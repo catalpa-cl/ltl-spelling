@@ -60,6 +60,18 @@ public class OverlapOfCorrectionsWithDictionary extends JCasAnnotator_ImplBase {
 				if (dictionaryWords.contains(error.getCorrection())) {
 					numberOfCorrectionsInDict++;
 				}
+				else if(error.getCorrection().contains(" ")) {
+					String[] parts = error.getCorrection().split(" ");
+					boolean isInDict = true;
+					for(String part : parts) {
+						if (!dictionaryWords.contains(part)){
+							isInDict = false;
+						}
+					}
+					if(isInDict) {
+						numberOfCorrectionsInDict++;
+					}
+				}
 			}
 		}
 	}

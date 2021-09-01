@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -18,6 +19,8 @@ import org.apache.uima.jcas.JCas;
 import org.dkpro.core.api.frequency.util.FrequencyDistribution;
 import org.uimafit.util.JCasUtil;
 
+import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
+import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import de.unidue.ltl.spelling.constants.SpellingConstants;
 import de.unidue.ltl.spelling.types.ExtendedSpellingAnomaly;
 import de.unidue.ltl.spelling.types.StartOfSentence;
@@ -35,11 +38,11 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 
 	int numberOfAnomalies = 0;
 	int numberOfMatchingCorrections = 0;
-	int rAt1;
-	int rAt2;
-	int rAt3;
-	int rAt5;
-	int rAt10;
+	double rAt1;
+	double rAt2;
+	double rAt3;
+	double rAt5;
+	double rAt10;
 	int lessThan1in1;
 	int lessThan2in2;
 	int lessThan3in3;
@@ -50,9 +53,14 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 	int moreThan3in3;
 	int moreThan5in5;
 	int moreThan10in10;
+	
+	List<String> corrections = new ArrayList<String>();
 
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
+		
+		//For list of wrong corrections
+		Map<ExtendedSpellingAnomaly, Collection<Sentence>> sentenceLookup = JCasUtil.indexCovering(aJCas, ExtendedSpellingAnomaly.class, Sentence.class);
 
 		for (ExtendedSpellingAnomaly anomaly : JCasUtil.select(aJCas, ExtendedSpellingAnomaly.class)) {
 
@@ -62,6 +70,8 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 			}
 
 			numberOfAnomalies++;
+			System.out.println("Number of anomalies "+numberOfAnomalies);
+			
 			if (anomaly.getCoveredText().equals(anomaly.getGoldStandardCorrection())) {
 				numberOfMatchingCorrections++;
 				correct.inc(anomaly.getMisspelledTokenText() + "\t(" + anomaly.getCoveredText() + ")");
@@ -75,7 +85,13 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 
 				numberedCorrect.add(
 						numberOfAnomalies + "\t" + anomaly.getMisspelledTokenText() + "\t" + anomaly.getCoveredText());
+				
+//				addToListOfCorrections(sentenceLookup.get(anomaly).iterator().next(),anomaly,"y");
+				
 			} else {
+				
+//				addToListOfCorrections(sentenceLookup.get(anomaly).iterator().next(),anomaly,"n");
+				
 				incorrect.inc(anomaly.getMisspelledTokenText() + "\t(" + anomaly.getCoveredText()
 						+ "), should have been: " + anomaly.getGoldStandardCorrection());
 				System.out.println("Incorrect: " + anomaly.getGoldStandardCorrection());
@@ -113,6 +129,12 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 				rankList.sort(null);
 
 //				System.out.println("Rank list: " + rankList);
+				
+				for(Float key : rankList) {
+					for(String entry : suggestions.get(key)) {
+						System.out.println(key+"\t"+entry);
+					}
+				}
 
 				Set<String> top1Candidates = new HashSet<String>();
 				Set<String> top2Candidates = new HashSet<String>();
@@ -129,16 +151,40 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 						break;
 					}
 				}
-				// In case of too many candidates with equal rank, remove those
+				// In case of too many candidates with equal rank, use probability
 				if (top1Candidates.size() > 1) {
-//					System.out.println("More than 3 candidates in top 3 set: " + top3Candidates.size());
-					top1Candidates.removeAll(suggestions.get(rankList.get(currentIndex - 1)));
-//					System.out.println("Size of top 3 after reducing: " + top3Candidates.size());
-					if (top1Candidates.size() == 0) {
-						top1Candidates.addAll(suggestions.get(rankList.get(0)));
-						moreThan1in1++;
-//						System.out.println(
-//								"Had to increase again, number of candidates is now: " + top3Candidates.size());
+
+					// These candidates are all equivalent
+					Set<String> equivalentCandidates = suggestions.get(rankList.get(currentIndex - 1));
+					top1Candidates.clear();
+					
+					for(int i=0; i<currentIndex-1; i++) {
+						top1Candidates.addAll(suggestions.get(rankList.get(i)));
+					}
+					
+					System.out.println("1 without equiv");
+					for(String cand: top1Candidates) {
+						System.out.println(cand);
+					}
+					System.out.println("end");
+
+					if (top1Candidates.contains(targetCorrection)
+							|| (isBeginningOfSentence && top1Candidates.contains(targetCorrection.toLowerCase()))) {
+						rAt1++;
+						System.out.println("1: above");
+					} else if (equivalentCandidates.contains(targetCorrection) || (isBeginningOfSentence
+							&& equivalentCandidates.contains(targetCorrection.toLowerCase()))) {
+						rAt1 += 1.0 / (equivalentCandidates.size() * 1.0);
+						System.out.println("1: within: "+equivalentCandidates.size());
+						for(String entry : equivalentCandidates) {
+							System.out.println(entry);
+						}
+					}
+				} else {
+					if (top1Candidates.contains(targetCorrection)
+							|| (isBeginningOfSentence && top1Candidates.contains(targetCorrection.toLowerCase()))) {
+						rAt1++;
+						System.out.println("1: contained");
 					}
 				}
 
@@ -151,16 +197,40 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 						break;
 					}
 				}
-				// In case of too many candidates with equal rank, remove those
+				// In case of too many candidates with equal rank, use probability
 				if (top2Candidates.size() > 2) {
-//					System.out.println("More than 3 candidates in top 3 set: " + top3Candidates.size());
-					top2Candidates.removeAll(suggestions.get(rankList.get(currentIndex - 1)));
-//					System.out.println("Size of top 3 after reducing: " + top3Candidates.size());
-					if (top2Candidates.size() == 0) {
-						top2Candidates.addAll(suggestions.get(rankList.get(0)));
-						moreThan2in2++;
-//						System.out.println(
-//								"Had to increase again, number of candidates is now: " + top3Candidates.size());
+
+					// These candidates are all equivalent
+					Set<String> equivalentCandidates = suggestions.get(rankList.get(currentIndex - 1));
+					top2Candidates.clear();
+					
+					for(int i=0; i<currentIndex-1; i++) {
+						top2Candidates.addAll(suggestions.get(rankList.get(i)));
+					}
+					
+					System.out.println("2 without equiv");
+					for(String cand: top2Candidates) {
+						System.out.println(cand);
+					}
+					System.out.println("end");
+
+					if (top2Candidates.contains(targetCorrection)
+							|| (isBeginningOfSentence && top2Candidates.contains(targetCorrection.toLowerCase()))) {
+						rAt2++;
+						System.out.println("2: above");
+					} else if (equivalentCandidates.contains(targetCorrection) || (isBeginningOfSentence
+							&& equivalentCandidates.contains(targetCorrection.toLowerCase()))) {
+						rAt2 += 1.0 / (equivalentCandidates.size() * 1.0);
+						System.out.println("2: within: "+equivalentCandidates.size());
+						for(String entry : equivalentCandidates) {
+							System.out.println(entry);
+						}
+					}
+				} else {
+					if (top2Candidates.contains(targetCorrection)
+							|| (isBeginningOfSentence && top2Candidates.contains(targetCorrection.toLowerCase()))) {
+						rAt2++;
+						System.out.println("2: contained");
 					}
 				}
 
@@ -173,26 +243,41 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 						break;
 					}
 				}
-
-				for (String cand : top3Candidates) {
-					System.out.println("in top 3: " + cand);
-				}
-
-				// In case of too many candidates with equal rank, remove those
+				// In case of too many candidates with equal rank, use probability
 				if (top3Candidates.size() > 3) {
-//					System.out.println("More than 3 candidates in top 3 set: " + top3Candidates.size());
-					top3Candidates.removeAll(suggestions.get(rankList.get(currentIndex - 1)));
-//					System.out.println("Size of top 3 after reducing: " + top3Candidates.size());
-					if (top3Candidates.size() == 0) {
-						top3Candidates.addAll(suggestions.get(rankList.get(0)));
-						moreThan3in3++;
-//						System.out.println(
-//								"Had to increase again, number of candidates is now: " + top3Candidates.size());
-					}
-				}
 
-				for (String cand : top3Candidates) {
-					System.out.println("in top 3: " + cand);
+					// These candidates are all equivalent
+					Set<String> equivalentCandidates = suggestions.get(rankList.get(currentIndex - 1));
+					top3Candidates.clear();
+					
+					for(int i=0; i<currentIndex-1; i++) {
+						top3Candidates.addAll(suggestions.get(rankList.get(i)));
+					}
+					
+					System.out.println("3 without equiv");
+					for(String cand: top3Candidates) {
+						System.out.println(cand);
+					}
+					System.out.println("end");
+
+					if (top3Candidates.contains(targetCorrection)
+							|| (isBeginningOfSentence && top3Candidates.contains(targetCorrection.toLowerCase()))) {
+						rAt3++;
+						System.out.println("3: above");
+					} else if (equivalentCandidates.contains(targetCorrection) || (isBeginningOfSentence
+							&& equivalentCandidates.contains(targetCorrection.toLowerCase()))) {
+						rAt3 += 1.0 / (equivalentCandidates.size() * 1.0);
+						System.out.println("3: within: "+equivalentCandidates.size());
+						for(String entry : equivalentCandidates) {
+							System.out.println(entry);
+						}
+					}
+				} else {
+					if (top3Candidates.contains(targetCorrection)
+							|| (isBeginningOfSentence && top3Candidates.contains(targetCorrection.toLowerCase()))) {
+						rAt3++;
+						System.out.println("3: contained");
+					}
 				}
 
 				currentIndex = 0;
@@ -205,15 +290,40 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 					}
 
 				}
+				// In case of too many candidates with equal rank, use probability
 				if (top5Candidates.size() > 5) {
-//					System.out.println("More than 5 candidates in top 5 set: " + top5Candidates.size());
-					top5Candidates.removeAll(suggestions.get(rankList.get(currentIndex - 1)));
-//					System.out.println("Size of top 5 after reducing: " + top5Candidates.size());
-					if (top5Candidates.size() == 0) {
-						top5Candidates.addAll(suggestions.get(rankList.get(0)));
-						moreThan5in5++;
-//						System.out.println(
-//								"Had to increase again, number of candidates is now: " + top5Candidates.size());
+
+					// These candidates are all equivalent
+					Set<String> equivalentCandidates = suggestions.get(rankList.get(currentIndex - 1));
+					top5Candidates.clear();
+					
+					for(int i=0; i<currentIndex-1; i++) {
+						top5Candidates.addAll(suggestions.get(rankList.get(i)));
+					}
+					
+					System.out.println("5 without equiv");
+					for(String cand: top5Candidates) {
+						System.out.println(cand);
+					}
+					System.out.println("end");
+
+					if (top5Candidates.contains(targetCorrection)
+							|| (isBeginningOfSentence && top5Candidates.contains(targetCorrection.toLowerCase()))) {
+						rAt5++;
+						System.out.println("5: above");
+					} else if (equivalentCandidates.contains(targetCorrection) || (isBeginningOfSentence
+							&& equivalentCandidates.contains(targetCorrection.toLowerCase()))) {
+						rAt5 += 1.0 / (equivalentCandidates.size() * 1.0);
+						System.out.println("5: within: "+equivalentCandidates.size());
+						for(String entry : equivalentCandidates) {
+							System.out.println(entry);
+						}
+					}
+				} else {
+					if (top5Candidates.contains(targetCorrection)
+							|| (isBeginningOfSentence && top5Candidates.contains(targetCorrection.toLowerCase()))) {
+						rAt5++;
+						System.out.println("5: contained");
 					}
 				}
 
@@ -226,65 +336,46 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 						break;
 					}
 				}
+				// In case of too many candidates with equal rank, use probability
 				if (top10Candidates.size() > 10) {
-//					System.out.println("More than 10 candidates in top 10 set: " + top10Candidates.size());
-					top10Candidates.removeAll(suggestions.get(rankList.get(currentIndex - 1)));
-//					System.out.println("Size of top 10 after reducing: " + top10Candidates.size());
-					if (top10Candidates.size() == 0) {
-						top10Candidates.addAll(suggestions.get(rankList.get(0)));
-						moreThan10in10++;
-//						System.out.println(
-//								"Had to increase again, number of candidates is now: " + top3Candidates.size());
+
+					// These candidates are all equivalent
+					Set<String> equivalentCandidates = suggestions.get(rankList.get(currentIndex - 1));
+					top10Candidates.clear();
+					
+					for(int i=0; i<currentIndex-1; i++) {
+						top10Candidates.addAll(suggestions.get(rankList.get(i)));
 					}
-				}
+					
+					System.out.println("10 without equiv");
+					for(String cand: top10Candidates) {
+						System.out.println(cand);
+					}
+					System.out.println("end");
 
-				if (top1Candidates.size() != 0 && top1Candidates.size() < 1) {
-//					System.err.println("WARN: less than 1 candidates in top 1: " + top1Candidates.size());
-					lessThan1in1++;
-				}
-				if (top2Candidates.size() != 0 && top2Candidates.size() < 2) {
-//					System.err.println("WARN: less than 2 candidates in top 2: " + top2Candidates.size());
-					lessThan2in2++;
-				}
-				if (top3Candidates.size() != 0 && top3Candidates.size() < 3) {
-//					System.err.println("WARN: less than 3 candidates in top 3: " + top3Candidates.size());
-					lessThan3in3++;
-				}
-				if (top5Candidates.size() != 0 && top5Candidates.size() < 5) {
-//					System.err.println("WARN: less than 5 candidates in top 5: " + top5Candidates.size());
-					lessThan5in5++;
-				}
-				if (top10Candidates.size() != 0 && top10Candidates.size() < 10) {
-//					System.err.println("WARN: less than 10 candidates in top 10: " + top10Candidates.size());
-					lessThan10in10++;
-				}
-
-				if (top1Candidates.contains(targetCorrection)
-						|| (isBeginningOfSentence && top1Candidates.contains(targetCorrection.toLowerCase()))) {
-					rAt1++;
-//					System.out.println("RANK LIST: "+rankList);
-				}
-				if (top2Candidates.contains(targetCorrection)
-						|| (isBeginningOfSentence && top2Candidates.contains(targetCorrection.toLowerCase()))) {
-					rAt2++;
-//					System.out.println("RANK LIST: "+rankList);
-				}
-				if (top3Candidates.contains(targetCorrection)
-						|| (isBeginningOfSentence && top3Candidates.contains(targetCorrection.toLowerCase()))) {
-					System.out.println("Is in top3");
-					rAt3++;
-//					System.out.println("RANK LIST: "+rankList);
-				}
-				if (top5Candidates.contains(targetCorrection)
-						|| (isBeginningOfSentence && top5Candidates.contains(targetCorrection.toLowerCase()))) {
-					rAt5++;
-				}
-				if (top10Candidates.contains(targetCorrection)
-						|| (isBeginningOfSentence && top10Candidates.contains(targetCorrection.toLowerCase()))) {
-					rAt10++;
+					if (top10Candidates.contains(targetCorrection)
+							|| (isBeginningOfSentence && top10Candidates.contains(targetCorrection.toLowerCase()))) {
+						rAt10++;
+						System.out.println("10: above");
+					} else if (equivalentCandidates.contains(targetCorrection) || (isBeginningOfSentence
+							&& equivalentCandidates.contains(targetCorrection.toLowerCase()))) {
+						rAt10 += (1.0 / (equivalentCandidates.size() * 1.0));
+						System.out.println("10: within: "+equivalentCandidates.size());
+						for(String entry : equivalentCandidates) {
+							System.out.println(entry);
+						}
+					}
+				} else {
+					if (top10Candidates.contains(targetCorrection)
+							|| (isBeginningOfSentence && top10Candidates.contains(targetCorrection.toLowerCase()))) {
+						rAt10++;
+						System.out.println("10: contained");
+					}
 				}
 			}
 
+			System.out.println("at 1: " + rAt1);
+			System.out.println("at 2: " + rAt2);
 			System.out.println("at 3: " + rAt3);
 			System.out.println("at 5: " + rAt5);
 			System.out.println("at 10: " + rAt10);
@@ -292,6 +383,45 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 
 		}
 	}
+	
+	private void addToListOfCorrections(Sentence sentence, ExtendedSpellingAnomaly anomaly, String isCorrect) {
+		
+		List<String> sentenceTokens = new ArrayList<String>();
+		List<Token> tokens = JCasUtil.selectCovered(Token.class, sentence);
+		
+		// to count offset of anomaly within sentence
+		int sentenceIndex = 0;
+		int begin_index = -1;
+		int end_index = -1;
+		
+		for(Token token : tokens) {
+//			if(token.getBegin() == anomaly.getBegin() && token.getEnd() == anomaly.getEnd()) {
+//				sentenceTokens.add(anomaly.getMisspelledTokenText());
+//			}
+//			else {
+//				sentenceTokens.add(token.getCoveredText());
+//			}
+			// Have to replace all that are spelling anomalies in oder to normalize back to initial form
+			if(JCasUtil.selectCovered(ExtendedSpellingAnomaly.class, token).size() != 0) {
+				ExtendedSpellingAnomaly anomalyToReplace = JCasUtil.selectCovered(ExtendedSpellingAnomaly.class, token).iterator().next();
+				sentenceTokens.add(anomalyToReplace.getMisspelledTokenText());
+				// if this is the target anomaly
+				if(anomalyToReplace.equals(anomaly)) {
+					begin_index = sentenceIndex;
+					end_index = sentenceIndex + anomalyToReplace.getMisspelledTokenText().length();
+				}
+				sentenceIndex += anomalyToReplace.getMisspelledTokenText().length()+1;
+			}
+			else {
+				sentenceTokens.add(token.getCoveredText());
+				sentenceIndex += token.getCoveredText().length()+1;
+			}
+		}
+		int sentenceBeginIndex = sentence.getBegin();
+		corrections.add(String.join(" ", sentenceTokens)+"\t"+anomaly.getMisspelledTokenText()+"\t"+begin_index+"\t"+end_index+"\t"+anomaly.getCoveredText()+"\t"+anomaly.getGoldStandardCorrection()+"\t"+isCorrect);
+		
+	}
+	
 
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
@@ -362,6 +492,13 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 			for (String i : numberedCorrect) {
 				bw.write(i);
 				bw.newLine();
+			}
+			bw.close();
+			
+			bw = new BufferedWriter(new FileWriter(eval_dir+"/wrongSentences.txt"));
+			bw.write("Sentence\tinitial_word\tstart_index\tend_index\tour_correction\tgold_correction\tours_is_correct\n");
+			for(String element : corrections) {
+				bw.write(element+"\n");
 			}
 			bw.close();
 
