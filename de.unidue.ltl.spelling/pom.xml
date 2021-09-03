@@ -13,6 +13,12 @@
   
   <dependencies>
   
+    <dependency>
+    <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+    <artifactId>de.tudarmstadt.ukp.dkpro.core.languagetool-asl</artifactId>
+    <version>1.10.0</version>
+    </dependency>
+  
   	<dependency>
     <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
     <artifactId>de.tudarmstadt.ukp.dkpro.core.api.anomaly-asl</artifactId>
@@ -247,7 +253,7 @@
 									repository (remove if not desired) -->
 							</transformers>
 							<outputFile>
-								${project.build.directory}/${project.artifactId}-${project.version}-CITA-hunspell-subtlexUnigrams-fromFull10-NEW.jar
+								${project.build.directory}/${project.artifactId}-${project.version}-MerlinCZ-hunspell-web1tTrigrams-forOracleRedo.jar
 							</outputFile>
 						</configuration>
 					</execution>
