@@ -10,12 +10,15 @@ import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import de.unidue.ltl.spelling.types.Punctuation;
 import de.unidue.ltl.spelling.types.SpellingError;
 
+// To print basic statistics about a dataset
 public class ErrorRatePrinter extends JCasAnnotator_ImplBase {
 
 	int numSentences = 0;
 	int numTokensTotal = 0;
 	int numTokensWithoutPunctuation = 0;
 	int numErrorsTotal = 0;
+	// To count an error consisting of multiple parts as one instead of multiple
+	// errors
 	int numErrorsWithoutMergeMiddleRight = 0;
 
 	@Override

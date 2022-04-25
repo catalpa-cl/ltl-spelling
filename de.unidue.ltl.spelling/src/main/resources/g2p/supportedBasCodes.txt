@@ -27,3 +27,4 @@ slk-SK
 spa-ES
 swe-SE
 tha-TH
+cze-CZ
