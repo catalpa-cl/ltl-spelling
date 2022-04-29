@@ -1,6 +1,6 @@
 
 
-/* First created by JCasGen Thu Mar 12 19:49:04 CET 2020 */
+/* First created by JCasGen Thu Apr 28 10:17:13 CEST 2022 */
 package de.tudarmstadt.ukp.dkpro.core.api.anomaly.type;
 
 import org.apache.uima.jcas.JCas; 
@@ -10,8 +10,8 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** 
- * Updated by JCasGen Tue Jun 30 21:13:38 CEST 2020
- * XML source: /Users/mariebexte/ltl-spelling/de.unidue.ltl.spelling/src/main/resources/desc/type/Spelling.xml
+ * Updated by JCasGen Thu Apr 28 10:19:32 CEST 2022
+ * XML source: /Users/mariebexte/Coding/Projects/ltl-spelling/spelling/src/main/resources/desc/type/Spelling.xml
  * @generated */
 public class SpellingAnomaly extends Anomaly {
   /** @generated

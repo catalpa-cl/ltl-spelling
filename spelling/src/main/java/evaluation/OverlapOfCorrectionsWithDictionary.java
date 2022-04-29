@@ -36,6 +36,7 @@ public class OverlapOfCorrectionsWithDictionary extends JCasAnnotator_ImplBase {
 	};
 
 	private void readDictionary(String dictionaryPath) {
+
 		BufferedReader br = null;
 		try {
 			br = new BufferedReader(new FileReader(new File(dictionaryPath)));
@@ -54,21 +55,27 @@ public class OverlapOfCorrectionsWithDictionary extends JCasAnnotator_ImplBase {
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 
 		for (SpellingError error : JCasUtil.select(aJCas, SpellingError.class)) {
+
+			// Ignore merge middle and merge right, as not to count merged errors multiple
+			// times
 			if (!error.getErrorType().contains("merge_middle") && !error.getErrorType().contains("merge_right")) {
+
 				numberOfErrors++;
 
 				if (dictionaryWords.contains(error.getCorrection())) {
+
 					numberOfCorrectionsInDict++;
-				}
-				else if(error.getCorrection().contains(" ")) {
+
+				} else if (error.getCorrection().contains(" ")) {
+
 					String[] parts = error.getCorrection().split(" ");
 					boolean isInDict = true;
-					for(String part : parts) {
-						if (!dictionaryWords.contains(part)){
+					for (String part : parts) {
+						if (!dictionaryWords.contains(part)) {
 							isInDict = false;
 						}
 					}
-					if(isInDict) {
+					if (isInDict) {
 						numberOfCorrectionsInDict++;
 					}
 				}
@@ -79,7 +86,8 @@ public class OverlapOfCorrectionsWithDictionary extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
 		System.out.println("Number of spelling errors without merge_middle and merge_right:\t" + numberOfErrors);
-		System.out.println("Number of errors whose corrections are found in dict:\t" + numberOfCorrectionsInDict);
-		System.out.println("Overlap:\t"+ (numberOfCorrectionsInDict*1.0)/(numberOfErrors*1.0));
+		System.out.println("Number of errors whose corrections are found in dictionary:\t" + numberOfCorrectionsInDict);
+		System.out.println("Percentage of errors whose corrrections are found in dictionary:\t"
+				+ (numberOfCorrectionsInDict * 1.0) / (numberOfErrors * 1.0));
 	}
 }

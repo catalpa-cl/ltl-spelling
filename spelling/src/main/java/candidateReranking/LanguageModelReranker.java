@@ -22,7 +22,6 @@ import de.tudarmstadt.ukp.dkpro.core.api.anomaly.type.SpellingAnomaly;
 import de.tudarmstadt.ukp.dkpro.core.api.anomaly.type.SuggestedAction;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
-import resources.DummyFrequencyCountProvider;
 
 public class LanguageModelReranker extends JCasAnnotator_ImplBase {
 
@@ -38,32 +37,32 @@ public class LanguageModelReranker extends JCasAnnotator_ImplBase {
 	@ConfigurationParameter(name = PARAM_NGRAM_SIZE, mandatory = true, defaultValue = "3")
 	private int ngramSize;
 
-	public static final String PARAM_SPECIFIC_LM_WEIGHT = "specificLMWeight";
-	@ConfigurationParameter(name = PARAM_SPECIFIC_LM_WEIGHT, mandatory = false, defaultValue = "0.5f")
-	private float specificLMweight;
-
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 
-		// Index to lookup the sentence an anomaly is contained in
+		// Build index to look up the sentence an anomaly is contained in
 		Map<SpellingAnomaly, Collection<Sentence>> index = JCasUtil.indexCovering(aJCas, SpellingAnomaly.class,
 				Sentence.class);
 
+		// For every anomaly
 		for (SpellingAnomaly anomaly : JCasUtil.select(aJCas, SpellingAnomaly.class)) {
 
 			if (anomaly.getSuggestions() != null) {
 				Collection<Sentence> sentences = index.get(anomaly);
+
 				if (sentences.size() != 1) {
 					System.err.println("SpellingAnomaly " + anomaly.getCoveredText()
 							+ " is not covered by exactly one sentence in the text " + aJCas.getDocumentText());
-					for(Sentence sentence : sentences) {
+					for (Sentence sentence : sentences) {
 						System.out.println(sentence.getCoveredText());
 					}
-					
+
 					for (int i = 0; i < anomaly.getSuggestions().size(); i++) {
 						anomaly.getSuggestions(i).setCertainty(Float.MAX_VALUE);
 					}
 //					System.exit(0);
+
+					// Set certainty according to language model probability
 				} else {
 					for (Sentence sentence : sentences) {
 						List<Token> tokens = JCasUtil.selectCovered(aJCas, Token.class, sentence);
@@ -102,33 +101,27 @@ public class LanguageModelReranker extends JCasAnnotator_ImplBase {
 			for (int i = 0; i < anomaly.getSuggestions().size(); i++) {
 				anomaly.getSuggestions(i).setCertainty(Float.MAX_VALUE);
 			}
+
 		} else {
 			minIndex = anomalyIndex - ngramSize_rec + 1;
+
 			// Can at most be beginning of the sentence, but not negative
 			if (minIndex < 0) {
 				minIndex = 0;
 			}
+
 			maxIndex = anomalyIndex + ngramSize_rec - 1;
 			// Prevent index from being out of sentence range
 			if (maxIndex >= tokens.size()) {
 				maxIndex = tokens.size() - 1;
 			}
-//				int ngramSizeToConsider;
-//				// Does at least one ngram of the desired size fit into the determined span?
-//				if (maxIndex - minIndex < ngramSize - 1) {
-//					// Must consider smaller ngram size for this sentence
-//					ngramSizeToConsider = maxIndex - minIndex + 1;
-//				} else {
-//					ngramSizeToConsider = ngramSize;
-//				}
 
-//				System.out. println("Anomaly: " + anomaly.getCoveredText());
-
+			// For each of the suggested corrections
 			for (int k = 0; k < suggestions.size(); k++) {
 
 				String candidate = anomaly.getSuggestions(k).getReplacement();
-//					System.out.println("Candidate: " + candidate);
 
+				// Build array with tokens for which to compute ngram probability
 				String[] ngramTokens = new String[maxIndex - minIndex + StringUtils.countMatches(candidate, " ") + 1];
 				int j = 0;
 				for (int i = minIndex; i < anomalyIndex; i++) {
@@ -146,24 +139,12 @@ public class LanguageModelReranker extends JCasAnnotator_ImplBase {
 					}
 				}
 
-				double probabilityInDefaultLM = getLMprobability(fcp, ngramTokens, ngramSize_rec);
-//					double probabilityInCustomLM = 0;
-//					if (fcp_specific != null && !(fcp_specific instanceof DummyFrequencyCountProvider)
-//							&& !(specificLMweight < 0.0001f)) {
-//						probabilityInCustomLM = getLMprobability(fcp_specific, ngramTokens, ngramSize);
-//					}
+				double probability = getLMprobability(fcp, ngramTokens, ngramSize_rec);
 
-				double probability = probabilityInDefaultLM;
-//					if (fcp_specific != null && !(fcp_specific instanceof DummyFrequencyCountProvider)
-//							&& !(specificLMweight < 0.0001f)) {
-//						probability = probabilityInCustomLM * specificLMweight
-//								+ probabilityInDefaultLM * (1 - specificLMweight);
-//					} else {
-//						probability = probabilityInDefaultLM;
-//					}
-//					System.out.println("Putting probability for " + anomaly.getSuggestions(k).getReplacement()
-//							+ ": " + probability);
 				LMProbabilities.put(anomaly.getSuggestions(k), (float) probability);
+
+				// Check whether newly calculated ngram probability is highest for this
+				// candidate
 				if (probability > maxProbability) {
 					maxProbability = probability;
 				}
@@ -171,16 +152,21 @@ public class LanguageModelReranker extends JCasAnnotator_ImplBase {
 		}
 
 		if (LMProbabilities.keySet().size() > 0) {
+
 			// Only replace the certainty of suggestions if their LM probability differs
 			if (!(Collections.frequency(LMProbabilities.values(),
 					LMProbabilities.values().iterator().next()) == LMProbabilities.values().size())) {
+
+				// Certainty used inversely: max prob/prob means lower values are better
 				for (SuggestedAction suggestedAction : LMProbabilities.keySet()) {
-//				System.out.println("Final probability of " + suggestedAction.getReplacement() + ": "
-//						+ String.format("%.12f", LMProbabilities.get(suggestedAction)) + " (normalized: "
-//						+ String.format("%.12f", (float) maxProbability / LMProbabilities.get(suggestedAction)) + ")");
-//					System.out.println("Probability of\t" + suggestedAction.getReplacement() + "\t"
-//							+ String.format("%.12f", LMProbabilities.get(suggestedAction)) + "\t"
-//							+ String.format("%.12f", (float) maxProbability / LMProbabilities.get(suggestedAction)));
+
+//					System.out.println("Final probability of " + suggestedAction.getReplacement() + ": "
+//							+ String.format("%.12f", LMProbabilities.get(suggestedAction)) + " (normalized: "
+//							+ String.format("%.12f", (float) maxProbability / LMProbabilities.get(suggestedAction)) + ")");
+//						System.out.println("Probability of\t" + suggestedAction.getReplacement() + "\t"
+//								+ String.format("%.12f", LMProbabilities.get(suggestedAction)) + "\t"
+//								+ String.format("%.12f", (float) maxProbability / LMProbabilities.get(suggestedAction)));
+
 					if (LMProbabilities.get(suggestedAction) > 0) {
 						suggestedAction.setCertainty((float) maxProbability / LMProbabilities.get(suggestedAction));
 					} else {
@@ -192,7 +178,7 @@ public class LanguageModelReranker extends JCasAnnotator_ImplBase {
 				System.out.println("Did not replace certainties for " + anomaly.getCoveredText()
 						+ " because all had same value:" + LMProbabilities.values().iterator().next());
 				if (ngramSize_rec > 1) {
-					System.out.println("Repeating with ngram size " + (ngramSize_rec - 1));
+					System.out.println("Backing off to ngram size " + (ngramSize_rec - 1));
 					processAnomaly(sentence, anomaly, tokens, ngramSize_rec - 1);
 				}
 
@@ -212,7 +198,7 @@ public class LanguageModelReranker extends JCasAnnotator_ImplBase {
 
 			String[] ngramTokens = Arrays.copyOfRange(tokens, i, i + ngramSize);
 			String ngram = String.join(" ", ngramTokens);
-//			System.out.println("NGRAM " + ngram);
+
 			try {
 				double ngramProbability = fcp.getProbability(ngram);
 				if (ngramProbability > 0) {
@@ -224,7 +210,6 @@ public class LanguageModelReranker extends JCasAnnotator_ImplBase {
 				e.printStackTrace();
 			}
 		}
-//		System.out.println();
 		return probability;
 	}
 }

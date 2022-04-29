@@ -6,8 +6,6 @@ import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
-import org.apache.uima.fit.descriptor.ResourceMetaData;
-import org.apache.uima.fit.descriptor.TypeCapability;
 import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
@@ -18,17 +16,10 @@ import spelling.types.StartOfSentence;
 import spelling.types.TokenToConsider;
 import dumonts.hunspell.bindings.HunspellLibrary;
 import dumonts.hunspell.bindings.HunspellLibrary.Hunhandle;
-import eu.openminted.share.annotations.api.DocumentationResource;
 
 /**
- * Checks presence of tokens within the dictionary that was passed to this
- * Annotator, if present marks them as a KnownWord.
+ * Checks which tokens hunspell deems a misspelling
  */
-
-@ResourceMetaData(name = "")
-@DocumentationResource("")
-@TypeCapability(inputs = { "de.unidue.ltl.spelling.types.TokenToConsider" }, outputs = {
-		"de.unidue.ltl.spelling.types.KnownWord" })
 
 public class HunspellDictionaryChecker extends JCasAnnotator_ImplBase {
 
@@ -55,6 +46,7 @@ public class HunspellDictionaryChecker extends JCasAnnotator_ImplBase {
 
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {
+
 		super.initialize(context);
 		try {
 			Pointer<Byte> aff = Pointer.pointerToCString(affPath.toString());
@@ -81,14 +73,9 @@ public class HunspellDictionaryChecker extends JCasAnnotator_ImplBase {
 			boolean knownWord = false;
 
 			if (JCasUtil.selectCovered(KnownWord.class, consider).isEmpty()) {
-				
-				if(spell(currentWord) != spell(currentWord.toLowerCase())) {
-					System.out.println("NOT SAME: "+currentWord);
-//					System.exit(0);
-				}
 
-				if (spell(currentWord) || (isBeginningOfSentence && spell(currentWord.toLowerCase()))) {
-//					System.out.println("Found a compound: " + consider.getCoveredText());
+				if (spelledCorrectly(currentWord) || (isBeginningOfSentence && spelledCorrectly(currentWord.toLowerCase()))) {
+
 					KnownWord known = new KnownWord(aJCas);
 					known.setBegin(consider.getBegin());
 					known.setEnd(consider.getEnd());
@@ -100,8 +87,8 @@ public class HunspellDictionaryChecker extends JCasAnnotator_ImplBase {
 
 					String[] wordParts = consider.getCoveredText().split("'");
 					if (wordParts.length == 2) {
-						if ((spell(wordParts[0]) && spell(wordParts[1])) || (isBeginningOfSentence
-								&& spell(wordParts[0].toLowerCase()) && spell(wordParts[1]))) {
+						if ((spelledCorrectly(wordParts[0]) && spelledCorrectly(wordParts[1])) || (isBeginningOfSentence
+								&& spelledCorrectly(wordParts[0].toLowerCase()) && spelledCorrectly(wordParts[1]))) {
 							KnownWord word = new KnownWord(aJCas);
 							word.setBegin(consider.getBegin());
 							word.setEnd(consider.getEnd());
@@ -116,8 +103,8 @@ public class HunspellDictionaryChecker extends JCasAnnotator_ImplBase {
 
 					String[] wordParts = consider.getCoveredText().split("’");
 					if (wordParts.length == 2) {
-						if ((spell(wordParts[0]) && spell(wordParts[1])) || (isBeginningOfSentence
-								&& spell(wordParts[0].toLowerCase()) && spell(wordParts[1]))) {
+						if ((spelledCorrectly(wordParts[0]) && spelledCorrectly(wordParts[1])) || (isBeginningOfSentence
+								&& spelledCorrectly(wordParts[0].toLowerCase()) && spelledCorrectly(wordParts[1]))) {
 							KnownWord word = new KnownWord(aJCas);
 							word.setBegin(consider.getBegin());
 							word.setEnd(consider.getEnd());
@@ -132,8 +119,7 @@ public class HunspellDictionaryChecker extends JCasAnnotator_ImplBase {
 						|| currentWord.matches("^([\\W\\s]*?)([\\w\\u0080-\\uFFFF]+'?)([\\W\\s]+?)$")) {
 					String stripNonAlpha = currentWord.replaceAll("^([\\W\\s]*?)([\\w\\u0080-\\uFFFF]+'?)([\\W\\s]*?)$",
 							"$2");
-//					System.out.println(currentWord+"\t"+stripNonAlpha);
-					if (spell(stripNonAlpha) || isBeginningOfSentence && spell(stripNonAlpha.toLowerCase())) {
+					if (spelledCorrectly(stripNonAlpha) || isBeginningOfSentence && spelledCorrectly(stripNonAlpha.toLowerCase())) {
 						KnownWord word = new KnownWord(aJCas);
 						word.setBegin(consider.getBegin());
 						word.setEnd(consider.getEnd());
@@ -142,10 +128,9 @@ public class HunspellDictionaryChecker extends JCasAnnotator_ImplBase {
 				}
 			}
 		}
-
 	}
 
-	public boolean spell(String word) {
+	public boolean spelledCorrectly(String word) {
 		if (handle == null) {
 			throw new RuntimeException("Attempt to use hunspell instance after closing");
 		}

@@ -1,6 +1,15 @@
 data_prep/raw_corpora/ETS_Corpus_of_Non-Native_Written_English
 data_prep/raw_corpora/cita-corrected
 data_prep/raw_corpora/ErrorDetection_Skala_errorList
-de.unidue.ltl.spelling/src/main/resources/tempGraphemes.txt
-de.unidue.ltl.spelling/src/main/resources/results
+data_prep/processed_corpora/cita_spelling.xml
+spelling/src/main/resources/tempGraphemes.txt
+spelling/src/main/resources/results
+spelling/src/main/resources/target
+spelling/target
 Results/
+spelling/src/main/resources/data/toefl_spelling.xml
+spelling/src/main/resources/data/cita_spelling.xml
+spelling/src/main/resources/data/skala_spelling.xml
+spelling/src/main/resources/data/toefl_misspelling_phonemes.xml
+spelling/src/main/resources/data/cita_misspelling_phonemes.xml
+spelling/src/main/resources/data/skala_misspelling_phonemes.xml

@@ -28,10 +28,7 @@ public class POStoNEAnnotator extends JCasAnnotator_ImplBase {
 		for (Token token : JCasUtil.select(aJCas, Token.class)) {
 
 			if (token.getPosValue().equals(nePosTag)) {
-//				if(token.getCoveredText().equals("Novembre")) {
-//					System.out.println("NE: "+token.getCoveredText());
-//				}
-//				System.out.println("Marking as NE: "+token.getCoveredText());
+
 				NamedEntity ne = new NamedEntity(aJCas);
 				ne.setBegin(token.getBegin());
 				ne.setEnd(token.getEnd());

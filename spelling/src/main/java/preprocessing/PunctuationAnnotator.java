@@ -2,24 +2,16 @@ package preprocessing;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
-import org.apache.uima.fit.descriptor.ResourceMetaData;
-import org.apache.uima.fit.descriptor.TypeCapability;
 import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import spelling.types.Punctuation;
-import eu.openminted.share.annotations.api.DocumentationResource;
 
 /**
- * Annotator matching and marking all tokens that are made up of nothing but
- * punctuation.
+ * Annotator that marks all tokens that are made up of nothing but punctuation
+ * as such.
  */
-
-@ResourceMetaData(name = "")
-@DocumentationResource("")
-@TypeCapability(inputs = { "de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token" }, outputs = {
-		"de.unidue.ltl.spelling.types.Punctuation" })
 
 public class PunctuationAnnotator extends JCasAnnotator_ImplBase {
 
@@ -29,7 +21,7 @@ public class PunctuationAnnotator extends JCasAnnotator_ImplBase {
 		for (Token token : JCasUtil.select(aJCas, Token.class)) {
 
 			if (token.getCoveredText().matches("^[&\\[\\];:!?\\.,=\\*\"„“_'\\-´`'()<>\\+/\\\\]+$")) {
-//				System.out.println("Found punctuation:\t" + token.getCoveredText());
+
 				Punctuation punct = new Punctuation(aJCas);
 				punct.setBegin(token.getBegin());
 				punct.setEnd(token.getEnd());

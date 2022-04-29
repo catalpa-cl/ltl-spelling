@@ -3,8 +3,6 @@ package preprocessing;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
-import org.apache.uima.fit.descriptor.ResourceMetaData;
-import org.apache.uima.fit.descriptor.TypeCapability;
 import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
@@ -13,17 +11,11 @@ import org.apache.uima.util.Level;
 import constants.SpellingConstants;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import spelling.types.TokenToConsider;
-import eu.openminted.share.annotations.api.DocumentationResource;
 
 /**
  * Marks all tokens that do not have annotations of a type that is to be ignored
  * as TokensToConsider.
  */
-
-@ResourceMetaData(name = "")
-@DocumentationResource("")
-@TypeCapability(inputs = { "de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token" }, outputs = {
-		"de.unidue.ltl.spelling.types.TokenToConsider" })
 
 public class MarkTokensToConsider extends JCasAnnotator_ImplBase {
 
@@ -40,6 +32,7 @@ public class MarkTokensToConsider extends JCasAnnotator_ImplBase {
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 
 		for (Token token : JCasUtil.select(aJCas, Token.class)) {
+
 			boolean ignoreToken = false;
 			// Check if token has annotation of any of the types to be excluded
 			for (String type : typesToIgnore) {
@@ -60,6 +53,7 @@ public class MarkTokensToConsider extends JCasAnnotator_ImplBase {
 					e.printStackTrace();
 				}
 			}
+
 			// If none of the types matched, mark token as one to consider
 			if (!ignoreToken) {
 
