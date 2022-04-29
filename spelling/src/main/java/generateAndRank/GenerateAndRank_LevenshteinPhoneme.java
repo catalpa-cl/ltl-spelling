@@ -242,7 +242,6 @@ public class GenerateAndRank_LevenshteinPhoneme extends CandidateGeneratorAndRan
 
 	@Override
 	protected String getStringToCorrectFromAnomaly(SpellingAnomaly anomaly) {
-		System.out.println("ANOMALY: " + anomaly.getCoveredText());
 		return PhonemeUtils.getPhoneticTranscription(anomaly.getCoveredText(), language);
 	}
 

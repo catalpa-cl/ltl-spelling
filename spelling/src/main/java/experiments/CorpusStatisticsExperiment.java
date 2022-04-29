@@ -9,12 +9,8 @@ import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.fit.factory.CollectionReaderFactory;
 import org.apache.uima.resource.ResourceInitializationException;
-import org.dkpro.core.tokit.RegexSegmenter;
 import org.uimafit.pipeline.SimplePipeline;
 
-import de.tudarmstadt.ukp.dkpro.core.corenlp.CoreNlpSegmenter;
-import de.tudarmstadt.ukp.dkpro.core.languagetool.LanguageToolSegmenter;
-import de.tudarmstadt.ukp.dkpro.core.opennlp.OpenNlpSegmenter;
 import evaluation.OverlapOfCorrectionsWithDictionary;
 import preprocessing.PunctuationAnnotator;
 import reader.SpellingReader;

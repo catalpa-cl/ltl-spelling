@@ -10,6 +10,7 @@ from statistics import mean, stdev
 corpora_path = "corpora_spelling"
 
 for file in sorted(os.listdir(corpora_path)):
+    
     if not file.endswith(".xml"):continue
     tree = ET.parse(corpora_path + "/" + file)
     corpus = tree.getroot()
@@ -22,6 +23,7 @@ for file in sorted(os.listdir(corpora_path)):
 
     for text in corpus.findall("text"):
         for error in text.findall("error"):
+            
             orig = error.text
             target = error.get("correct")
             if orig == None or target == None:

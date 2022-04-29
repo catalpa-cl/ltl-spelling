@@ -45,7 +45,7 @@ public class ErrorCorrectionExperiments_hunspell {
 		String dic = "src/main/resources/dictionaries/hunspell/German_de_DE_aux.dic";
 		String aff = "src/main/resources/dictionaries/hunspell/German_de_DE.aff";
 
-		String web1t_path = System.getenv("WEB1T_DE");
+		String web1t_path = System.getenv("WEB1T") + "/de";
 
 		runErrorCorrection_hunspell(lang, path, "SkaLa_hunspell_noReranking", dic, aff, 1, web1t_path, -1, false,
 				false);
@@ -64,7 +64,7 @@ public class ErrorCorrectionExperiments_hunspell {
 		String dic = "src/main/resources/dictionaries/hunspell/German_de_DE_aux.dic";
 		String aff = "src/main/resources/dictionaries/hunspell/German_de_DE.aff";
 
-		String web1t_path = System.getenv("WEB1T_DE");
+		String web1t_path = System.getenv("WEB1T") + "/de";
 
 		runErrorCorrection_hunspell(lang, path, "Litkey_hunspell_noReranking", dic, aff, 1, web1t_path, -1, false,
 				true);
@@ -82,7 +82,7 @@ public class ErrorCorrectionExperiments_hunspell {
 		String dic = "src/main/resources/dictionaries/hunspell/German_de_DE_aux.dic";
 		String aff = "src/main/resources/dictionaries/hunspell/German_de_DE.aff";
 
-		String web1t_path = System.getenv("WEB1T_DE");
+		String web1t_path = System.getenv("WEB1T") + "/de";
 
 		runErrorCorrection_hunspell(lang, path, "MERLIN-DE_hunspell_noReranking", dic, aff, 1, web1t_path, -1, false,
 				false);
@@ -100,7 +100,7 @@ public class ErrorCorrectionExperiments_hunspell {
 		String dic = "src/main/resources/dictionaries/hunspell/Czech.dic";
 		String aff = "src/main/resources/dictionaries/hunspell/Czech.aff";
 
-		String web1t_path = System.getenv("WEB1T_CZ");
+		String web1t_path = System.getenv("WEB1T") + "/cz";
 
 		runErrorCorrection_hunspell(lang, path, "MERLIN-CZ_hunspell_noReranking", dic, aff, 1, web1t_path, -1, false,
 				false);
@@ -118,7 +118,7 @@ public class ErrorCorrectionExperiments_hunspell {
 		String dic = "src/main/resources/dictionaries/hunspell/Italian.dic";
 		String aff = "src/main/resources/dictionaries/hunspell/Italian.aff";
 
-		String web1t_path = System.getenv("WEB1T_IT");
+		String web1t_path = System.getenv("WEB1T") + "/it";
 
 		runErrorCorrection_hunspell(lang, path, "MERLIN-IT_hunspell_noReranking", dic, aff, 1, web1t_path, -1, false,
 				false);
@@ -136,7 +136,7 @@ public class ErrorCorrectionExperiments_hunspell {
 		String dic = "src/main/resources/dictionaries/hunspell/Italian.dic";
 		String aff = "src/main/resources/dictionaries/hunspell/Italian.aff";
 
-		String web1t_path = System.getenv("WEB1T_IT");
+		String web1t_path = System.getenv("WEB1T" + "/it");
 
 		runErrorCorrection_hunspell(lang, corpus_path, "CIta_hunspell_noReranking", dic, aff, 1, web1t_path, -1, false,
 				false);
@@ -155,7 +155,7 @@ public class ErrorCorrectionExperiments_hunspell {
 		String dic = "src/main/resources/dictionaries/hunspell/en_US.dic";
 		String aff = "src/main/resources/dictionaries/hunspell/en_US.aff";
 
-		String web1t_path = System.getenv("WEB1T_EN");
+		String web1t_path = System.getenv("WEB1T") + "/en";
 
 		runErrorCorrection_hunspell(lang, path, "TOEFL_hunspell_noReranking", dic, aff, 1, web1t_path, -1, false,
 				false);

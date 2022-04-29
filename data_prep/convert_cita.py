@@ -12,7 +12,7 @@ import xml.etree.ElementTree as ET
 import re
 import os
 
-corpus_path = "corpora/cita-corrected/"
+corpus_path = "raw_corpora/cita-corrected/"
 
 #root element for our spelling-XML with corpus name as attribute
 corpus = ET.Element("corpus")
@@ -145,5 +145,5 @@ for year_folder in ["I-year/", "II-year/"]:
 
 #create an XML tree with 'corpus' as root node and write to file
 tree = ET.ElementTree(corpus)
-tree.write("corpora_spelling/cita_spelling.xml", encoding="unicode")
+tree.write("processed_corpora/cita_spelling.xml", encoding="unicode")
 

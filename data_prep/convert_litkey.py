@@ -12,7 +12,7 @@ import xml.etree.ElementTree as ET
 import re
 import os
 
-corpus_path = "corpora/litkey-xml/"
+corpus_path = "raw_corpora/litkey-xml/"
 
 #root element for our spelling-XML with corpus name as attribute
 corpus = ET.Element("corpus")
@@ -167,7 +167,7 @@ for file in sorted(os.listdir(corpus_path)):
         text.append(elem)
 
 corpus_tree = ET.ElementTree(corpus)
-corpus_tree.write("corpora_spelling/litkey_spelling.xml", encoding="unicode")
+corpus_tree.write("processed_corpora/litkey_spelling.xml", encoding="unicode")
 
 
 

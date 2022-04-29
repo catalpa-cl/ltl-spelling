@@ -185,7 +185,7 @@ public class ErrorCorrectionExperiments_noReranking {
 				"grapheme", lang, path, dict, dict_phon, keyboard_distances, num_candidates_per_method, false);
 		runErrorCorrection_noReranking("SkaLa_phoneme_hunspell_noReranking_numCand_" + num_candidates_per_method,
 				"phoneme", lang, path, dict, dict_phon, keyboard_distances, num_candidates_per_method, false);
-		runErrorCorrection_noReranking("SkaLa_keyboard_hunspell_web1t_noReranking_numCand_" + num_candidates_per_method,
+		runErrorCorrection_noReranking("SkaLa_keyboard_hunspell_noReranking_numCand_" + num_candidates_per_method,
 				"keyboard", lang, path, dict, dict_phon, keyboard_distances, num_candidates_per_method, false);
 		runErrorCorrection_noReranking("SkaLa_full_hunspell_noReranking_numCand_" + num_candidates_per_method, "full",
 				lang, path, dict, dict_phon, keyboard_distances, num_candidates_per_method, false);

@@ -1,0 +1,2152 @@
+Languagetool gets right: 809
+Out of: 2136
+Accuracy: 0.379
+
+LT correct + ours correct: 673
+LT correct + ours incorrect: 136
+LT incorrect + ours correct: 761
+LT incorrect + ours incorrect: 566
+
+############ Correct by Languagetool, correct by us ##########
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: giá 	 correct: già ours: già
+orig: reggionale 	 correct: regionale ours: regionale
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: viaggare 	 correct: viaggiare ours: viaggiare
+orig: practicare 	 correct: praticare ours: praticare
+orig: piú 	 correct: più ours: più
+orig: realtá 	 correct: realtà ours: realtà
+orig: viaggieremo 	 correct: viaggeremo ours: viaggeremo
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: per 	 correct: Per ours: Per
+orig: piú 	 correct: più ours: più
+orig: esattemente 	 correct: esattamente ours: esattamente
+orig: possibilita 	 correct: possibilità ours: possibilità
+orig: passegiata 	 correct: passeggiata ours: passeggiata
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: publicato 	 correct: pubblicato ours: pubblicato
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: lontanto 	 correct: lontano ours: lontano
+orig: pratticamente 	 correct: praticamente ours: praticamente
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: possibilita 	 correct: possibilità ours: possibilità
+orig: fruquantato 	 correct: frequentato ours: frequentato
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: dificile 	 correct: difficile ours: difficile
+orig: systema 	 correct: sistema ours: sistema
+orig: Perchè 	 correct: Perché ours: Perché
+orig: Universita 	 correct: Università ours: Università
+orig: perchè 	 correct: perché ours: perché
+orig: conoscuto 	 correct: conosciuto ours: conosciuto
+orig: Egrega 	 correct: Egregia ours: Egregia
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: caffe 	 correct: caffè ours: caffè
+orig: Giorgo 	 correct: Giorgio ours: Giorgio
+orig: perchè 	 correct: perché ours: perché
+orig: raggazzi 	 correct: ragazzi ours: ragazzi
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: conoscienza 	 correct: conoscenza ours: conoscenza
+orig: practicare 	 correct: praticare ours: praticare
+orig: comincato 	 correct: cominciato ours: cominciato
+orig: perchè 	 correct: perché ours: perché
+orig: mottivo 	 correct: motivo ours: motivo
+orig: perche 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: communicare 	 correct: comunicare ours: comunicare
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perfezzionare 	 correct: perfezionare ours: perfezionare
+orig: piu 	 correct: più ours: più
+orig: comincare 	 correct: cominciare ours: cominciare
+orig: perchè 	 correct: perché ours: perché
+orig: candidattura 	 correct: candidatura ours: candidatura
+orig: pomerrigio 	 correct: pomeriggio ours: pomeriggio
+orig: facolta 	 correct: facoltà ours: facoltà
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: maturita 	 correct: maturità ours: maturità
+orig: quache 	 correct: qualche ours: qualche
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: reguardo 	 correct: riguardo ours: riguardo
+orig: lunedi 	 correct: lunedì ours: lunedì
+orig: perchè 	 correct: perché ours: perché
+orig: cinama 	 correct: cinema ours: cinema
+orig: perche 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: prezenterà 	 correct: presenterà ours: presenterà
+orig: perchè 	 correct: perché ours: perché
+orig: cerchare 	 correct: cercare ours: cercare
+orig: maturita 	 correct: maturità ours: maturità
+orig: facolta 	 correct: facoltà ours: facoltà
+orig: sìa 	 correct: sia ours: sia
+orig: sìano 	 correct: siano ours: siano
+orig: riccezza 	 correct: ricchezza ours: ricchezza
+orig: rapresenta 	 correct: rappresenta ours: rappresenta
+orig: Percio 	 correct: Perciò ours: Perciò
+orig: verramente 	 correct: veramente ours: veramente
+orig: verramente 	 correct: veramente ours: veramente
+orig: mettodo 	 correct: metodo ours: metodo
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: maturita 	 correct: maturità ours: maturità
+orig: Perchè 	 correct: Perché ours: Perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: Universita 	 correct: Università ours: Università
+orig: communicazione 	 correct: comunicazione ours: comunicazione
+orig: thema 	 correct: tema ours: tema
+orig: perchè 	 correct: perché ours: perché
+orig: messeggio 	 correct: messaggio ours: messaggio
+orig: Universita 	 correct: Università ours: Università
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: personalita 	 correct: personalità ours: personalità
+orig: perchè 	 correct: perché ours: perché
+orig: qualce 	 correct: qualche ours: qualche
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: biglitti 	 correct: biglietti ours: biglietti
+orig: Perchè 	 correct: Perché ours: Perché
+orig: Perchè 	 correct: Perché ours: Perché
+orig: completta 	 correct: completa ours: completa
+orig: Residencie 	 correct: Residence ours: Residence
+orig: gironale 	 correct: giornale ours: giornale
+orig: africa 	 correct: Africa ours: Africa
+orig: participare 	 correct: partecipare ours: partecipare
+orig: verita 	 correct: verità ours: verità
+orig: pericoloze 	 correct: pericolose ours: pericolose
+orig: scrupuli 	 correct: scrupoli ours: scrupoli
+orig: communicare 	 correct: comunicare ours: comunicare
+orig: perchè 	 correct: perché ours: perché
+orig: puo 	 correct: può ours: può
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: vendità 	 correct: vendita ours: vendita
+orig: virtualli 	 correct: virtuali ours: virtuali
+orig: virtualli 	 correct: virtuali ours: virtuali
+orig: caffé 	 correct: caffè ours: caffè
+orig: societa 	 correct: società ours: società
+orig: Lougano 	 correct: Lugano ours: Lugano
+orig: fà 	 correct: fa ours: fa
+orig: Perció 	 correct: Perciò ours: Perciò
+orig: svolgiere 	 correct: svolgere ours: svolgere
+orig: posibile 	 correct: possibile ours: possibile
+orig: societa 	 correct: società ours: società
+orig: perche 	 correct: perché ours: perché
+orig: gia 	 correct: già ours: già
+orig: piu 	 correct: più ours: più
+orig: publicità 	 correct: pubblicità ours: pubblicità
+orig: Soliderietà 	 correct: Solidarietà ours: Solidarietà
+orig: piaciono 	 correct: piacciono ours: piacciono
+orig: publiche 	 correct: pubbliche ours: pubbliche
+orig: perche 	 correct: perché ours: perché
+orig: societa 	 correct: società ours: società
+orig: venerdi 	 correct: venerdì ours: venerdì
+orig: proffessione 	 correct: professione ours: professione
+orig: proffessione 	 correct: professione ours: professione
+orig: consingli 	 correct: consigli ours: consigli
+orig: svilluppare 	 correct: sviluppare ours: sviluppare
+orig: Ancòra 	 correct: Ancora ours: Ancora
+orig: coleghi 	 correct: colleghi ours: colleghi
+orig: farrei 	 correct: farei ours: farei
+orig: villagio 	 correct: villaggio ours: villaggio
+orig: semprava 	 correct: sembrava ours: sembrava
+orig: verita 	 correct: verità ours: verità
+orig: secondo 	 correct: Secondo ours: Secondo
+orig: verita 	 correct: verità ours: verità
+orig: Solidarieta 	 correct: Solidarietà ours: Solidarietà
+orig: perchè 	 correct: perché ours: perché
+orig: tiroccinio 	 correct: tirocinio ours: tirocinio
+orig: Perchè 	 correct: Perché ours: Perché
+orig: Benche 	 correct: Benché ours: Benché
+orig: puo 	 correct: può ours: può
+orig: sviluperà 	 correct: svilupperà ours: svilupperà
+orig: dittà 	 correct: ditta ours: ditta
+orig: Universitá 	 correct: Università ours: Università
+orig: bicichletta 	 correct: bicicletta ours: bicicletta
+orig: sodisfazione 	 correct: soddisfazione ours: soddisfazione
+orig: Signiora 	 correct: Signora ours: Signora
+orig: perchè 	 correct: perché ours: perché
+orig: anché 	 correct: anche ours: anche
+orig: perchè 	 correct: perché ours: perché
+orig: anché 	 correct: anche ours: anche
+orig: chercando 	 correct: cercando ours: cercando
+orig: conosciutto 	 correct: conosciuto ours: conosciuto
+orig: chercare 	 correct: cercare ours: cercare
+orig: Egrega 	 correct: Egregia ours: Egregia
+orig: piaciutto 	 correct: piaciuto ours: piaciuto
+orig: pachetto 	 correct: pacchetto ours: pacchetto
+orig: colaboratori 	 correct: collaboratori ours: collaboratori
+orig: publicato 	 correct: pubblicato ours: pubblicato
+orig: pachetto 	 correct: pacchetto ours: pacchetto
+orig: costreto 	 correct: costretto ours: costretto
+orig: publici 	 correct: pubblici ours: pubblici
+orig: pulman 	 correct: pullman ours: pullman
+orig: possibilita 	 correct: possibilità ours: possibilità
+orig: sottosvilupo 	 correct: sottosviluppo ours: sottosviluppo
+orig: volonta 	 correct: volontà ours: volontà
+orig: Societa 	 correct: Società ours: Società
+orig: spezializzazione 	 correct: specializzazione ours: specializzazione
+orig: Universita 	 correct: Università ours: Università
+orig: cognosco 	 correct: conosco ours: conosco
+orig: vocabuli 	 correct: vocaboli ours: vocaboli
+orig: conoscienze 	 correct: conoscenze ours: conoscenze
+orig: congratulazzioni 	 correct: congratulazioni ours: congratulazioni
+orig: ringrazzio 	 correct: ringrazio ours: ringrazio
+orig: ringrazzio 	 correct: ringrazio ours: ringrazio
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: Lunedi 	 correct: Lunedì ours: Lunedì
+orig: fà 	 correct: fa ours: fa
+orig: fà 	 correct: fa ours: fa
+orig: Aspeto 	 correct: Aspetto ours: Aspetto
+orig: perchè 	 correct: perché ours: perché
+orig: Aguri 	 correct: Auguri ours: Auguri
+orig: é 	 correct: e ours: e
+orig: sarànno 	 correct: saranno ours: saranno
+orig: ringarzio 	 correct: ringrazio ours: ringrazio
+orig: perche 	 correct: perché ours: perché
+orig: lavoró 	 correct: lavoro ours: lavoro
+orig: é 	 correct: e ours: e
+orig: perdonnare 	 correct: perdonare ours: perdonare
+orig: affetuosamente 	 correct: affettuosamente ours: affettuosamente
+orig: potró 	 correct: potrò ours: potrò
+orig: piaccerebbe 	 correct: piacerebbe ours: piacerebbe
+orig: Lunedi 	 correct: Lunedì ours: Lunedì
+orig: perche 	 correct: perché ours: perché
+orig: Potró 	 correct: Potrò ours: Potrò
+orig: che 	 correct: Che ours: Che
+orig: intento 	 correct: Intento ours: Intento
+orig: vi 	 correct: Vi ours: Vi
+orig: stefano 	 correct: Stefano ours: Stefano
+orig: té 	 correct: te ours: te
+orig: lunedi 	 correct: lunedì ours: lunedì
+orig: grazié 	 correct: grazie ours: grazie
+orig: possibilita 	 correct: possibilità ours: possibilità
+orig: piú 	 correct: più ours: più
+orig: tantíssimo 	 correct: tantissimo ours: tantissimo
+orig: perchè 	 correct: perché ours: perché
+orig: participato 	 correct: partecipato ours: partecipato
+orig: preocupate 	 correct: preoccupate ours: preoccupate
+orig: perchè 	 correct: perché ours: perché
+orig: anchè 	 correct: anche ours: anche
+orig: piu 	 correct: più ours: più
+orig: é 	 correct: e ours: e
+orig: é 	 correct: e ours: e
+orig: prospetiva 	 correct: prospettiva ours: prospettiva
+orig: miliore 	 correct: migliore ours: migliore
+orig: Èra 	 correct: Era ours: Era
+orig: messagio 	 correct: messaggio ours: messaggio
+orig: Grazzie 	 correct: Grazie ours: Grazie
+orig: piu 	 correct: più ours: più
+orig: possibilita 	 correct: possibilità ours: possibilità
+orig: Perchè 	 correct: Perché ours: Perché
+orig: pacienza 	 correct: pazienza ours: pazienza
+orig: perchè 	 correct: perché ours: perché
+orig: belissima 	 correct: bellissima ours: bellissima
+orig: Perchè 	 correct: Perché ours: Perché
+orig: é 	 correct: e ours: e
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: cultara 	 correct: cultura ours: cultura
+orig: perchè 	 correct: perché ours: perché
+orig: comminciare 	 correct: cominciare ours: cominciare
+orig: à 	 correct: a ours: a
+orig: piu 	 correct: più ours: più
+orig: piu 	 correct: più ours: più
+orig: familia 	 correct: famiglia ours: famiglia
+orig: perchè 	 correct: perché ours: perché
+orig: comminciato 	 correct: cominciato ours: cominciato
+orig: Anché 	 correct: Anche ours: Anche
+orig: comminciato 	 correct: cominciato ours: cominciato
+orig: comminciare 	 correct: cominciare ours: cominciare
+orig: comminciare 	 correct: cominciare ours: cominciare
+orig: sono 	 correct: Sono ours: Sono
+orig: per 	 correct: Per ours: Per
+orig: perchè 	 correct: perché ours: perché
+orig: connosciuto 	 correct: conosciuto ours: conosciuto
+orig: anché 	 correct: anche ours: anche
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: comminciare 	 correct: cominciare ours: cominciare
+orig: comminciato 	 correct: cominciato ours: cominciato
+orig: cercha 	 correct: cerca ours: cerca
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: Siccomè 	 correct: Siccome ours: Siccome
+orig: perchè 	 correct: perché ours: perché
+orig: puo 	 correct: può ours: può
+orig: ceremonia 	 correct: cerimonia ours: cerimonia
+orig: ceremonia 	 correct: cerimonia ours: cerimonia
+orig: chè 	 correct: che ours: che
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: puó 	 correct: può ours: può
+orig: perchè 	 correct: perché ours: perché
+orig: piú 	 correct: più ours: più
+orig: sappete 	 correct: sapete ours: sapete
+orig: negozzio 	 correct: negozio ours: negozio
+orig: chè 	 correct: che ours: che
+orig: sappere 	 correct: sapere ours: sapere
+orig: dificile 	 correct: difficile ours: difficile
+orig: gia 	 correct: già ours: già
+orig: sià 	 correct: sia ours: sia
+orig: projetti 	 correct: progetti ours: progetti
+orig: giurisprudenzia 	 correct: giurisprudenza ours: giurisprudenza
+orig: maturita 	 correct: maturità ours: maturità
+orig: piu 	 correct: più ours: più
+orig: mandatò 	 correct: mandato ours: mandato
+orig: maraviglia 	 correct: meraviglia ours: meraviglia
+orig: paisaggi 	 correct: paesaggi ours: paesaggi
+orig: sogiorno 	 correct: soggiorno ours: soggiorno
+orig: priparare 	 correct: preparare ours: preparare
+orig: dovè 	 correct: dove ours: dove
+orig: svilupato 	 correct: sviluppato ours: sviluppato
+orig: nummero 	 correct: numero ours: numero
+orig: cercha 	 correct: cerca ours: cerca
+orig: comminciare 	 correct: cominciare ours: cominciare
+orig: comminci 	 correct: cominci ours: cominci
+orig: communicare 	 correct: comunicare ours: comunicare
+orig: sappere 	 correct: sapere ours: sapere
+orig: lunedi 	 correct: lunedì ours: lunedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: anchè 	 correct: anche ours: anche
+orig: anché 	 correct: anche ours: anche
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: conoscienze 	 correct: conoscenze ours: conoscenze
+orig: confidenzà 	 correct: confidenza ours: confidenza
+orig: nellà 	 correct: nella ours: nella
+orig: finische 	 correct: finisce ours: finisce
+orig: possibilita 	 correct: possibilità ours: possibilità
+orig: perchè 	 correct: perché ours: perché
+orig: verita 	 correct: verità ours: verità
+orig: Lunedi 	 correct: Lunedì ours: Lunedì
+orig: perchè 	 correct: perché ours: perché
+orig: mercoledi 	 correct: mercoledì ours: mercoledì
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: puoì 	 correct: puoi ours: puoi
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: Perchè 	 correct: Perché ours: Perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: vità 	 correct: vita ours: vita
+orig: Inoltrè 	 correct: Inoltre ours: Inoltre
+orig: perche 	 correct: perché ours: perché
+orig: maturita 	 correct: maturità ours: maturità
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: paghano 	 correct: pagano ours: pagano
+orig: proffessori 	 correct: professori ours: professori
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: citta 	 correct: città ours: città
+orig: temà 	 correct: tema ours: tema
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: decizione 	 correct: decisione ours: decisione
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: molti 	 correct: Molti ours: Molti
+orig: piaccerebbe 	 correct: piacerebbe ours: piacerebbe
+orig: adresso 	 correct: adesso ours: adesso
+orig: essattamente 	 correct: esattamente ours: esattamente
+orig: comminciare 	 correct: cominciare ours: cominciare
+orig: piú 	 correct: più ours: più
+orig: giá 	 correct: già ours: già
+orig: piu 	 correct: più ours: più
+orig: perche 	 correct: perché ours: perché
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: restorante 	 correct: ristorante ours: ristorante
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: scrivi 	 correct: Scrivi ours: Scrivi
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: tanti 	 correct: Tanti ours: Tanti
+orig: comminciare 	 correct: cominciare ours: cominciare
+orig: pomerigio 	 correct: pomeriggio ours: pomeriggio
+orig: perche 	 correct: perché ours: perché
+orig: pomerigio 	 correct: pomeriggio ours: pomeriggio
+orig: à 	 correct: a ours: a
+orig: le 	 correct: Le ours: Le
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: perchè 	 correct: perché ours: perché
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: perchè 	 correct: perché ours: perché
+orig: pérchè 	 correct: perché ours: perché
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: Arivederci 	 correct: Arrivederci ours: Arrivederci
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: perche 	 correct: perché ours: perché
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: perche 	 correct: perché ours: perché
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: perche 	 correct: perché ours: perché
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: coleghi 	 correct: colleghi ours: colleghi
+orig: stazzione 	 correct: stazione ours: stazione
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: possibilita 	 correct: possibilità ours: possibilità
+orig: Arrividerci 	 correct: Arrivederci ours: Arrivederci
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: perchè 	 correct: perché ours: perché
+orig: piú 	 correct: più ours: più
+orig: piú 	 correct: più ours: più
+orig: cittá 	 correct: città ours: città
+orig: martedi 	 correct: martedì ours: martedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: Proporiamo 	 correct: Proponiamo ours: Proponiamo
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: Perche 	 correct: Perché ours: Perché
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: perchè 	 correct: perché ours: perché
+orig: Perchè 	 correct: Perché ours: Perché
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: Perchè 	 correct: Perché ours: Perché
+orig: Perchè 	 correct: Perché ours: Perché
+orig: piu 	 correct: più ours: più
+orig: Perche 	 correct: Perché ours: Perché
+orig: vaqanza 	 correct: vacanza ours: vacanza
+orig: piu 	 correct: più ours: più
+orig: Aspeto 	 correct: Aspetto ours: Aspetto
+orig: Perche 	 correct: Perché ours: Perché
+orig: venerdi 	 correct: venerdì ours: venerdì
+orig: riuniune 	 correct: riunione ours: riunione
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: pommerigio 	 correct: pomeriggio ours: pomeriggio
+orig: perchè 	 correct: perché ours: perché
+orig: Siccuramente 	 correct: Sicuramente ours: Sicuramente
+orig: perchè 	 correct: perché ours: perché
+orig: nummero 	 correct: numero ours: numero
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: Perchè 	 correct: Perché ours: Perché
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: perchè 	 correct: perché ours: perché
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: pommeriggio 	 correct: pomeriggio ours: pomeriggio
+orig: perchè 	 correct: perché ours: perché
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: à 	 correct: a ours: a
+orig: piú 	 correct: più ours: più
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: Peccáto 	 correct: Peccato ours: Peccato
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: Perche 	 correct: Perché ours: Perché
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: perche 	 correct: perché ours: perché
+orig: perche 	 correct: perché ours: perché
+orig: venerdi 	 correct: venerdì ours: venerdì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: perche 	 correct: perché ours: perché
+orig: Perche 	 correct: Perché ours: Perché
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: Perche 	 correct: Perché ours: Perché
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: Vuoì 	 correct: Vuoi ours: Vuoi
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: perchè 	 correct: perché ours: perché
+orig: giovedi 	 correct: giovedì ours: giovedì
+orig: perchè 	 correct: perché ours: perché
+orig: Perchè 	 correct: Perché ours: Perché
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: à 	 correct: a ours: a
+orig: Perchè 	 correct: Perché ours: Perché
+orig: posibile 	 correct: possibile ours: possibile
+orig: vacansa 	 correct: vacanza ours: vacanza
+orig: perchè 	 correct: perché ours: perché
+orig: perche 	 correct: perché ours: perché
+orig: allora 	 correct: Allora ours: Allora
+orig: piu 	 correct: più ours: più
+orig: atualmente 	 correct: attualmente ours: attualmente
+orig: é 	 correct: e ours: e
+orig: ricieste 	 correct: richieste ours: richieste
+orig: Giovedi 	 correct: Giovedì ours: Giovedì
+orig: familia 	 correct: famiglia ours: famiglia
+orig: compleano 	 correct: compleanno ours: compleanno
+orig: pasticeria 	 correct: pasticceria ours: pasticceria
+orig: perche 	 correct: perché ours: perché
+orig: perche 	 correct: perché ours: perché
+orig: lunedi 	 correct: lunedì ours: lunedì
+orig: gia 	 correct: già ours: già
+orig: racontare 	 correct: raccontare ours: raccontare
+orig: piu 	 correct: più ours: più
+orig: gia 	 correct: già ours: già
+orig: speró 	 correct: spero ours: spero
+orig: possibilita 	 correct: possibilità ours: possibilità
+orig: anchè 	 correct: anche ours: anche
+orig: Salutì 	 correct: Saluti ours: Saluti
+orig: lunedi 	 correct: lunedì ours: lunedì
+orig: Lunedi 	 correct: Lunedì ours: Lunedì
+orig: familia 	 correct: famiglia ours: famiglia
+orig: qualce 	 correct: qualche ours: qualche
+orig: mercoledi 	 correct: mercoledì ours: mercoledì
+orig: Prosimo 	 correct: Prossimo ours: Prossimo
+orig: ticino 	 correct: Ticino ours: Ticino
+orig: piu 	 correct: più ours: più
+orig: quinque 	 correct: cinque ours: cinque
+orig: conditionale 	 correct: condizionale ours: condizionale
+orig: comminciato 	 correct: cominciato ours: cominciato
+orig: come 	 correct: Come ours: Come
+orig: genetori 	 correct: genitori ours: genitori
+orig: é 	 correct: e ours: e
+orig: é 	 correct: e ours: e
+orig: tanti 	 correct: Tanti ours: Tanti
+orig: cittá 	 correct: città ours: città
+orig: ciama 	 correct: chiama ours: chiama
+orig: Abiamo 	 correct: Abbiamo ours: Abbiamo
+orig: à 	 correct: a ours: a
+orig: Zealanda 	 correct: Zelanda ours: Zelanda
+orig: familia 	 correct: famiglia ours: famiglia
+orig: familia 	 correct: famiglia ours: famiglia
+orig: montagnia 	 correct: montagna ours: montagna
+orig: perche 	 correct: perché ours: perché
+orig: Sizilia 	 correct: Sicilia ours: Sicilia
+orig: Collosseo 	 correct: Colosseo ours: Colosseo
+orig: perchè 	 correct: perché ours: perché
+orig: proffessione 	 correct: professione ours: professione
+orig: ci 	 correct: Ci ours: Ci
+orig: Perchè 	 correct: Perché ours: Perché
+orig: piaccere 	 correct: piacere ours: piacere
+orig: perchè 	 correct: perché ours: perché
+orig: Perchè 	 correct: Perché ours: Perché
+orig: à 	 correct: a ours: a
+orig: a 	 correct: A ours: A
+orig: quelcosa 	 correct: qualcosa ours: qualcosa
+orig: in 	 correct: In ours: In
+orig: perchè 	 correct: perché ours: perché
+orig: mà 	 correct: ma ours: ma
+orig: negozzio 	 correct: negozio ours: negozio
+orig: perchè 	 correct: perché ours: perché
+orig: piu 	 correct: più ours: più
+orig: dificile 	 correct: difficile ours: difficile
+orig: piu 	 correct: più ours: più
+orig: prefferito 	 correct: preferito ours: preferito
+orig: e 	 correct: E ours: E
+orig: chè 	 correct: che ours: che
+orig: messagio 	 correct: messaggio ours: messaggio
+orig: nummero 	 correct: numero ours: numero
+orig: Qualce 	 correct: Qualche ours: Qualche
+orig: à 	 correct: a ours: a
+orig: cìtta 	 correct: città ours: città
+orig: ciao 	 correct: Ciao ours: Ciao
+orig: anché 	 correct: anche ours: anche
+orig: megliori 	 correct: migliori ours: migliori
+orig: quando 	 correct: Quando ours: Quando
+orig: mi 	 correct: Mi ours: Mi
+orig: riturnare 	 correct: ritornare ours: ritornare
+orig: ciao 	 correct: Ciao ours: Ciao
+orig: cittá 	 correct: città ours: città
+orig: cittá 	 correct: città ours: città
+orig: francia 	 correct: Francia ours: Francia
+orig: la 	 correct: La ours: La
+orig: nel 	 correct: Nel ours: Nel
+orig: cittá 	 correct: città ours: città
+orig: puó 	 correct: può ours: può
+orig: racontare 	 correct: raccontare ours: raccontare
+orig: quando 	 correct: Quando ours: Quando
+orig: revisioné 	 correct: revisione ours: revisione
+orig: citta 	 correct: città ours: città
+orig: muséo 	 correct: museo ours: museo
+orig: Martedi 	 correct: Martedì ours: Martedì
+orig: negozzi 	 correct: negozi ours: negozi
+orig: luisa 	 correct: Luisa ours: Luisa
+orig: personne 	 correct: persone ours: persone
+orig: hanno 	 correct: Hanno ours: Hanno
+orig: pasienza 	 correct: pazienza ours: pazienza
+orig: mià 	 correct: mia ours: mia
+orig: Portroppo 	 correct: Purtroppo ours: Purtroppo
+orig: sympatico 	 correct: simpatico ours: simpatico
+orig: restorante 	 correct: ristorante ours: ristorante
+orig: clara 	 correct: Clara ours: Clara
+orig: Martedí 	 correct: Martedì ours: Martedì
+orig: piu 	 correct: più ours: più
+orig: perche 	 correct: perché ours: perché
+orig: perche 	 correct: perché ours: perché
+orig: piu 	 correct: più ours: più
+orig: piu 	 correct: più ours: più
+orig: Maroco 	 correct: Marocco ours: Marocco
+orig: dificile 	 correct: difficile ours: difficile
+orig: venerdi 	 correct: venerdì ours: venerdì
+orig: gia 	 correct: già ours: già
+orig: lentemente 	 correct: lentamente ours: lentamente
+orig: gia 	 correct: già ours: già
+orig: raconterei 	 correct: racconterei ours: racconterei
+orig: perchè 	 correct: perché ours: perché
+orig: perchè 	 correct: perché ours: perché
+orig: Comè 	 correct: Come ours: Come
+orig: prossimà 	 correct: prossima ours: prossima
+orig: Comè 	 correct: Come ours: Come
+orig: Abiamo 	 correct: Abbiamo ours: Abbiamo
+orig: perche 	 correct: perché ours: perché
+orig: comminciato 	 correct: cominciato ours: cominciato
+orig: é 	 correct: e ours: e
+orig: cittá 	 correct: città ours: città
+orig: puó 	 correct: può ours: può
+orig: cittá 	 correct: città ours: città
+orig: germania 	 correct: Germania ours: Germania
+orig: gia 	 correct: già ours: già
+orig: anché 	 correct: anche ours: anche
+orig: anché 	 correct: anche ours: anche
+orig: caffé 	 correct: caffè ours: caffè
+orig: anché 	 correct: anche ours: anche
+orig: racontarti 	 correct: raccontarti ours: raccontarti
+orig: Qualce 	 correct: Qualche ours: Qualche
+orig: piu 	 correct: più ours: più
+orig: Martedi 	 correct: Martedì ours: Martedì
+orig: perche 	 correct: perché ours: perché
+orig: citta 	 correct: città ours: città
+orig: theatro 	 correct: teatro ours: teatro
+orig: familia 	 correct: famiglia ours: famiglia
+orig: parccheggio 	 correct: parcheggio ours: parcheggio
+orig: citta 	 correct: città ours: città
+orig: theatro 	 correct: teatro ours: teatro
+orig: vaganze 	 correct: vacanze ours: vacanze
+orig: commincera 	 correct: comincerà ours: comincerà
+orig: familia 	 correct: famiglia ours: famiglia
+orig: lunedi 	 correct: lunedì ours: lunedì
+orig: mercoledi 	 correct: mercoledì ours: mercoledì
+orig: italia 	 correct: Italia ours: Italia
+orig: ciama 	 correct: chiama ours: chiama
+orig: lunedi 	 correct: lunedì ours: lunedì
+orig: venerdi 	 correct: venerdì ours: venerdì
+orig: baccione 	 correct: bacione ours: bacione
+orig: bibliodeca 	 correct: biblioteca ours: biblioteca
+orig: Perche 	 correct: Perché ours: Perché
+orig: lunedi 	 correct: lunedì ours: lunedì
+orig: à 	 correct: a ours: a
+orig: messagio 	 correct: messaggio ours: messaggio
+orig: directamente 	 correct: direttamente ours: direttamente
+
+############ Correct by Languagetool, incorrect by us ##########
+orig: Solidarietá 	 correct: Solidarietà ours: solidarietà
+orig: Soliderietà 	 correct: Solidarietà ours: solidarietà
+orig: lammentare 	 correct: lamentare ours: alimentare
+orig: sovrafollata 	 correct: sovraffollata ours: sovraffollate
+orig: Singnor 	 correct: Signor ours: signor
+orig: Giorgo 	 correct: Giorgio ours: giorno
+orig: piacuto 	 correct: piaciuto ours: piaccio
+orig: comincare 	 correct: cominciare ours: cominciate
+orig: chierdere 	 correct: chiedere ours: Chiedere
+orig: capouffico 	 correct: capoufficio ours: capocomico
+orig: svegliàta 	 correct: svegliata ours: svegliato
+orig: comincare 	 correct: cominciare ours: comunicare
+orig: erasmus 	 correct: Erasmus ours: Erasmo
+orig: Universita 	 correct: Università ours: università
+orig: civilta 	 correct: civiltà ours: rivolta
+orig: baccare 	 correct: bacare ours: beccare
+orig: Singora 	 correct: Signora ours: singola
+orig: publicata 	 correct: pubblicata ours: pubblicato
+orig: Chattolica 	 correct: Cattolica ours: cattolica
+orig: communicavo 	 correct: comunicavo ours: comunicato
+orig: Farcitto 	 correct: Farcito ours: fritto
+orig: residenc 	 correct: residence ours: residenza
+orig: Puo 	 correct: Può ours: Puoi
+orig: neelle 	 correct: nelle ours: delle
+orig: capiro 	 correct: capirò ours: capivo
+orig: Ammettéro 	 correct: Ammetterò ours: Ammetto
+orig: Solidarieta 	 correct: Solidarietà ours: solidarietà
+orig: gia 	 correct: già ours: sia
+orig: conocserei 	 correct: conoscerei ours: conoscere
+orig: Reppublica 	 correct: Repubblica ours: repubblica
+orig: duemillaundici 	 correct: duemilaundici ours: duemiladodici
+orig: ticinesci 	 correct: ticinesi ours: cinesi
+orig: pulman 	 correct: pullman ours: pulmino
+orig: realizate 	 correct: realizzate ours: realizzati
+orig: sodisfatta 	 correct: soddisfatta ours: soddisfatto
+orig: Societa 	 correct: Società ours: società
+orig: Afetto 	 correct: Affetto ours: affetto
+orig: vi 	 correct: Vi ours: Ti
+orig: ho 	 correct: Ho ours: Io
+orig: sicome 	 correct: siccome ours: come
+orig: sicome 	 correct: siccome ours: come
+orig: in 	 correct: In ours: Io
+orig: saró 	 correct: sarò ours: sarà
+orig: potró 	 correct: potrò ours: poter
+orig: comminció 	 correct: comincio ours: comincia
+orig: finiró 	 correct: finirò ours: finire
+orig: saró 	 correct: sarò ours: sarà
+orig: telefoneró 	 correct: telefonerò ours: telefonare
+orig: baci 	 correct: Baci ours: Bacio
+orig: potró 	 correct: potrò ours: potrai
+orig: vorebbe 	 correct: vorrebbe ours: direbbe
+orig: gìa 	 correct: già ours: a
+orig: communicazione 	 correct: comunicazione ours: Comunicazione
+orig: conoschete 	 correct: conoscete ours: conoscere
+orig: à 	 correct: a ours: e
+orig: caspitta 	 correct: caspita ours: aspetta
+orig: gia 	 correct: già ours: Già
+orig: va 	 correct: Va ours: va
+orig: contentissma 	 correct: contentissima ours: contentissimo
+orig: mariviglioso 	 correct: meraviglioso ours: Meraviglioso
+orig: dittà 	 correct: ditta ours: città
+orig: communicazioni 	 correct: comunicazioni ours: comunicazione
+orig: nervocismo 	 correct: nervosismo ours: terrorismo
+orig: piacuta 	 correct: piaciuta ours: piaciuto
+orig: cioé 	 correct: cioè ours: con
+orig: mediterranae 	 correct: mediterranea ours: mediterraneo
+orig: participare 	 correct: partecipare ours: particolare
+orig: possibilitá 	 correct: possibilità ours: possibili
+orig: Arriveró 	 correct: Arriverò ours: Arriverà
+orig: gia 	 correct: già ours: sia
+orig: financiare 	 correct: finanziare ours: rilanciare
+orig: Sicome 	 correct: Siccome ours: Come
+orig: sucesso 	 correct: successo ours: accesso
+orig: comincierò 	 correct: comincerò ours: cominciare
+orig: sucesso 	 correct: successo ours: spesso
+orig: festeciamo 	 correct: festeggiamo ours: festeggiano
+orig: anché 	 correct: anche ours: Anche
+orig: forsè 	 correct: forse ours: farsi
+orig: appertutto 	 correct: dappertutto ours: appetito
+orig: quache 	 correct: qualche ours: quante
+orig: simpathici 	 correct: simpatici ours: simpatico
+orig: paghano 	 correct: pagano ours: pagato
+orig: sappere 	 correct: sapere ours: Sapere
+orig: telephonarmi 	 correct: telefonarmi ours: telefonarci
+orig: ti 	 correct: Ti ours: Mi
+orig: cominiciare 	 correct: cominciare ours: comunicare
+orig: giovedi 	 correct: giovedì ours: giovani
+orig: è 	 correct: È ours: A
+orig: sabatosera 	 correct: sabato sera ours: stratosfera
+orig: è 	 correct: È ours: A
+orig: giovedi 	 correct: giovedì ours: giovani
+orig: giovedi 	 correct: giovedì ours: giovani
+orig: à 	 correct: a ours: e
+orig: comincare 	 correct: cominciare ours: nominare
+orig: rifutare 	 correct: rifiutare ours: aiutare
+orig: pùoi 	 correct: puoi ours: vuoi
+orig: lavolare 	 correct: lavorare ours: Lavorare
+orig: Bongiorno 	 correct: Buongiorno ours: Giorno
+orig: giovedi 	 correct: giovedì ours: giovani
+orig: giovedi 	 correct: giovedì ours: giovani
+orig: Giovedi 	 correct: Giovedì ours: Giovani
+orig: giovedi 	 correct: giovedì ours: giovani
+orig: Prererisco 	 correct: Preferisco ours: Preferisce
+orig: giovedi 	 correct: giovedì ours: giovani
+orig: giovedi 	 correct: giovedì ours: giovani
+orig: giovedi 	 correct: giovedì ours: giovani
+orig: giovedi 	 correct: giovedì ours: giovani
+orig: compleano 	 correct: compleanno ours: completo
+orig: cogniati 	 correct: cognati ours: contati
+orig: à 	 correct: a ours: e
+orig: maturita 	 correct: maturità ours: materia
+orig: ventitre 	 correct: ventitré ours: ventidue
+orig: chiamero 	 correct: chiamerò ours: chiamare
+orig: avete 	 correct: Avete ours: Avere
+orig: ci 	 correct: Ci ours: Chi
+orig: depende 	 correct: dipende ours: decente
+orig: puo 	 correct: può ours: Puoi
+orig: cathedrale 	 correct: cattedrale ours: cattedrali
+orig: hai 	 correct: Hai ours: Ha
+orig: tutti 	 correct: Tutti ours: Tutto
+orig: el 	 correct: El ours: Il
+orig: daniella 	 correct: Daniela ours: cannella
+orig: gentille 	 correct: gentile ours: gentili
+orig: commincio 	 correct: comincio ours: comincia
+orig: sono 	 correct: Sono ours: Solo
+orig: vocabulari 	 correct: vocabolari ours: vocabolario
+orig: Jennaio 	 correct: Gennaio ours: gennaio
+orig: depende 	 correct: dipende ours: decente
+orig: affetuosi 	 correct: affettuosi ours: affettuoso
+orig: panetiere 	 correct: panettiere ours: cantiere
+orig: lunedi 	 correct: lunedì ours: Lunedì
+orig: croazia 	 correct: Croazia ours: grazia
+orig: gentille 	 correct: gentile ours: geniale
+orig: delicioso 	 correct: delizioso ours: deliziosi
+orig: lunedi 	 correct: lunedì ours: Lunedì
+orig: passegiare 	 correct: passeggiare ours: assegnare
+
+############ Inorrect by Languagetool, correct by us##########
+orig: appassianati 	 languagetool: Appassionati 	 correct: appassionati ours: appassionati
+orig: residenze 	 languagetool:  	 correct: residence ours: residence
+orig: universita 	 languagetool: Università 	 correct: università ours: università
+orig: giugo 	 languagetool: giogo 	 correct: giugno ours: giugno
+orig: annucio 	 languagetool: Annuncio 	 correct: annuncio ours: annuncio
+orig: area 	 languagetool:  	 correct: aria ours: aria
+orig: villaggo 	 languagetool: villaggi 	 correct: villaggio ours: villaggio
+orig: occassione 	 languagetool: Occasione 	 correct: occasione ours: occasione
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: augosto 	 languagetool: Agosto 	 correct: agosto ours: agosto
+orig: ano 	 languagetool:  	 correct: anno ours: anno
+orig: buggia 	 languagetool: Muggia 	 correct: bugia ours: bugia
+orig: ocorre 	 languagetool: Occorre 	 correct: occorre ours: occorre
+orig: gioccare 	 languagetool: fioccare 	 correct: giocare ours: giocare
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: leggeró 	 languagetool: leggero 	 correct: leggerò ours: leggerò
+orig: accetabile 	 languagetool:  	 correct: accettabile ours: accettabile
+orig: rivolgheró 	 languagetool: rivogherò 	 correct: rivolgerò ours: rivolgerò
+orig: cosí 	 languagetool: cosi 	 correct: così ours: così
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: anniunciato 	 languagetool: Annunciato 	 correct: annunciato ours: annunciato
+orig: condottore 	 languagetool: condottare 	 correct: conduttore ours: conduttore
+orig: refiremento 	 languagetool: Escremento 	 correct: riferimento ours: riferimento
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: occassione 	 languagetool: Occasione 	 correct: occasione ours: occasione
+orig: Anchio 	 languagetool: Anch io 	 correct: Anch'io ours: Anch'io
+orig: Anchio 	 languagetool: Anch io 	 correct: Anch'io ours: Anch'io
+orig: eticha 	 languagetool: Etica 	 correct: etica ours: etica
+orig: esperianza 	 languagetool: Esperanza 	 correct: esperienza ours: esperienza
+orig: itoliana 	 languagetool: Italiana 	 correct: italiana ours: italiana
+orig: voui 	 languagetool: voci 	 correct: vuoi ours: vuoi
+orig: ché 	 languagetool:  	 correct: che ours: che
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: Abbraccio 	 languagetool:  	 correct: Abbraccio ours: Abbraccio
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: occupató 	 languagetool: Occupato 	 correct: occupato ours: occupato
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: cosi 	 languagetool:  	 correct: così ours: così
+orig: cosi 	 languagetool:  	 correct: così ours: così
+orig: giocco 	 languagetool: ciocco 	 correct: gioco ours: gioco
+orig: Profesoressa 	 languagetool: Professoressa 	 correct: professoressa ours: professoressa
+orig: sicomme 	 languagetool: ricolme 	 correct: siccome ours: siccome
+orig: fa' 	 languagetool:  	 correct: fa ours: fa
+orig: obligatorio 	 languagetool: Obbligatorio 	 correct: obbligatorio ours: obbligatorio
+orig: inizo 	 languagetool: Inizi 	 correct: inizio ours: inizio
+orig: peró 	 languagetool: pero 	 correct: però ours: però
+orig: giono 	 languagetool: Giano 	 correct: giorno ours: giorno
+orig: eseme 	 languagetool: Esame 	 correct: esame ours: esame
+orig: collegi 	 languagetool:  	 correct: colleghi ours: colleghi
+orig: attanzione 	 languagetool: Attenzione 	 correct: attenzione ours: attenzione
+orig: cosi 	 languagetool:  	 correct: così ours: così
+orig: anuncio 	 languagetool: Annuncio 	 correct: annuncio ours: annuncio
+orig: garra 	 languagetool:  	 correct: gara ours: gara
+orig: cosi 	 languagetool:  	 correct: così ours: così
+orig: Orario 	 languagetool:  	 correct: orario ours: orario
+orig: Inglese 	 languagetool:  	 correct: inglese ours: inglese
+orig: futtura 	 languagetool: fattura 	 correct: futura ours: futura
+orig: intolleraza 	 languagetool: Intolleranza 	 correct: intolleranza ours: intolleranza
+orig: assistante 	 languagetool: Assestante 	 correct: assistente ours: assistente
+orig: eseme 	 languagetool: Esame 	 correct: esame ours: esame
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: aparso 	 languagetool: Apparso 	 correct: apparso ours: apparso
+orig: piacce 	 languagetool: diacce 	 correct: piace ours: piace
+orig: sitto 	 languagetool: Sisto 	 correct: sito ours: sito
+orig: crescuta 	 languagetool: crescita 	 correct: cresciuta ours: cresciuta
+orig: è 	 languagetool:  	 correct: e ours: e
+orig: alora 	 languagetool: Adora 	 correct: allora ours: allora
+orig: opportunita 	 languagetool: Opportunità 	 correct: opportunità ours: opportunità
+orig: argumenti 	 languagetool: Argomenti 	 correct: argomenti ours: argomenti
+orig: bel' 	 languagetool:  	 correct: bel ours: bel
+orig: nell 	 languagetool:  	 correct: nel ours: nel
+orig: nell 	 languagetool:  	 correct: nel ours: nel
+orig: Nell 	 languagetool:  	 correct: Nel ours: Nel
+orig: abilita 	 languagetool:  	 correct: abilità ours: abilità
+orig: un' 	 languagetool:  	 correct: un ours: un
+orig: al' 	 languagetool:  	 correct: all' ours: all'
+orig: asolti 	 languagetool: Ascolti 	 correct: ascolti ours: ascolti
+orig: baccio 	 languagetool: Baccio 	 correct: bacio ours: bacio
+orig: un' 	 languagetool:  	 correct: un ours: un
+orig: cosi 	 languagetool:  	 correct: così ours: così
+orig: clinti 	 languagetool: cinti 	 correct: clienti ours: clienti
+orig: universita 	 languagetool: Università 	 correct: università ours: università
+orig: univerista 	 languagetool: Università 	 correct: università ours: università
+orig: tenni 	 languagetool:  	 correct: tennis ours: tennis
+orig: Ottobre 	 languagetool:  	 correct: ottobre ours: ottobre
+orig: è 	 languagetool:  	 correct: e ours: e
+orig: attivita 	 languagetool: Attività 	 correct: attività ours: attività
+orig: computere 	 languagetool: competere 	 correct: computer ours: computer
+orig: accetazione 	 languagetool: Accentazione 	 correct: accettazione ours: accettazione
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: freda 	 languagetool: Breda 	 correct: fredda ours: fredda
+orig: fredo 	 languagetool: Frido 	 correct: freddo ours: freddo
+orig: Anchio 	 languagetool: Anch io 	 correct: Anch'io ours: Anch'io
+orig: raccette 	 languagetool: accette 	 correct: racchette ours: racchette
+orig: un' 	 languagetool:  	 correct: un ours: un
+orig: proggetto 	 languagetool: poggetto 	 correct: progetto ours: progetto
+orig: proggetto 	 languagetool: poggetto 	 correct: progetto ours: progetto
+orig: aiuterá 	 languagetool: Aiuterà 	 correct: aiuterà ours: aiuterà
+orig: finanzare 	 languagetool: fidanzare 	 correct: finanziare ours: finanziare
+orig: proggetti 	 languagetool: poggetti 	 correct: progetti ours: progetti
+orig: piascerebbe 	 languagetool: pascerebbe 	 correct: piacerebbe ours: piacerebbe
+orig: organisazione 	 languagetool: Organicazione 	 correct: organizzazione ours: organizzazione
+orig: rica 	 languagetool: Rica 	 correct: ricca ours: ricca
+orig: grupi 	 languagetool: grumi 	 correct: gruppi ours: gruppi
+orig: soddisfata 	 languagetool: soddisfala 	 correct: soddisfatta ours: soddisfatta
+orig: inernet 	 languagetool: Internet 	 correct: internet ours: internet
+orig: academia 	 languagetool: Accademia 	 correct: accademia ours: accademia
+orig: Posibilitta 	 languagetool: Possibilista 	 correct: Possibilità ours: Possibilità
+orig: atenzione 	 languagetool: Attenzione 	 correct: attenzione ours: attenzione
+orig: valuttati 	 languagetool: valutatati 	 correct: valutati ours: valutati
+orig: proggietto 	 languagetool: poggetto 	 correct: progetto ours: progetto
+orig: proggieto 	 languagetool: poggiato 	 correct: progetto ours: progetto
+orig: a 	 languagetool:  	 correct: ha ours: ha
+orig: messi 	 languagetool:  	 correct: mesi ours: mesi
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: proggieto 	 languagetool: poggiato 	 correct: progetto ours: progetto
+orig: aspeti 	 languagetool: Appetì 	 correct: aspetti ours: aspetti
+orig: attessa 	 languagetool: Atessa 	 correct: attesa ours: attesa
+orig: gugnio 	 languagetool: Eugenio 	 correct: giugno ours: giugno
+orig: organizare 	 languagetool: Organicare 	 correct: organizzare ours: organizzare
+orig: albergho 	 languagetool: Alberghi 	 correct: albergo ours: albergo
+orig: è 	 languagetool:  	 correct: e ours: e
+orig: è 	 languagetool:  	 correct: e ours: e
+orig: all 	 languagetool:  	 correct: al ours: al
+orig: è 	 languagetool:  	 correct: e ours: e
+orig: dall 	 languagetool:  	 correct: dal ours: dal
+orig: è 	 languagetool:  	 correct: e ours: e
+orig: licencia 	 languagetool: licenzia 	 correct: licenza ours: licenza
+orig: Saluti 	 languagetool:  	 correct: saluti ours: saluti
+orig: In 	 languagetool:  	 correct: in ours: in
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: Nel 	 languagetool:  	 correct: nel ours: nel
+orig: organiziate 	 languagetool: Organizzate 	 correct: organizzate ours: organizzate
+orig: bugardi 	 languagetool: begardi 	 correct: bugiardi ours: bugiardi
+orig: auitante 	 languagetool: Abitante 	 correct: aiutante ours: aiutante
+orig: anziche 	 languagetool: Anziché 	 correct: anziché ours: anziché
+orig: imaginarmi 	 languagetool: Immaginarmi 	 correct: immaginarmi ours: immaginarmi
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: Al' 	 languagetool:  	 correct: All' ours: All'
+orig: spezzialista 	 languagetool: spazialista 	 correct: specialista ours: specialista
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: cercho 	 languagetool: cerchi 	 correct: cerco ours: cerco
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: anuncio 	 languagetool: Annuncio 	 correct: annuncio ours: annuncio
+orig: acount 	 languagetool: Account 	 correct: account ours: account
+orig: acount 	 languagetool: Account 	 correct: account ours: account
+orig: acount 	 languagetool: Account 	 correct: account ours: account
+orig: modele 	 languagetool: modale 	 correct: modelle ours: modelle
+orig: modele 	 languagetool: modale 	 correct: modelle ours: modelle
+orig: detagli 	 languagetool: datagli 	 correct: dettagli ours: dettagli
+orig: vasce 	 languagetool: Vasco 	 correct: vasche ours: vasche
+orig: organizata 	 languagetool: Organicata 	 correct: organizzata ours: organizzata
+orig: diffeto 	 languagetool: biffato 	 correct: difetto ours: difetto
+orig: gioccando 	 languagetool: fioccando 	 correct: giocando ours: giocando
+orig: un' 	 languagetool:  	 correct: un ours: un
+orig: experienza 	 languagetool: Esperienza 	 correct: esperienza ours: esperienza
+orig: abbilliamento 	 languagetool: Abbigliamento 	 correct: abbigliamento ours: abbigliamento
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: attivita 	 languagetool: Attività 	 correct: attività ours: attività
+orig: preso 	 languagetool:  	 correct: presso ours: presso
+orig: Italiana 	 languagetool:  	 correct: italiana ours: italiana
+orig: istituto 	 languagetool:  	 correct: Istituto ours: Istituto
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: Com 	 languagetool:  	 correct: Con ours: Con
+orig: felicitá 	 languagetool: felicita 	 correct: felicità ours: felicità
+orig: Ringrazio 	 languagetool:  	 correct: ringrazio ours: ringrazio
+orig: Novembre 	 languagetool:  	 correct: novembre ours: novembre
+orig: Regalare 	 languagetool:  	 correct: regalare ours: regalare
+orig: cosí 	 languagetool: cosi 	 correct: così ours: così
+orig: Ringrazio 	 languagetool:  	 correct: ringrazio ours: ringrazio
+orig: Marzo 	 languagetool:  	 correct: marzo ours: marzo
+orig: moltto 	 languagetool: molato 	 correct: molto ours: molto
+orig: moltto 	 languagetool: molato 	 correct: molto ours: molto
+orig: Presto 	 languagetool:  	 correct: presto ours: presto
+orig: Ti 	 languagetool:  	 correct: ti ours: ti
+orig: cuando 	 languagetool: cando 	 correct: quando ours: quando
+orig: cuando 	 languagetool: cando 	 correct: quando ours: quando
+orig: bacci 	 languagetool: Baccio 	 correct: baci ours: baci
+orig: Famiglia 	 languagetool:  	 correct: famiglia ours: famiglia
+orig: Voi 	 languagetool:  	 correct: voi ours: voi
+orig: bacci 	 languagetool: Baccio 	 correct: baci ours: baci
+orig: Vi 	 languagetool:  	 correct: vi ours: vi
+orig: compare 	 languagetool:  	 correct: comprare ours: comprare
+orig: farre 	 languagetool: Carrè 	 correct: fare ours: fare
+orig: Baci 	 languagetool:  	 correct: baci ours: baci
+orig: Marzo 	 languagetool:  	 correct: marzo ours: marzo
+orig: recivuto 	 languagetool: receduto 	 correct: ricevuto ours: ricevuto
+orig: abbarcio 	 languagetool: Abbarco 	 correct: abbraccio ours: abbraccio
+orig: Agosto 	 languagetool:  	 correct: agosto ours: agosto
+orig: bacci 	 languagetool: Baccio 	 correct: baci ours: baci
+orig: Maggio 	 languagetool:  	 correct: maggio ours: maggio
+orig: Marzo 	 languagetool:  	 correct: marzo ours: marzo
+orig: cosi 	 languagetool:  	 correct: così ours: così
+orig: natal 	 languagetool: Natan 	 correct: natale ours: natale
+orig: Marzo 	 languagetool:  	 correct: marzo ours: marzo
+orig: cosi 	 languagetool:  	 correct: così ours: così
+orig: Marzo 	 languagetool:  	 correct: marzo ours: marzo
+orig: Auguri 	 languagetool:  	 correct: auguri ours: auguri
+orig: Matrimonio 	 languagetool:  	 correct: matrimonio ours: matrimonio
+orig: Sará 	 languagetool: Sara 	 correct: Sarà ours: Sarà
+orig: picolo 	 languagetool: Nicolò 	 correct: piccolo ours: piccolo
+orig: obbgetto 	 languagetool: Obbietto 	 correct: oggetto ours: oggetto
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: Settimana 	 languagetool:  	 correct: settimana ours: settimana
+orig: viccino 	 languagetool: piccino 	 correct: vicino ours: vicino
+orig: recevere 	 languagetool: recedere 	 correct: ricevere ours: ricevere
+orig: sará 	 languagetool: Sara 	 correct: sarà ours: sarà
+orig: Io 	 languagetool:  	 correct: io ours: io
+orig: Marzo 	 languagetool:  	 correct: marzo ours: marzo
+orig: aguri 	 languagetool: Auguri 	 correct: auguri ours: auguri
+orig: mile 	 languagetool: Cile 	 correct: mille ours: mille
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: Perche 	 languagetool: Perché 	 correct: perché ours: perché
+orig: belissimo 	 languagetool: belassimo 	 correct: bellissimo ours: bellissimo
+orig: Marzo 	 languagetool:  	 correct: marzo ours: marzo
+orig: Regalo 	 languagetool:  	 correct: regalo ours: regalo
+orig: Marzo 	 languagetool:  	 correct: marzo ours: marzo
+orig: Novembre 	 languagetool:  	 correct: novembre ours: novembre
+orig: avró 	 languagetool: Avrò 	 correct: avrò ours: avrò
+orig: fará 	 languagetool: Fara 	 correct: farà ours: farà
+orig: perche 	 languagetool: perché 	 correct: Perché ours: Perché
+orig: Io 	 languagetool:  	 correct: io ours: io
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: sará 	 languagetool: Sara 	 correct: sarà ours: sarà
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: sepciale 	 languagetool: selciale 	 correct: speciale ours: speciale
+orig: abbitare 	 languagetool: Abbicare 	 correct: abitare ours: abitare
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: cità 	 languagetool: cita 	 correct: città ours: città
+orig: cavagliere 	 languagetool: cavagliele 	 correct: cavaliere ours: cavaliere
+orig: obligatorio 	 languagetool: Obbligatorio 	 correct: obbligatorio ours: obbligatorio
+orig: allbergo 	 languagetool: Albergo 	 correct: albergo ours: albergo
+orig: avró 	 languagetool: Avrò 	 correct: avrò ours: avrò
+orig: faró 	 languagetool: faro 	 correct: farò ours: farò
+orig: sorpressa 	 languagetool: soppressa 	 correct: sorpresa ours: sorpresa
+orig: universita 	 languagetool: Università 	 correct: università ours: università
+orig: Qualge 	 languagetool: Quale 	 correct: Qualche ours: Qualche
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: è 	 languagetool:  	 correct: e ours: e
+orig: peró 	 languagetool: pero 	 correct: però ours: però
+orig: sará 	 languagetool: Sara 	 correct: Sarà ours: Sarà
+orig: Inglese 	 languagetool:  	 correct: inglese ours: inglese
+orig: è 	 languagetool:  	 correct: e ours: e
+orig: è 	 languagetool:  	 correct: e ours: e
+orig: bacci 	 languagetool: Baccio 	 correct: baci ours: baci
+orig: anchora 	 languagetool: Ancora 	 correct: ancora ours: ancora
+orig: organizare 	 languagetool: Organicare 	 correct: organizzare ours: organizzare
+orig: aria 	 languagetool:  	 correct: area ours: area
+orig: augosto 	 languagetool: Agosto 	 correct: agosto ours: agosto
+orig: allbergho 	 languagetool: Alberghi 	 correct: albergo ours: albergo
+orig: architecto 	 languagetool: Architetto 	 correct: architetto ours: architetto
+orig: annulare 	 languagetool: Annullare 	 correct: annullare ours: annullare
+orig: doppo 	 languagetool: coppo 	 correct: dopo ours: dopo
+orig: essatamente 	 languagetool: Issatamene 	 correct: esattamente ours: esattamente
+orig: Caro 	 languagetool:  	 correct: caro ours: caro
+orig: sara 	 languagetool: Sara 	 correct: sarà ours: sarà
+orig: anchè 	 languagetool:  	 correct: anche ours: anche
+orig: albergi 	 languagetool: Albeggi 	 correct: alberghi ours: alberghi
+orig: Università 	 languagetool:  	 correct: università ours: università
+orig: invence 	 languagetool: Invece 	 correct: invece ours: invece
+orig: imperio 	 languagetool:  	 correct: impero ours: impero
+orig: interressa 	 languagetool: Interessa 	 correct: interessa ours: interessa
+orig: Ancoro 	 languagetool:  	 correct: Ancora ours: Ancora
+orig: Luglio 	 languagetool:  	 correct: luglio ours: luglio
+orig: Cosí 	 languagetool: Cosi 	 correct: Così ours: Così
+orig: avró 	 languagetool: Avrò 	 correct: avrò ours: avrò
+orig: Saluti 	 languagetool:  	 correct: saluti ours: saluti
+orig: corriere 	 languagetool:  	 correct: Corriere ours: Corriere
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: è 	 languagetool:  	 correct: e ours: e
+orig: pacerebbe 	 languagetool: bacerebbe 	 correct: piacerebbe ours: piacerebbe
+orig: allogio 	 languagetool: Allodio 	 correct: alloggio ours: alloggio
+orig: Italiana 	 languagetool:  	 correct: italiana ours: italiana
+orig: Italiano 	 languagetool:  	 correct: italiano ours: italiano
+orig: Italiano 	 languagetool:  	 correct: italiano ours: italiano
+orig: allogio 	 languagetool: Allodio 	 correct: alloggio ours: alloggio
+orig: Università 	 languagetool:  	 correct: università ours: università
+orig: Mammina 	 languagetool:  	 correct: mammina ours: mammina
+orig: piacciere 	 languagetool: bracciere 	 correct: piacere ours: piacere
+orig: Ci 	 languagetool:  	 correct: ci ours: ci
+orig: Lasciatemi 	 languagetool:  	 correct: lasciatemi ours: lasciatemi
+orig: Febbraio 	 languagetool:  	 correct: febbraio ours: febbraio
+orig: essatamente 	 languagetool: Issatamene 	 correct: esattamente ours: esattamente
+orig: pocca 	 languagetool: bocca 	 correct: poca ours: poca
+orig: Novembre 	 languagetool:  	 correct: novembre ours: novembre
+orig: Novembre 	 languagetool:  	 correct: novembre ours: novembre
+orig: Novembre 	 languagetool:  	 correct: novembre ours: novembre
+orig: Genaio 	 languagetool: Genio 	 correct: gennaio ours: gennaio
+orig: alloro 	 languagetool:  	 correct: allora ours: allora
+orig: utilizo 	 languagetool: Utilizzo 	 correct: utilizzo ours: utilizzo
+orig: Caro 	 languagetool:  	 correct: caro ours: caro
+orig: Repeto 	 languagetool: Reperto 	 correct: Ripeto ours: Ripeto
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: anchora 	 languagetool: Ancora 	 correct: ancora ours: ancora
+orig: doppo 	 languagetool: coppo 	 correct: dopo ours: dopo
+orig: universita 	 languagetool: Università 	 correct: università ours: università
+orig: a 	 languagetool:  	 correct: ha ours: ha
+orig: Italiano 	 languagetool:  	 correct: italiano ours: italiano
+orig: Francese 	 languagetool:  	 correct: francese ours: francese
+orig: securo 	 languagetool: scuro 	 correct: sicuro ours: sicuro
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: cità 	 languagetool: cita 	 correct: città ours: città
+orig: perchè 	 languagetool: perché 	 correct: Perché ours: Perché
+orig: sara 	 languagetool: Sara 	 correct: sarà ours: sarà
+orig: sara 	 languagetool: Sara 	 correct: sarà ours: sarà
+orig: Andró 	 languagetool: Andro 	 correct: Andrò ours: Andrò
+orig: gardino 	 languagetool: Galdino 	 correct: giardino ours: giardino
+orig: gardino 	 languagetool: Galdino 	 correct: giardino ours: giardino
+orig: Novembre 	 languagetool:  	 correct: novembre ours: novembre
+orig: Di 	 languagetool:  	 correct: di ours: di
+orig: Novembre 	 languagetool:  	 correct: novembre ours: novembre
+orig: farrò 	 languagetool: farro 	 correct: farò ours: farò
+orig: addatta 	 languagetool: Adatta 	 correct: adatta ours: adatta
+orig: disederi 	 languagetool: di sederi 	 correct: desideri ours: desideri
+orig: Novembre 	 languagetool:  	 correct: novembre ours: novembre
+orig: Novembre 	 languagetool:  	 correct: novembre ours: novembre
+orig: Matrimonio 	 languagetool:  	 correct: matrimonio ours: matrimonio
+orig: Luglio 	 languagetool:  	 correct: luglio ours: luglio
+orig: Agosto 	 languagetool:  	 correct: agosto ours: agosto
+orig: bisognò 	 languagetool:  	 correct: bisogno ours: bisogno
+orig: menziato 	 languagetool: Anziato 	 correct: menzionato ours: menzionato
+orig: L' 	 languagetool:  	 correct: l' ours: l'
+orig: eccecionale 	 languagetool: Eccezionale 	 correct: eccezionale ours: eccezionale
+orig: allogio 	 languagetool: Allodio 	 correct: alloggio ours: alloggio
+orig: allogio 	 languagetool: Allodio 	 correct: alloggio ours: alloggio
+orig: anuncio 	 languagetool: Annuncio 	 correct: annuncio ours: annuncio
+orig: aloggio 	 languagetool: Alaggio 	 correct: alloggio ours: alloggio
+orig: anunciare 	 languagetool: Annunciare 	 correct: annunciare ours: annunciare
+orig: abbracio 	 languagetool: Abbraccio 	 correct: abbraccio ours: abbraccio
+orig: Matrimonio 	 languagetool:  	 correct: matrimonio ours: matrimonio
+orig: publico 	 languagetool: Publio 	 correct: pubblico ours: pubblico
+orig: verrano 	 languagetool: Errano 	 correct: verranno ours: verranno
+orig: avocato 	 languagetool:  	 correct: avvocato ours: avvocato
+orig: hà 	 languagetool: Ha 	 correct: ha ours: ha
+orig: trata 	 languagetool: Arata 	 correct: tratta ours: tratta
+orig: obligazione 	 languagetool: Obbligazione 	 correct: obbligazione ours: obbligazione
+orig: aguia 	 languagetool: Abbia 	 correct: aquila ours: aquila
+orig: hà 	 languagetool: Ha 	 correct: ha ours: ha
+orig: contato 	 languagetool:  	 correct: contatto ours: contatto
+orig: là 	 languagetool:  	 correct: la ours: la
+orig: boca 	 languagetool: Oca 	 correct: bocca ours: bocca
+orig: Agosto 	 languagetool:  	 correct: agosto ours: agosto
+orig: a 	 languagetool:  	 correct: ha ours: ha
+orig: voui 	 languagetool: voci 	 correct: vuoi ours: vuoi
+orig: sara 	 languagetool: Sara 	 correct: sarà ours: sarà
+orig: baccio 	 languagetool: Baccio 	 correct: bacio ours: bacio
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: abbracio 	 languagetool: Abbraccio 	 correct: abbraccio ours: abbraccio
+orig: contato 	 languagetool:  	 correct: contatto ours: contatto
+orig: Hotel 	 languagetool:  	 correct: hotel ours: hotel
+orig: Hotel 	 languagetool:  	 correct: hotel ours: hotel
+orig: Hotel 	 languagetool:  	 correct: hotel ours: hotel
+orig: securo 	 languagetool: scuro 	 correct: sicuro ours: sicuro
+orig: Ance 	 languagetool:  	 correct: Anche ours: Anche
+orig: pottresti 	 languagetool: poteresti 	 correct: potresti ours: potresti
+orig: vorei 	 languagetool: torei 	 correct: vorrei ours: vorrei
+orig: Cosi 	 languagetool:  	 correct: Così ours: Così
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: ideà 	 languagetool: Idea 	 correct: idea ours: idea
+orig: sognio 	 languagetool: soglio 	 correct: sogno ours: sogno
+orig: farrò 	 languagetool: farro 	 correct: farò ours: farò
+orig: Sicomme 	 languagetool: Ricolme 	 correct: Siccome ours: Siccome
+orig: lungho 	 languagetool: Lungro 	 correct: lungo ours: lungo
+orig: Novembre 	 languagetool:  	 correct: novembre ours: novembre
+orig: cosi 	 languagetool:  	 correct: così ours: così
+orig: te' 	 languagetool:  	 correct: te ours: te
+orig: anchio 	 languagetool: anch io 	 correct: anch'io ours: anch'io
+orig: thesi 	 languagetool: Thiesi 	 correct: tesi ours: tesi
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: amiga 	 languagetool: Amica 	 correct: amica ours: amica
+orig: cosi 	 languagetool:  	 correct: così ours: così
+orig: son 	 languagetool:  	 correct: non ours: non
+orig: nell 	 languagetool:  	 correct: nell' ours: nell'
+orig: Mamma 	 languagetool:  	 correct: mamma ours: mamma
+orig: Mamma 	 languagetool:  	 correct: mamma ours: mamma
+orig: Università 	 languagetool:  	 correct: università ours: università
+orig: baco 	 languagetool:  	 correct: bacio ours: bacio
+orig: Novembre 	 languagetool:  	 correct: novembre ours: novembre
+orig: operà 	 languagetool: Opera 	 correct: opera ours: opera
+orig: cosi 	 languagetool:  	 correct: così ours: così
+orig: Novembre 	 languagetool:  	 correct: novembre ours: novembre
+orig: Mah 	 languagetool:  	 correct: Ma ours: Ma
+orig: Novembre 	 languagetool:  	 correct: novembre ours: novembre
+orig: Matrimonio 	 languagetool:  	 correct: matrimonio ours: matrimonio
+orig: organizato 	 languagetool: Organicato 	 correct: organizzato ours: organizzato
+orig: scoula 	 languagetool: scola 	 correct: scuola ours: scuola
+orig: nel' 	 languagetool:  	 correct: nell' ours: nell'
+orig: informatione 	 languagetool: Informatine 	 correct: informazione ours: informazione
+orig: cosi 	 languagetool:  	 correct: così ours: così
+orig: nel' 	 languagetool:  	 correct: nell' ours: nell'
+orig: Italiano 	 languagetool:  	 correct: italiano ours: italiano
+orig: pecato 	 languagetool: pacato 	 correct: peccato ours: peccato
+orig: pocchi 	 languagetool: cocchi 	 correct: pochi ours: pochi
+orig: forze 	 languagetool:  	 correct: forse ours: forse
+orig: li 	 languagetool:  	 correct: lì ours: lì
+orig: Albergo 	 languagetool:  	 correct: albergo ours: albergo
+orig: abraccio 	 languagetool: Abbraccio 	 correct: abbraccio ours: abbraccio
+orig: traducione 	 languagetool: traduciane 	 correct: traduzione ours: traduzione
+orig: all 	 languagetool:  	 correct: all' ours: all'
+orig: agencia 	 languagetool: Agenzia 	 correct: agenzia ours: agenzia
+orig: internationale 	 languagetool: Internazionale 	 correct: internazionale ours: internazionale
+orig: cosi 	 languagetool:  	 correct: così ours: così
+orig: dall 	 languagetool:  	 correct: dal ours: dal
+orig: giugnio 	 languagetool: Giunio 	 correct: giugno ours: giugno
+orig: all 	 languagetool:  	 correct: al ours: al
+orig: piaceono 	 languagetool: piacerono 	 correct: piacciono ours: piacciono
+orig: un' 	 languagetool:  	 correct: un ours: un
+orig: novi 	 languagetool: covi 	 correct: nuovi ours: nuovi
+orig: un' 	 languagetool:  	 correct: un ours: un
+orig: un' 	 languagetool:  	 correct: un ours: un
+orig: erà 	 languagetool: Era 	 correct: era ours: era
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: glilo 	 languagetool: glico 	 correct: glielo ours: glielo
+orig: all 	 languagetool:  	 correct: all' ours: all'
+orig: Università 	 languagetool:  	 correct: università ours: università
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: albergho 	 languagetool: Alberghi 	 correct: albergo ours: albergo
+orig: albergho 	 languagetool: Alberghi 	 correct: albergo ours: albergo
+orig: liberò 	 languagetool:  	 correct: libero ours: libero
+orig: piacia 	 languagetool: piaca 	 correct: piaccia ours: piaccia
+orig: scula 	 languagetool: Oscula 	 correct: scuola ours: scuola
+orig: desso 	 languagetool:  	 correct: adesso ours: adesso
+orig: vorei 	 languagetool: torei 	 correct: vorrei ours: vorrei
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: altretando 	 languagetool: Altrettanto 	 correct: altrettanto ours: altrettanto
+orig: cerci 	 languagetool:  	 correct: cerchi ours: cerchi
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: demande 	 languagetool: demanda 	 correct: domande ours: domande
+orig: Salati 	 languagetool:  	 correct: Saluti ours: Saluti
+orig: voui 	 languagetool: voci 	 correct: vuoi ours: vuoi
+orig: machina 	 languagetool: Macrina 	 correct: macchina ours: macchina
+orig: college 	 languagetool:  	 correct: colleghe ours: colleghe
+orig: compania 	 languagetool: Campania 	 correct: compagnia ours: compagnia
+orig: compania 	 languagetool: Campania 	 correct: compagnia ours: compagnia
+orig: Poui 	 languagetool: Podi 	 correct: Puoi ours: Puoi
+orig: poui 	 languagetool: podi 	 correct: puoi ours: puoi
+orig: cerghi 	 languagetool: carghi 	 correct: cerchi ours: cerchi
+orig: chosa 	 languagetool: chiosa 	 correct: cosa ours: cosa
+orig: lavaro 	 languagetool: Avaro 	 correct: lavoro ours: lavoro
+orig: incostro 	 languagetool: Incastro 	 correct: incontro ours: incontro
+orig: è 	 languagetool:  	 correct: È ours: È
+orig: Mio 	 languagetool:  	 correct: mio ours: mio
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: Bacci 	 languagetool: Baccio 	 correct: Baci ours: Baci
+orig: Sabato 	 languagetool:  	 correct: sabato ours: sabato
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: organizerà 	 languagetool: Organizzerà 	 correct: organizzerà ours: organizzerà
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: Mi 	 languagetool:  	 correct: mi ours: mi
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: completto 	 languagetool: completato 	 correct: completo ours: completo
+orig: doppo 	 languagetool: coppo 	 correct: dopo ours: dopo
+orig: Ciao 	 languagetool:  	 correct: Ciao ours: Ciao
+orig: ser 	 languagetool: User 	 correct: sera ours: sera
+orig: Giornata 	 languagetool:  	 correct: giornata ours: giornata
+orig: café 	 languagetool: cade 	 correct: caffè ours: caffè
+orig: cosí 	 languagetool: cosi 	 correct: così ours: così
+orig: ché 	 languagetool:  	 correct: che ours: che
+orig: anchora 	 languagetool: Ancora 	 correct: ancora ours: ancora
+orig: ufficcio 	 languagetool: Ufficio 	 correct: ufficio ours: ufficio
+orig: ultimamento 	 languagetool: Ultimamente 	 correct: ultimamente ours: ultimamente
+orig: piacce 	 languagetool: diacce 	 correct: piace ours: piace
+orig: salutti 	 languagetool: salotti 	 correct: saluti ours: saluti
+orig: Sopratutto 	 languagetool:  	 correct: Soprattutto ours: Soprattutto
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: Fabrica 	 languagetool: Fabbrica 	 correct: fabbrica ours: fabbrica
+orig: Risponti 	 languagetool: Risconti 	 correct: Rispondi ours: Rispondi
+orig: Adeso 	 languagetool: Adesco 	 correct: Adesso ours: Adesso
+orig: serrata 	 languagetool:  	 correct: serata ours: serata
+orig: Risbonti 	 languagetool: Risconti 	 correct: Rispondi ours: Rispondi
+orig: ti 	 languagetool:  	 correct: di ours: di
+orig: Venerdi 	 languagetool: Venerdì 	 correct: venerdì ours: venerdì
+orig: scussi 	 languagetool: escussi 	 correct: scusi ours: scusi
+orig: ristaurante 	 languagetool: restaurante 	 correct: ristorante ours: ristorante
+orig: lavorro 	 languagetool: lavorerò 	 correct: lavoro ours: lavoro
+orig: Doppo 	 languagetool: Coppo 	 correct: Dopo ours: Dopo
+orig: Presto 	 languagetool:  	 correct: presto ours: presto
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: uffico 	 languagetool: Uffici 	 correct: ufficio ours: ufficio
+orig: cuccina 	 languagetool: buccina 	 correct: cucina ours: cucina
+orig: E-Mail 	 languagetool:  	 correct: email ours: email
+orig: Espero 	 languagetool: Esperto 	 correct: Spero ours: Spero
+orig: qualque 	 languagetool: Qualcun 	 correct: qualche ours: qualche
+orig: poui 	 languagetool: podi 	 correct: puoi ours: puoi
+orig: nouvo 	 languagetool: novo 	 correct: nuovo ours: nuovo
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: Agosto 	 languagetool:  	 correct: agosto ours: agosto
+orig: alora 	 languagetool: Adora 	 correct: allora ours: allora
+orig: voule 	 languagetool: joule 	 correct: vuole ours: vuole
+orig: voule 	 languagetool: joule 	 correct: vuole ours: vuole
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: apunntamento 	 languagetool: Appuntamento 	 correct: appuntamento ours: appuntamento
+orig: Alora 	 languagetool: Adora 	 correct: Allora ours: Allora
+orig: pero 	 languagetool:  	 correct: però ours: però
+orig: voreii 	 languagetool: Ordii 	 correct: vorrei ours: vorrei
+orig: vidiamo 	 languagetool: fidiamo 	 correct: vediamo ours: vediamo
+orig: uffico 	 languagetool: Uffici 	 correct: ufficio ours: ufficio
+orig: statizione 	 languagetool: statuizione 	 correct: stazione ours: stazione
+orig: Lavoro 	 languagetool:  	 correct: lavoro ours: lavoro
+orig: Lunedì 	 languagetool:  	 correct: lunedì ours: lunedì
+orig: mangare 	 languagetool: mancare 	 correct: mangiare ours: mangiare
+orig: et 	 languagetool:  	 correct: e ours: e
+orig: et 	 languagetool:  	 correct: e ours: e
+orig: maccina 	 languagetool: Macrina 	 correct: macchina ours: macchina
+orig: Baccio 	 languagetool:  	 correct: Bacio ours: Bacio
+orig: et 	 languagetool:  	 correct: e ours: e
+orig: voi 	 languagetool:  	 correct: vuoi ours: vuoi
+orig: voi 	 languagetool:  	 correct: vuoi ours: vuoi
+orig: vare 	 languagetool: Darè 	 correct: fare ours: fare
+orig: Alora 	 languagetool: Adora 	 correct: Allora ours: Allora
+orig: ce 	 languagetool:  	 correct: che ours: che
+orig: voi 	 languagetool:  	 correct: vuoi ours: vuoi
+orig: ativita 	 languagetool: Attività 	 correct: attività ours: attività
+orig: atesa 	 languagetool: Alesa 	 correct: attesa ours: attesa
+orig: Marzo 	 languagetool:  	 correct: marzo ours: marzo
+orig: Marzo 	 languagetool:  	 correct: marzo ours: marzo
+orig: filho 	 languagetool: filmo 	 correct: figlio ours: figlio
+orig: Luglio 	 languagetool:  	 correct: luglio ours: luglio
+orig: piacce 	 languagetool: diacce 	 correct: piace ours: piace
+orig: chittara 	 languagetool: chiara 	 correct: chitarra ours: chitarra
+orig: raggione 	 languagetool: raggiane 	 correct: ragione ours: ragione
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: addesso 	 languagetool: Addenso 	 correct: adesso ours: adesso
+orig: sará 	 languagetool: Sara 	 correct: sarà ours: sarà
+orig: interesanti 	 languagetool: Interessanti 	 correct: interessanti ours: interessanti
+orig: ariverai 	 languagetool: Arriverai 	 correct: arriverai ours: arriverai
+orig: abraccio 	 languagetool: Abbraccio 	 correct: abbraccio ours: abbraccio
+orig: è 	 languagetool:  	 correct: e ours: e
+orig: è 	 languagetool:  	 correct: e ours: e
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: erá 	 languagetool: Era 	 correct: era ours: era
+orig: forze 	 languagetool:  	 correct: forse ours: forse
+orig: faccendo 	 languagetool: Accendo 	 correct: facendo ours: facendo
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: insième 	 languagetool: Insieme 	 correct: insieme ours: insieme
+orig: bacci 	 languagetool: Baccio 	 correct: baci ours: baci
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: Hieri 	 languagetool: Chieri 	 correct: Ieri ours: Ieri
+orig: Vacanza 	 languagetool:  	 correct: vacanza ours: vacanza
+orig: è 	 languagetool:  	 correct: e ours: e
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: Ciau 	 languagetool: Ciad 	 correct: Ciao ours: Ciao
+orig: frattelo 	 languagetool: fattelo 	 correct: fratello ours: fratello
+orig: sembre 	 languagetool: sembra 	 correct: sempre ours: sempre
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: apartamento 	 languagetool: Appartamento 	 correct: appartamento ours: appartamento
+orig: cosi 	 languagetool:  	 correct: così ours: così
+orig: Papa 	 languagetool:  	 correct: Papà ours: Papà
+orig: doppo 	 languagetool: coppo 	 correct: dopo ours: dopo
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: ristaurante 	 languagetool: restaurante 	 correct: ristorante ours: ristorante
+orig: è 	 languagetool:  	 correct: e ours: e
+orig: è 	 languagetool:  	 correct: e ours: e
+orig: è 	 languagetool:  	 correct: e ours: e
+orig: è 	 languagetool:  	 correct: e ours: e
+orig: quatro 	 languagetool: quadro 	 correct: quattro ours: quattro
+orig: abraccio 	 languagetool: Abbraccio 	 correct: abbraccio ours: abbraccio
+orig: faciamo 	 languagetool: baciamo 	 correct: facciamo ours: facciamo
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: inteligente 	 languagetool: Intelligente 	 correct: intelligente ours: intelligente
+orig: abiamo 	 languagetool: Abbiamo 	 correct: abbiamo ours: abbiamo
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: curso 	 languagetool: Carso 	 correct: corso ours: corso
+orig: Persone 	 languagetool:  	 correct: persone ours: persone
+orig: Ragazze 	 languagetool:  	 correct: ragazze ours: ragazze
+orig: Musei 	 languagetool:  	 correct: musei ours: musei
+orig: Salutie 	 languagetool: Salute 	 correct: saluti ours: saluti
+orig: Tomaso 	 languagetool: Domaso 	 correct: Tommaso ours: Tommaso
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: anchora 	 languagetool: Ancora 	 correct: ancora ours: ancora
+orig: asspetta 	 languagetool: Aspetta 	 correct: aspetta ours: aspetta
+orig: nova 	 languagetool:  	 correct: nuova ours: nuova
+orig: mama 	 languagetool: Ama 	 correct: mamma ours: mamma
+orig: Novembre 	 languagetool:  	 correct: novembre ours: novembre
+orig: Dicembre 	 languagetool:  	 correct: dicembre ours: dicembre
+orig: Musei 	 languagetool:  	 correct: musei ours: musei
+orig: allmeno 	 languagetool: Alleno 	 correct: almeno ours: almeno
+orig: chosa 	 languagetool: chiosa 	 correct: cosa ours: cosa
+orig: Discoteka 	 languagetool: Discoteca 	 correct: discoteca ours: discoteca
+orig: ti 	 languagetool:  	 correct: di ours: di
+orig: La 	 languagetool:  	 correct: la ours: la
+orig: bacci 	 languagetool: Baccio 	 correct: baci ours: baci
+orig: cità 	 languagetool: cita 	 correct: città ours: città
+orig: Casa 	 languagetool:  	 correct: casa ours: casa
+orig: Alora 	 languagetool: Adora 	 correct: Allora ours: Allora
+orig: Puoi 	 languagetool:  	 correct: puoi ours: puoi
+orig: Attesa 	 languagetool:  	 correct: attesa ours: attesa
+orig: insengnante 	 languagetool: Insegnante 	 correct: insegnante ours: insegnante
+orig: sabbato 	 languagetool: gabbato 	 correct: sabato ours: sabato
+orig: poso 	 languagetool:  	 correct: posso ours: posso
+orig: café 	 languagetool: cade 	 correct: caffè ours: caffè
+orig: Iieri 	 languagetool: Inerì 	 correct: Ieri ours: Ieri
+orig: melio 	 languagetool: Amelio 	 correct: meglio ours: meglio
+orig: ché 	 languagetool:  	 correct: che ours: che
+orig: tartuffo 	 languagetool: tartuffe 	 correct: tartufo ours: tartufo
+orig: Italiano 	 languagetool:  	 correct: italiano ours: italiano
+orig: camara 	 languagetool: Camara 	 correct: camera ours: camera
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: Settembre 	 languagetool:  	 correct: settembre ours: settembre
+orig: Prima 	 languagetool:  	 correct: prima ours: prima
+orig: Subito 	 languagetool:  	 correct: subito ours: subito
+orig: La 	 languagetool:  	 correct: la ours: la
+orig: Italiana 	 languagetool:  	 correct: italiana ours: italiana
+orig: Parla 	 languagetool:  	 correct: parla ours: parla
+orig: Tedeschi 	 languagetool:  	 correct: tedeschi ours: tedeschi
+orig: Spero 	 languagetool:  	 correct: spero ours: spero
+orig: Baci 	 languagetool:  	 correct: baci ours: baci
+orig: Espero 	 languagetool: Esperto 	 correct: Spero ours: Spero
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: Marzo 	 languagetool:  	 correct: marzo ours: marzo
+orig: Mezzogiorno 	 languagetool:  	 correct: mezzogiorno ours: mezzogiorno
+orig: quatro 	 languagetool: quadro 	 correct: quattro ours: quattro
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: tuto 	 languagetool: Auto 	 correct: Tutto ours: Tutto
+orig: Profesoressa 	 languagetool: Professoressa 	 correct: professoressa ours: professoressa
+orig: baccio 	 languagetool: Baccio 	 correct: bacio ours: bacio
+orig: é 	 languagetool: e 	 correct: E ours: E
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: abracio 	 languagetool: Abramio 	 correct: abbraccio ours: abbraccio
+orig: italianno 	 languagetool: Italiano 	 correct: italiano ours: italiano
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: Italiano 	 languagetool:  	 correct: italiano ours: italiano
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: un' 	 languagetool:  	 correct: Un ours: Un
+orig: quatro 	 languagetool: quadro 	 correct: quattro ours: quattro
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: amicca 	 languagetool: Amica 	 correct: amica ours: amica
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: Italiano 	 languagetool:  	 correct: italiano ours: italiano
+orig: Italiano 	 languagetool:  	 correct: italiano ours: italiano
+orig: Presto 	 languagetool:  	 correct: presto ours: presto
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: el 	 languagetool: El 	 correct: il ours: il
+orig: et 	 languagetool:  	 correct: e ours: e
+orig: clase 	 languagetool: case 	 correct: classe ours: classe
+orig: berre 	 languagetool: Erre 	 correct: bere ours: bere
+orig: Lunedi 	 languagetool:  	 correct: lunedì ours: lunedì
+orig: segnora 	 languagetool: segnerà 	 correct: signora ours: signora
+orig: et 	 languagetool:  	 correct: e ours: e
+orig: Italiano 	 languagetool:  	 correct: italiano ours: italiano
+orig: Tua 	 languagetool:  	 correct: tua ours: tua
+orig: Centro 	 languagetool:  	 correct: centro ours: centro
+orig: Amici 	 languagetool:  	 correct: amici ours: amici
+orig: Seguire 	 languagetool:  	 correct: seguire ours: seguire
+orig: Italiano 	 languagetool:  	 correct: italiano ours: italiano
+orig: Miei 	 languagetool:  	 correct: miei ours: miei
+orig: Molto 	 languagetool:  	 correct: molto ours: molto
+orig: Francese 	 languagetool:  	 correct: francese ours: francese
+orig: Molto 	 languagetool:  	 correct: molto ours: molto
+orig: Sera 	 languagetool:  	 correct: sera ours: sera
+orig: Tipico 	 languagetool:  	 correct: tipico ours: tipico
+orig: Ristorante 	 languagetool:  	 correct: ristorante ours: ristorante
+orig: Cuando 	 languagetool: Cando 	 correct: Quando ours: Quando
+orig: Amici 	 languagetool:  	 correct: amici ours: amici
+orig: Italiano 	 languagetool:  	 correct: italiano ours: italiano
+orig: qualque 	 languagetool: Qualcun 	 correct: qualche ours: qualche
+orig: perqué 	 languagetool: serque 	 correct: perché ours: perché
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: Maggio 	 languagetool:  	 correct: maggio ours: maggio
+orig: commincato 	 languagetool: comminato 	 correct: cominciato ours: cominciato
+orig: Maggio 	 languagetool:  	 correct: maggio ours: maggio
+orig: Aprile 	 languagetool:  	 correct: aprile ours: aprile
+orig: Italiano 	 languagetool:  	 correct: italiano ours: italiano
+orig: Cosi 	 languagetool:  	 correct: Così ours: Così
+orig: Italiano 	 languagetool:  	 correct: italiano ours: italiano
+orig: cosi 	 languagetool:  	 correct: così ours: così
+orig: gia 	 languagetool:  	 correct: già ours: già
+orig: spezialità 	 languagetool: spazialità 	 correct: specialità ours: specialità
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: bruto 	 languagetool:  	 correct: brutto ours: brutto
+orig: setimane 	 languagetool: estimane 	 correct: settimane ours: settimane
+orig: tipichi 	 languagetool: tipiche 	 correct: tipici ours: tipici
+orig: reggione 	 languagetool: reggiane 	 correct: regione ours: regione
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: a 	 languagetool:  	 correct: ha ours: ha
+orig: huomo 	 languagetool: Homo 	 correct: uomo ours: uomo
+orig: amicha 	 languagetool: Amica 	 correct: amica ours: amica
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: giocciamo 	 languagetool: giacciamo 	 correct: giochiamo ours: giochiamo
+orig: sì 	 languagetool:  	 correct: si ours: si
+orig: spiagga 	 languagetool: spiagge 	 correct: spiaggia ours: spiaggia
+orig: abiamo 	 languagetool: Abbiamo 	 correct: abbiamo ours: abbiamo
+orig: officio 	 languagetool:  	 correct: ufficio ours: ufficio
+orig: manqua 	 languagetool: man qua 	 correct: manca ours: manca
+orig: tuto 	 languagetool: Auto 	 correct: tutto ours: tutto
+orig: cosi 	 languagetool:  	 correct: così ours: così
+orig: svizzera 	 languagetool:  	 correct: Svizzera ours: Svizzera
+orig: giovanni 	 languagetool: Giovanni 	 correct: giovani ours: giovani
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: abraccio 	 languagetool: Abbraccio 	 correct: abbraccio ours: abbraccio
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: Andró 	 languagetool: Andro 	 correct: Andrò ours: Andrò
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: albergho 	 languagetool: Alberghi 	 correct: albergo ours: albergo
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: un' 	 languagetool:  	 correct: un ours: un
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: svizzera 	 languagetool:  	 correct: Svizzera ours: Svizzera
+orig: è 	 languagetool:  	 correct: e ours: e
+orig: Doppo 	 languagetool: Coppo 	 correct: Dopo ours: Dopo
+orig: ou 	 languagetool: EU 	 correct: o ours: o
+orig: Persone 	 languagetool:  	 correct: persone ours: persone
+orig: Persone 	 languagetool:  	 correct: persone ours: persone
+orig: mangare 	 languagetool: mancare 	 correct: mangiare ours: mangiare
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: vacance 	 languagetool: vacane 	 correct: vacanze ours: vacanze
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: invitero 	 languagetool: Inviterò 	 correct: inviterò ours: inviterò
+orig: pregho 	 languagetool: preghi 	 correct: prego ours: prego
+orig: cosi 	 languagetool:  	 correct: così ours: così
+orig: collegi 	 languagetool:  	 correct: colleghi ours: colleghi
+orig: letioni 	 languagetool: legioni 	 correct: lezioni ours: lezioni
+orig: è 	 languagetool:  	 correct: e ours: e
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: com' 	 languagetool:  	 correct: come ours: come
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: ristaurante 	 languagetool: restaurante 	 correct: ristorante ours: ristorante
+orig: cità 	 languagetool: cita 	 correct: città ours: città
+orig: Carrisimi 	 languagetool: Arridimi 	 correct: Carissimi ours: Carissimi
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: sopratutto 	 languagetool:  	 correct: soprattutto ours: soprattutto
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: Italiana 	 languagetool:  	 correct: italiana ours: italiana
+orig: Italiana 	 languagetool:  	 correct: italiana ours: italiana
+orig: baccio 	 languagetool: Baccio 	 correct: bacio ours: bacio
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: volia 	 languagetool: Golia 	 correct: voglia ours: voglia
+orig: e 	 languagetool:  	 correct: è ours: è
+orig: Novembre 	 languagetool:  	 correct: novembre ours: novembre
+orig: cosi 	 languagetool:  	 correct: così ours: così
+orig: é 	 languagetool: e 	 correct: è ours: è
+orig: conversatione 	 languagetool: conversatine 	 correct: conversazione ours: conversazione
+
+############ Inorrect by Languagetool, incorrect by us ##########
+orig: sopprattutto 	 languagetool: soprattutto 	 correct: sopratutto ours: soprattutto
+orig: augusto 	 languagetool:  	 correct: agosto ours: Augusto
+orig: In 	 languagetool:  	 correct: Inoltre ours: In
+orig: oltre 	 languagetool:  	 correct: Inoltre ours: oltre
+orig: residenze 	 languagetool:  	 correct: residence ours: residente
+orig: Io 	 languagetool:  	 correct: io ours: Io
+orig: sovrafollata 	 languagetool: sovraffollata 	 correct: sovraffolata ours: sovraffollato
+orig: é 	 languagetool: e 	 correct: è ours: e
+orig: Cosí 	 languagetool: Cosi 	 correct: Così ours: Cosa
+orig: In 	 languagetool:  	 correct: in ours: In
+orig: hote 	 languagetool: Hotel 	 correct: hotel ours: note
+orig: peró 	 languagetool: pero 	 correct: però ours: per
+orig: peró 	 languagetool: pero 	 correct: però ours: per
+orig: Abbiamo 	 languagetool:  	 correct: abbiamo ours: Abbiamo
+orig: sovrafollata 	 languagetool: sovraffollata 	 correct: sanaffollata ours: sovraffollato
+orig: fará 	 languagetool: Fara 	 correct: farà ours: fare
+orig: Sono 	 languagetool:  	 correct: sono ours: Sono
+orig: e 	 languagetool:  	 correct: è ours: e
+orig: anniunciato 	 languagetool: Annunciato 	 correct: annunciato ours: annunciate
+orig: faro 	 languagetool:  	 correct: farò ours: fare
+orig: Instituto 	 languagetool: Istituto 	 correct: instituto ours: Istituto
+orig: Nellattesa 	 languagetool: Nell attesa 	 correct: Nell' ours: Niellantesi
+orig: aitarLa 	 languagetool: Abitarla 	 correct: aiutarLa ours: aiutarla
+orig: vorebbe 	 languagetool: vorrebbe 	 correct: . ours: potrebbe
+orig: amicinzia 	 languagetool: Amicizia 	 correct: vorrebbe ours: amicizia
+orig: esperianza 	 languagetool: Esperanza 	 correct: amicizia ours: esperienza
+orig: amicinzia 	 languagetool: Amicizia 	 correct: esperienza ours: amicizia
+orig: chatao 	 languagetool: Catai 	 correct: chattavo ours: Chat
+orig: nouvo 	 languagetool: novo 	 correct: nuovo ours: nuova
+orig: In 	 languagetool:  	 correct: in ours: In
+orig: assocazione 	 languagetool: Associazione 	 correct: associazione ours: Associazione
+orig: gironata 	 languagetool: Gionata 	 correct: gironata ours: giornata
+orig: oggigorni 	 languagetool: Aggiorni 	 correct: oggigiorni ours: soggiorni
+orig: Vorrei 	 languagetool:  	 correct: vorrei ours: Vorrei
+orig: và 	 languagetool: va 	 correct: va' ours: va
+orig: In 	 languagetool:  	 correct: in ours: In
+orig: la 	 languagetool:  	 correct: là ours: ma
+orig: Eg.Gabriella 	 languagetool:  	 correct: Egr. Gabriella ours: Gabriele
+orig: In 	 languagetool:  	 correct: in ours: In
+orig: Colgo 	 languagetool:  	 correct: colgo ours: Colgo
+orig: Mi 	 languagetool:  	 correct: mi ours: Mi
+orig: un 	 languagetool:  	 correct: un' ours: una
+orig: un 	 languagetool:  	 correct: un' ours: una
+orig: assistante 	 languagetool: Assestante 	 correct: asssitente ours: assistente
+orig: cosi 	 languagetool:  	 correct: così ours: cosa
+orig: universita 	 languagetool: Università 	 correct: università ours: Università
+orig: Scuzi 	 languagetool: Scuci 	 correct: Scusi ours: Scuri
+orig: gia 	 languagetool: già 	 correct: già  ours: già
+orig: Universita 	 languagetool: Università 	 correct: Università  ours: Università
+orig: corriere 	 languagetool:  	 correct: Corriere ours: corriere
+orig: corriere 	 languagetool:  	 correct: Corriere ours: corriere
+orig: ciacchierare 	 languagetool: chiacchierare 	 correct: chiaccierare ours: chiacchierare
+orig: baccio 	 languagetool: Baccio 	 correct: bacio ours: faccio
+orig: Pero 	 languagetool:  	 correct: Però ours: Pero
+orig: cita 	 languagetool:  	 correct: città ours: vita
+orig: universita 	 languagetool: Università 	 correct: università ours: Università
+orig: su 	 languagetool:  	 correct: sugli ours: se
+orig: gli 	 languagetool:  	 correct: sugli ours: gli
+orig: comminiciare 	 languagetool: cominciare 	 correct: cominicare ours: cominciare
+orig: É 	 languagetool:  	 correct: È ours: D
+orig: e 	 languagetool:  	 correct: è ours: e
+orig: Una 	 languagetool:  	 correct: una ours: Una
+orig: ne 	 languagetool:  	 correct: né ours: se
+orig: ne 	 languagetool:  	 correct: né ours: e
+orig: quest 	 languagetool:  	 correct: quest' ours: quest
+orig: Maggio 	 languagetool:  	 correct: maggio ours: saggio
+orig: VOREI 	 languagetool:  	 correct: VORREI ours: RAI
+orig: INTERESATA 	 languagetool:  	 correct: INTERESSATA ours: ISTAT
+orig: GIOCATOLI 	 languagetool:  	 correct: GIOCATTOLI ours: giocatori
+orig: E 	 languagetool:  	 correct: È ours: e
+orig: SETIMANA 	 languagetool:  	 correct: SETTIMANA ours: settimana
+orig: CERA 	 languagetool:  	 correct: C'ERA ours: Era
+orig: PIU 	 languagetool:  	 correct: PIÙ ours: PC
+orig: GIA 	 languagetool:  	 correct: GIÀ ours: IVA
+orig: SCRITO 	 languagetool:  	 correct: SCRITTO ours: sito
+orig: ATESA 	 languagetool:  	 correct: ATTESA ours: ANSA
+orig: INDIRIZIO 	 languagetool:  	 correct: INDIRIZZO ours: indirizzo
+orig: SCRITO 	 languagetool:  	 correct: SCRITTO ours: sito
+orig: Ho 	 languagetool:  	 correct: ho ours: Ho
+orig: adderirme 	 languagetool: Aderire 	 correct: aderirme ours: aderire
+orig: Anché 	 languagetool: Anche 	 correct: anche ours: Anche
+orig: de 	 languagetool:  	 correct: della ours: e
+orig: la 	 languagetool:  	 correct: della ours: la
+orig: lago 	 languagetool:  	 correct: Lago ours: lago
+orig: Residence 	 languagetool:  	 correct: residence ours: residente
+orig: po 	 languagetool:  	 correct: po' ours: po
+orig: li 	 languagetool:  	 correct: lì ours: di
+orig: Hai 	 languagetool:  	 correct: hai ours: Hai
+orig: de 	 languagetool:  	 correct: della ours: e
+orig: la 	 languagetool:  	 correct: della ours: la
+orig: quele 	 languagetool: QUELL 	 correct: quelle ours: quel
+orig: Alla 	 languagetool:  	 correct: All' ours: Alla
+orig: alla 	 languagetool:  	 correct: all' ours: all
+orig: in 	 languagetool:  	 correct: insieme ours: in
+orig: sieme 	 languagetool:  	 correct: insieme ours: siede
+orig: Pur 	 languagetool:  	 correct: Purtroppo ours: Pure
+orig: troppo 	 languagetool:  	 correct: Purtroppo ours: troppo
+orig: e 	 languagetool:  	 correct: è ours: e
+orig: part-taime 	 languagetool: partitale 	 correct: time ours: Partitine
+orig: ofrire 	 languagetool: Offrire 	 correct: offrire ours: aprire
+orig: lunedi 	 languagetool: lunedì 	 correct: lunedi ours: lunedì
+orig: è 	 languagetool:  	 correct: e ours: a
+orig: bum 	 languagetool: bue 	 correct: boom ours: bug
+orig: pezzeto 	 languagetool: pezzato 	 correct: pezzetto ours: pezzo
+orig: asieme 	 languagetool: Assieme 	 correct: assieme ours: insieme
+orig: tràpoco 	 languagetool: tampoco 	 correct: tra poco ours: poco
+orig: all 	 languagetool:  	 correct: l' ours: al
+orig: Residente 	 languagetool:  	 correct: Residence ours: residence
+orig: perche 	 languagetool: perché 	 correct: percé ours: perché
+orig: perche 	 languagetool: perché 	 correct: perchè ours: perché
+orig: e 	 languagetool:  	 correct: è ours: ex
+orig: sovraffolata 	 languagetool: sovraffollata 	 correct: sovraffolata ours: sovraffollato
+orig: interesate 	 languagetool: Interessate 	 correct: interessate ours: interessante
+orig: pottete 	 languagetool: fottete 	 correct: potete ours: potrete
+orig: Al 	 languagetool:  	 correct: All' ours: L
+orig: Quest 	 languagetool:  	 correct: Quest' ours: Questa
+orig: e 	 languagetool:  	 correct: è ours: o
+orig: assumeró 	 languagetool: Assumerò 	 correct: assumerò ours: assumerà
+orig: é 	 languagetool: e 	 correct: è ours: e
+orig: a 	 languagetool:  	 correct: all' ours: al
+orig: l' 	 languagetool:  	 correct: all' ours: l'
+orig: dela 	 languagetool: DELL 	 correct: della ours: del
+orig: reparazzione 	 languagetool: preparazione 	 correct: re(i)parazione ours: preparazione
+orig: ralta 	 languagetool: Alta 	 correct: realtà ours: alta
+orig: assomiliano 	 languagetool: Assomigliano 	 correct: assomigliano ours: assimilano
+orig: po 	 languagetool:  	 correct: po' ours: poi
+orig: Prima 	 languagetool:  	 correct: prima ours: Prima
+orig: matrimogno 	 languagetool: matrimoni 	 correct: matrimonio ours: patrimonio
+orig: invitazzione 	 languagetool: Incitazione 	 correct: invitazione ours: indicazione
+orig: In 	 languagetool:  	 correct: Inoltre ours: In
+orig: oltre 	 languagetool:  	 correct: Inoltre ours: oltre
+orig: Quando 	 languagetool:  	 correct: quando ours: Quando
+orig: INNAZI 	 languagetool:  	 correct: INNANZI ours: Inni
+orig: Tua 	 languagetool:  	 correct: tua ours: sua
+orig: BACCI- 	 languagetool:  	 correct: Baci ours: ASCII
+orig: Graciè 	 languagetool: Graie 	 correct: Grazie ours: Grecia
+orig: goia 	 languagetool: Golia 	 correct: gioia ours: noia
+orig: resivuto 	 languagetool: residuato 	 correct: ricevuto ours: residuo
+orig: Siamo 	 languagetool:  	 correct: siamo ours: Siamo
+orig: Ho 	 languagetool:  	 correct: ho ours: Ho
+orig: Congratulazioni 	 languagetool:  	 correct: congratulazioni ours: Congratulazioni
+orig: Molti 	 languagetool:  	 correct: molti ours: Molte
+orig: É 	 languagetool:  	 correct: È ours: D
+orig: compare 	 languagetool:  	 correct: comprare ours: Comprare
+orig: Ho 	 languagetool:  	 correct: ho ours: Ho
+orig: Vi 	 languagetool:  	 correct: vi ours: Vi
+orig: pò 	 languagetool: Po 	 correct: po' ours: po
+orig: Vengo 	 languagetool:  	 correct: vengo ours: Vendo
+orig: Tanti 	 languagetool:  	 correct: tanti auguri ours: tanti
+orig: Auguri 	 languagetool:  	 correct: tanti auguri ours: auguri
+orig: Tanti 	 languagetool:  	 correct: tanti auguri ours: tanti
+orig: Auguri 	 languagetool:  	 correct: tanti auguri ours: auguri
+orig: molti 	 languagetool:  	 correct: Molti ours: Molto
+orig: andró 	 languagetool: Andro 	 correct: andrò ours: andrà
+orig: Abbracci 	 languagetool:  	 correct: abbracci ours: Abbracci
+orig: Ho 	 languagetool:  	 correct: ho ours: Ho
+orig: pó 	 languagetool: Po 	 correct: po' ours: po
+orig: pó 	 languagetool: Po 	 correct: po' ours: po
+orig: Invio 	 languagetool:  	 correct: invio ours: Invia
+orig: é 	 languagetool: e 	 correct: è ours: a
+orig: abbraciati 	 languagetool: Abbracciati 	 correct: abbracciati ours: abbracciate
+orig: Amichi 	 languagetool:  	 correct: amici ours: Amici
+orig: recevuto 	 languagetool: receduto 	 correct: . ours: ricevuto
+orig: cari 	 languagetool:  	 correct: Cari ours: Pari
+orig: universitá 	 languagetool: Università 	 correct: univeristà ours: Università
+orig: soridendo 	 languagetool: sorridendo 	 correct: dell' ours: scrivendo
+orig: potro 	 languagetool: potrò 	 correct: sorridendo ours: potrà
+orig: dificile 	 languagetool: difficile 	 correct: potrò ours: difficile
+orig: téléfonarti 	 languagetool: telefonarti 	 correct: difficile ours: telefonarci
+orig: bacci 	 languagetool: Baccio 	 correct: telefonarti ours: baci
+orig: Ho 	 languagetool:  	 correct: ho ours: Io
+orig: Ho 	 languagetool:  	 correct: ho ours: Ho
+orig: . 	 languagetool: . 	 correct: , ours: L
+orig: Gratulazio 	 languagetool: Vitulazio 	 correct: gratulazio ours: Granulati
+orig: Ho 	 languagetool:  	 correct: ho ours: Ho
+orig: vinire 	 languagetool: finire 	 correct: venire ours: finire
+orig: É 	 languagetool:  	 correct: È ours: D
+orig: É 	 languagetool:  	 correct: È ours: D
+orig: é 	 languagetool: e 	 correct: è ours: e
+orig: Il 	 languagetool:  	 correct: il ours: Il
+orig: Italiano 	 languagetool:  	 correct: Italiano ours: italiano
+orig: li 	 languagetool:  	 correct: lì ours: di
+orig: pò 	 languagetool: Po 	 correct: po' ours: po
+orig: volintario 	 languagetool: volontario 	 correct: voluntario ours: volontario
+orig: regolarvi 	 languagetool:  	 correct: regalarvi ours: regolarvi
+orig: al' 	 languagetool:  	 correct: all' ours: al
+orig: Grazie 	 languagetool:  	 correct: grazie ours: Grazie
+orig: Anchè 	 languagetool: Anche 	 correct: anche ours: Anche
+orig: Sono 	 languagetool:  	 correct: sono ours: Sono
+orig: Mà 	 languagetool: Ma 	 correct: ma ours: Ma
+orig: Prima 	 languagetool:  	 correct: prima ours: Prima
+orig: Noci 	 languagetool:  	 correct: noci ours: voci
+orig: E 	 languagetool:  	 correct: È ours: E
+orig: E 	 languagetool:  	 correct: È ours: E
+orig: Spero 	 languagetool:  	 correct: spero ours: Spero
+orig: interressono 	 languagetool: Interessano 	 correct: interessono ours: interessano
+orig: Augosto 	 languagetool: Agosto 	 correct: agosto ours: Agosto
+orig: Cosí 	 languagetool: Cosi 	 correct: Così ours: Cosa
+orig: natale 	 languagetool:  	 correct: Natale ours: natale
+orig: Caro 	 languagetool:  	 correct: caro ours: Caro
+orig: Signore 	 languagetool:  	 correct: . ours: signor
+orig: In 	 languagetool:  	 correct: in ours: In
+orig: apena 	 languagetool: Amena 	 correct: appena ours: Appena
+orig: Università 	 languagetool:  	 correct: università ours: Università
+orig: CUCCINARE 	 languagetool:  	 correct: CUCINARE ours: Cucinare
+orig: Cosí 	 languagetool: Cosi 	 correct: Così ours: cosa
+orig: Italiana 	 languagetool:  	 correct: italiana ours: Italiana
+orig: Sono 	 languagetool:  	 correct: sono ours: Sono
+orig: Felicitazioni 	 languagetool:  	 correct: felicitazioni ours: Felicitazioni
+orig: Grazie 	 languagetool:  	 correct: grazie ours: Grazie
+orig: pò 	 languagetool: Po 	 correct: po' ours: po
+orig: Sono 	 languagetool:  	 correct: sono ours: Sono
+orig: pò 	 languagetool: Po 	 correct: po' ours: po
+orig: /Grazie 	 languagetool:  	 correct: grazie ours: Grazie
+orig: po 	 languagetool:  	 correct: po' ours: po
+orig: Congratulazione 	 languagetool:  	 correct: congratulazione ours: Congratulazioni
+orig: secura 	 languagetool: scura 	 correct: sicura ours: sicuro
+orig: Congratulazione 	 languagetool:  	 correct: congratulazione ours: Congratulazioni
+orig: e 	 languagetool:  	 correct: È ours: è
+orig: sára 	 languagetool: Sara 	 correct: sarà ours: sera
+orig: Carro 	 languagetool:  	 correct: Caro ours: Carlo
+orig: Cara 	 languagetool:  	 correct: cara ours: Sara
+orig: Il 	 languagetool:  	 correct: il ours: Il
+orig: Ho 	 languagetool:  	 correct: ho ours: Ho
+orig: Novembre 	 languagetool:  	 correct: novembre ours: Novembre
+orig: santa 	 languagetool:  	 correct: Santa ours: santa
+orig: chiara 	 languagetool:  	 correct: Chiara ours: chiara
+orig: Forze 	 languagetool:  	 correct: Forse ours: Forze
+orig: belissimo 	 languagetool: belassimo 	 correct: bellissimo ours: Benissimo
+orig: euphorica 	 languagetool: Euforica 	 correct: euforico ours: Euforico
+orig: puo 	 languagetool: può 	 correct: può  ours: può
+orig: L' 	 languagetool:  	 correct: l' ours: La
+orig: coneguentemente 	 languagetool: conseguentemente 	 correct:  conseguentemente ours: conseguentemente
+orig: Ottobre 	 languagetool:  	 correct: ottobre ours: Ottobre
+orig: Siccome 	 languagetool:  	 correct: siccome ours: Siccome
+orig: po 	 languagetool:  	 correct: po' ours: po
+orig: DA 	 languagetool: Dà 	 correct: DÀ ours: da
+orig: ETERNÀ 	 languagetool:  	 correct: ETERNA ours: Eterna
+orig: annurciarsi 	 languagetool: Annunciarsi 	 correct: annunciarsi ours: annunciarvi
+orig: Appena 	 languagetool:  	 correct: appena ours: Appena
+orig: amessi 	 languagetool: Amassi 	 correct: ammessi ours: messi
+orig: Ho 	 languagetool:  	 correct: ho ours: Ho
+orig: Signor 	 languagetool:  	 correct: signor ours: signore
+orig: Cosi 	 languagetool:  	 correct: Così ours: Cosa
+orig: cosi 	 languagetool:  	 correct: così ours: cosa
+orig: affetusamente 	 languagetool: affettuosamente 	 correct: affettu(o)samente ours: affettuosamente
+orig: abracciamo 	 languagetool: Abbracciamo 	 correct: abbracciamo  ours: abbracciamo
+orig: risquieste 	 languagetool: discuteste 	 correct: ri(s)chieste ours: richieste
+orig: dite 	 languagetool:  	 correct: ditte ours: dita
+orig: Pero 	 languagetool:  	 correct: Però ours: Pero
+orig: dell' 	 languagetool:  	 correct: del ours: dell'
+orig: Cosi 	 languagetool:  	 correct: Così ours: Cosa
+orig: Nell' 	 languagetool:  	 correct: nel ours: Nell'
+orig: cerceranno 	 languagetool: berceranno 	 correct: cerc(a)vano ours: cercheranno
+orig: Lavorarai 	 languagetool: Lavorarci 	 correct: lavorerai ours: Lavorarci
+orig: articulo 	 languagetool: Articolo 	 correct: articolo ours: articoli
+orig: de 	 languagetool:  	 correct: dell' ours: e
+orig: l' 	 languagetool:  	 correct: dell' ours: l'
+orig: Si 	 languagetool:  	 correct: Sì ours: Si
+orig: fra 	 languagetool:  	 correct: frattempo ours: far
+orig: tempo 	 languagetool:  	 correct: frattempo ours: tempo
+orig: fra 	 languagetool:  	 correct: frattempo ours: era
+orig: tempo 	 languagetool:  	 correct: frattempo ours: tempo
+orig: guiste 	 languagetool: giuste 	 correct: giuste  ours: giuste
+orig: E 	 languagetool:  	 correct: È ours: E
+orig: Avete 	 languagetool:  	 correct: avete ours: Avete
+orig: raccommandarti 	 languagetool: raccomandarti 	 correct: racomandarti ours: raccomandati
+orig: perchèposso 	 languagetool: percepisco 	 correct: perché ours: percorso
+orig: Monstrero 	 languagetool: Mostrerò 	 correct: Mo(n)strerò ours: Mostrerà
+orig: É 	 languagetool:  	 correct: È ours: D
+orig: Pero 	 languagetool:  	 correct: Però ours: Ero
+orig: perodevi 	 languagetool: Erodevi 	 correct: però ours: perdevi
+orig: Si 	 languagetool:  	 correct: Sì ours: Si
+orig: à 	 languagetool: a 	 correct: all' ours: e
+orig: l' 	 languagetool:  	 correct: all' ours: l'
+orig: podi 	 languagetool:  	 correct: po' ours: poi
+orig: po 	 languagetool:  	 correct: po' ours: po
+orig: Cosi 	 languagetool:  	 correct: Così ours: Cosa
+orig: po 	 languagetool:  	 correct: po' ours: po
+orig: àpresto 	 languagetool: Agresto 	 correct: a ours: presto
+orig: po 	 languagetool:  	 correct: po' ours: po
+orig: po 	 languagetool:  	 correct: po' ours: po
+orig: po 	 languagetool:  	 correct: po' ours: po
+orig: cosi 	 languagetool:  	 correct: cosi ours: così
+orig: à 	 languagetool: a 	 correct: all' ours: e
+orig: l 	 languagetool:  	 correct: all' ours: l'
+orig: Que 	 languagetool: UE 	 correct: Che ours: Qui
+orig: d' 	 languagetool:  	 correct: dappertutto ours: l'
+orig: dità 	 languagetool: dita 	 correct: ditta ours: dita
+orig: cudeva 	 languagetool: cadeva 	 correct: chiudeva ours: vedeva
+orig: dità 	 languagetool: dita 	 correct: ditta ours: dita
+orig: Cosi 	 languagetool:  	 correct: Così ours: Cosa
+orig: autuno 	 languagetool: Autunno 	 correct: autunno ours: futuro
+orig: Albergo 	 languagetool:  	 correct: abergo ours: albergo
+orig: A 	 languagetool:  	 correct: Adesso ours: A
+orig: desso 	 languagetool:  	 correct: Adesso ours: adesso
+orig: All 	 languagetool:  	 correct: All' ours: All
+orig: e 	 languagetool:  	 correct: è ours: e
+orig: all 	 languagetool:  	 correct: al ours: alle
+orig: All 	 languagetool:  	 correct: Al ours: All
+orig: inseguito 	 languagetool:  	 correct: in seguito ours: Inseguito
+orig: Li 	 languagetool:  	 correct: Lì ours: Li
+orig: cerci 	 languagetool:  	 correct: cerchi ours: cerco
+orig: ecetera 	 languagetool: Eccetera 	 correct: eccetera ours: estera
+orig: Un' 	 languagetool:  	 correct: Un amico ours: Un
+orig: materità 	 languagetool: materia 	 correct: maturità ours: materia
+orig: é 	 languagetool: e 	 correct: è ours: e
+orig: li 	 languagetool:  	 correct: lì ours: si
+orig: a 	 languagetool:  	 correct: adesso ours: è
+orig: chomincare 	 languagetool: cominciare 	 correct:  cominciare ours: cominciare
+orig: Salutti 	 languagetool: Salotti 	 correct: saluti ours: Saluti
+orig: E 	 languagetool:  	 correct: È ours: E
+orig: COMINCARE 	 languagetool:  	 correct: COMINCIARE ours: CNR
+orig: In 	 languagetool:  	 correct: in ours: In
+orig: qalalcuno 	 languagetool: qualcuno 	 correct: qualche ours: Qualcuno
+orig: IFORMATIONE 	 languagetool:  	 correct: INFORMAZIONE ours: formatone
+orig: PIU 	 languagetool:  	 correct: PIÙ ours: PDF
+orig: . 	 languagetool:  	 correct: ? ours: D
+orig: dita 	 languagetool:  	 correct: ditta ours: vita
+orig: preferici 	 languagetool: preferii 	 correct: preferisci ours: preferiti
+orig: apresto 	 languagetool: Agresto 	 correct: A ours: Presto
+orig: e 	 languagetool:  	 correct: è ours: A
+orig: , 	 languagetool:  	 correct: ? ours: D
+orig: e 	 languagetool:  	 correct: è ours: È
+orig: , 	 languagetool:  	 correct: ? ours: C
+orig: GIOVEDI 	 languagetool:  	 correct: GIOVEDÌ ours: giovedì
+orig: GIOVEDI 	 languagetool:  	 correct: GIOVEDÌ ours: giovedì
+orig: POMERIGIO 	 languagetool:  	 correct:  POMERIGGIO ours: pomeriggio
+orig: TALIANDESE 	 languagetool:  	 correct: TAILANDESE ours: AIDS
+orig: CITTA 	 languagetool:  	 correct: CITTÀ ours: CIO
+orig: PERCHE 	 languagetool:  	 correct: PERCHÉ ours: perché
+orig: cita 	 languagetool:  	 correct: città ours: dita
+orig: Grazie 	 languagetool:  	 correct: grazie ours: Grazie
+orig: Grazie 	 languagetool:  	 correct: grazie ours: Grazie
+orig: voui 	 languagetool: voci 	 correct: vuoi ours: Vuoi
+orig: , 	 languagetool:  	 correct: ? ours: D
+orig: Pero 	 languagetool:  	 correct: Però ours: Pero
+orig: Barciono 	 languagetool: Arcigno 	 correct: Bacione ours: Bariano
+orig: perchè 	 languagetool: perché 	 correct: peché ours: Perché
+orig: E 	 languagetool:  	 correct: È ours: E
+orig: MARTEDI 	 languagetool:  	 correct: MARTEDÌ ours: Arte
+orig: GIOVEDI 	 languagetool:  	 correct: GIOVEDÌ ours: giovedì
+orig: GIOVEDI 	 languagetool:  	 correct: GIOVEDÌ ours: giovedì
+orig: GIOVEDI 	 languagetool:  	 correct: GIOVEDÌ ours: giovedì
+orig: GIOVEDI 	 languagetool:  	 correct: GIOVEDÌ ours: giovedì
+orig: baccio 	 languagetool: Baccio 	 correct: bacio ours: Bacio
+orig: Li 	 languagetool:  	 correct: Lì ours: Li
+orig: voui 	 languagetool: voci 	 correct: vuoi  ours: vuoi
+orig: atessa 	 languagetool: Atessa 	 correct: attesa ours: Stessa
+orig: Come 	 languagetool:  	 correct: come ours: Come
+orig: Bono 	 languagetool:  	 correct: Buono ours: Bonn
+orig: in 	 languagetool:  	 correct: incontrarvi ours: il
+orig: contrarvi 	 languagetool:  	 correct: incontrarvi ours: contrari
+orig: Come 	 languagetool:  	 correct: come ours: Come
+orig: baccio 	 languagetool: Baccio 	 correct: bacio ours: Bacio
+orig: dità 	 languagetool: dita 	 correct: ditta ours: dita
+orig: bacci 	 languagetool: Baccio 	 correct: baci ours: Baci
+orig: BACCIONI 	 languagetool:  	 correct: BACIONI ours: bacioni
+orig: MILE 	 languagetool:  	 correct: MILLE ours: PIL
+orig: PIÚ 	 languagetool:  	 correct: PIÙ ours: PDF
+orig: piacce 	 languagetool: diacce 	 correct: piace ours: Piace
+orig: Ĕ 	 languagetool:  	 correct: È ours: D
+orig: Oggi 	 languagetool:  	 correct: oggi ours: Oggi
+orig: giovedi 	 languagetool: giovedì 	 correct: giovedÌ ours: giovedì
+orig: Mo 	 languagetool:  	 correct: Ma ours: Io
+orig: tio 	 languagetool: Aio 	 correct: tua ours: tuo
+orig: Setimane 	 languagetool: Settimane 	 correct: settimane ours: Settimane
+orig: tuto 	 languagetool: Auto 	 correct: tutto ours: Tutto
+orig: di 	 languagetool:  	 correct: ti ours: mi
+orig: cosi 	 languagetool:  	 correct: così ours: cosa
+orig: pui 	 languagetool: PCI 	 correct: più ours: può
+orig: al 	 languagetool:  	 correct: all' ours: ad
+orig: Bona 	 languagetool:  	 correct: Buona ours: Bona
+orig: cosi 	 languagetool:  	 correct: così ours: cosa
+orig: un 	 languagetool:  	 correct: un' ours: un
+orig: É 	 languagetool:  	 correct: È ours: D
+orig: perquè 	 languagetool: serque 	 correct: perché ours: serqua
+orig: al 	 languagetool:  	 correct: all' ours: a
+orig: giovedi 	 languagetool: giovedì 	 correct: giovedi ours: giovedì
+orig: di 	 languagetool:  	 correct: della ours: di
+orig: la 	 languagetool:  	 correct: della ours: La
+orig: e 	 languagetool:  	 correct: è ours: È
+orig: é 	 languagetool: e 	 correct: è ours: È
+orig: giuglio 	 languagetool: Giulio 	 correct: luglio ours: giugno
+orig: horribile 	 languagetool: Orribile 	 correct: orribile ours: terribile
+orig: PICOLLA 	 languagetool:  	 correct: PICCOLA ours: Nicola
+orig: E 	 languagetool:  	 correct: È ours: E
+orig: GIOVEDI 	 languagetool:  	 correct: GIOVEDÌ ours: giovedì
+orig: ocupato 	 languagetool: Occupato 	 correct: occupato ours: Occupato
+orig: giovedi 	 languagetool: giovedì 	 correct: giovedì  ours: giovedì
+orig: Scuzo 	 languagetool: Scudo 	 correct: Scuso ours: Scuro
+orig: CUCCINA 	 languagetool:  	 correct: CUCINA ours: CNA
+orig: BACCI 	 languagetool:  	 correct: BACI ours: ICI
+orig: ABRACI 	 languagetool:  	 correct: ABBRACCI ours: RAI
+orig: asspetiamo 	 languagetool: Assetiamo 	 correct: aspettiamo ours: Aspettiamo
+orig: Scrivi 	 languagetool:  	 correct: Scrivimi ours: Scrivo
+orig: mi 	 languagetool:  	 correct: Scrivimi ours: ma
+orig: perce 	 languagetool: Perca 	 correct: perché ours: pesce
+orig: Giovedì 	 languagetool:  	 correct: giovedi ours: giovedì
+orig: Et 	 languagetool:  	 correct: E ours: Et
+orig: maese 	 languagetool: malese 	 correct: mese ours: paese
+orig: cerci 	 languagetool:  	 correct: cerchi ours: cerca
+orig: voi 	 languagetool:  	 correct: vuoi ours: Poi
+orig: Quando 	 languagetool:  	 correct: quando ours: quanto
+orig: Come 	 languagetool:  	 correct: come ours: Come
+orig: Bacioni 	 languagetool:  	 correct: Bacioni ours: Bacione
+orig: À 	 languagetool:  	 correct: A ours: D
+orig: Come 	 languagetool:  	 correct: come ours: Come
+orig: Vado 	 languagetool:  	 correct: vado ours: Vada
+orig: é 	 languagetool: e 	 correct: è ours: e
+orig: é 	 languagetool: e 	 correct: è ours: e
+orig: COSI 	 languagetool:  	 correct: COSÌ ours: Cosi
+orig: SCRIVERO 	 languagetool:  	 correct: SCRIVERÒ ours: scrivere
+orig: COSI 	 languagetool:  	 correct: COSÌ ours: cosi
+orig: GIA 	 languagetool:  	 correct: GIÀ ours: IVA
+orig: PROPIO 	 languagetool:  	 correct: PROPRIO ours: CIO
+orig: POSIAMO 	 languagetool:  	 correct: POSSIAMO ours: Osimo
+orig: Come 	 languagetool:  	 correct: come ours: Come
+orig: quatro 	 languagetool: quadro 	 correct: quattro ours: quarto
+orig: é 	 languagetool: e 	 correct: è ours: e
+orig: baccio 	 languagetool: Baccio 	 correct: bacio ours: Bacio
+orig: Non 	 languagetool:  	 correct: non ours: Non
+orig: É 	 languagetool:  	 correct: È ours: C
+orig: al' 	 languagetool:  	 correct: all'estate ours: al
+orig: estate 	 languagetool:  	 correct: all'estate ours: state
+orig: Cari 	 languagetool:  	 correct: cari ours: Caro
+orig: Io 	 languagetool:  	 correct: io ours: Io
+orig: Cosi 	 languagetool:  	 correct: Così ours: Cosa
+orig: menomale 	 languagetool: Menomale 	 correct: meno male ours: menomale
+orig: 29.Marzo 	 languagetool:  	 correct: 29. marzo ours: marzo
+orig: Maggio 	 languagetool:  	 correct: maggio ours: Maggio
+orig: lundi 	 languagetool: lindi 	 correct: lunedì ours: lungi
+orig: , 	 languagetool:  	 correct: . ours: C
+orig: Sono 	 languagetool:  	 correct: sono ours: Sono
+orig: pero 	 languagetool:  	 correct: però ours: Ero
+orig: Spero 	 languagetool:  	 correct: spero ours: Spero
+orig: È 	 languagetool:  	 correct: è ours: È
+orig: é 	 languagetool: e 	 correct: è ours: e
+orig: po 	 languagetool:  	 correct: po' ours: po
+orig: Carissimi 	 languagetool:  	 correct: Carissimi ours: Carissimo
+orig: é 	 languagetool: e 	 correct: è ours: e
+orig: Doppo 	 languagetool: Coppo 	 correct: : ours: Dopo
+orig: participanti 	 languagetool: partecipanti 	 correct: participianti ours: partecipanti
+orig: japonese 	 languagetool: Aponense 	 correct: giapponese ours: savonese
+orig: (Lui 	 languagetool:  	 correct: (lui ours: lui
+orig: (comme 	 languagetool:  	 correct: (come ours: come
+orig: po 	 languagetool:  	 correct: po' ours: po
+orig: piacono 	 languagetool:  	 correct: piacciono ours: piacono
+orig: Baccione 	 languagetool: Bacione 	 correct: bacione ours: Baccio
+orig: E 	 languagetool:  	 correct: È ours: E
+orig: e 	 languagetool:  	 correct: è ours: e
+orig: e 	 languagetool:  	 correct: è ours: e
+orig: e 	 languagetool:  	 correct: è ours: a
+orig: Come 	 languagetool:  	 correct: come ours: Come
+orig: Come 	 languagetool:  	 correct: come ours: Come
+orig: baccio 	 languagetool: Baccio 	 correct: bacio ours: Bacio
+orig: Come 	 languagetool:  	 correct: come ours: Come
+orig: danmarco 	 languagetool: Danimarca 	 correct: Danmarco ours: danaro
+orig: , 	 languagetool:  	 correct: . ours: D
+orig: Ragazzi 	 languagetool:  	 correct: ragazzi ours: ragazze
+orig: é 	 languagetool: e 	 correct: è ours: e
+orig: C' 	 languagetool:  	 correct: c'è ours: c'
+orig: é 	 languagetool: e 	 correct: c'è ours: è
+orig: sempre 	 languagetool:  	 correct: c'è ours: sempre
+orig: é 	 languagetool: e 	 correct: , ours: è
+orig: po 	 languagetool:  	 correct: è ours: po
+orig: é 	 languagetool: e 	 correct: po' ours: è
+orig: dita 	 languagetool:  	 correct: ditta ours: vita
+orig: e 	 languagetool:  	 correct: è ours: e
+orig: prosima 	 languagetool: prosoma 	 correct: prossima ours: prima
+orig: patrone 	 languagetool:  	 correct: padrone ours: Padrone
+orig: vorei 	 languagetool: torei 	 correct: vorrei ours: Vorrei
+orig: c' 	 languagetool:  	 correct: C ours: C'
+orig: stano 	 languagetool:  	 correct: stanno ours: siano
+orig: po 	 languagetool:  	 correct: po' ours: po
+orig: Come 	 languagetool:  	 correct: come ours: Come
+orig: e 	 languagetool: E 	 correct: È ours: O
+orig: Lino 	 languagetool:  	 correct: Lino ours: Gino
+orig: passegiathi 	 languagetool: passeggiati 	 correct: passegiati ours: passeggiata
+orig: Come 	 languagetool:  	 correct: come ours: Come
+orig: cosi 	 languagetool:  	 correct: così ours: cosa
+orig: po 	 languagetool:  	 correct: po' ours: po
+orig: Saluti 	 languagetool:  	 correct: saluti ours: Saluti
+orig: campania 	 languagetool: Campania 	 correct: campagna ours: Campania
+orig: e 	 languagetool:  	 correct: è ours: È
+orig: dové 	 languagetool:  	 correct: dov'è ours: dove
+orig: citta. 	 languagetool:  	 correct: città. ours: città
+orig: Grazie 	 languagetool:  	 correct: grazie ours: Grazie
+orig: Gennaio  	 languagetool:  	 correct: gennaio ours: Gennaro
+orig: Caro 	 languagetool:  	 correct: caro ours: Carlo
+orig: asieme 	 languagetool: Assieme 	 correct: assieme ours: insieme
+orig: Due 	 languagetool:  	 correct: due ours: Due
+orig: Amici 	 languagetool:  	 correct: Saluti ours: amici
+orig: Mangiamo 	 languagetool:  	 correct: mangiamo ours: mangiano
+orig: sicile 	 languagetool: Sicilie 	 correct: Sicilia ours: simile
+orig: ciamo 	 languagetool: Camo 	 correct: chiamo ours: siamo
+orig: all' 	 languagetool:  	 correct: al ours: all'
+orig: ristorante 	 languagetool:  	 correct: al ours: ristorante
+orig: per 	 languagetool:  	 correct: al ours: per
+orig: a 	 languagetool:  	 correct: accanto ours: e
+orig: canto 	 languagetool:  	 correct: accanto ours: conto
+orig: cita 	 languagetool:  	 correct: città ours: vita
+orig: e 	 languagetool:  	 correct: è ours: de
+orig: (gramatica 	 languagetool:  	 correct: (grammatica ours: aramaica
+orig: X.ci 	 languagetool:  	 correct: X. Ci ours: ci
+orig: é 	 languagetool: e 	 correct: è ours: e
+orig: é 	 languagetool: e 	 correct: E ours: A
+orig: amica 	 languagetool:  	 correct: Un ours: amici
+orig: é 	 languagetool: e 	 correct: è ours: a
+orig: Rimago 	 languagetool: Imago 	 correct: rima(n)go ours: rimango
+orig: undieci 	 languagetool: Undici 	 correct: undici ours: dieci
+orig: que 	 languagetool: UE 	 correct: che ours: qui
+orig: filipini 	 languagetool: filippini 	 correct: Filipini ours: filippini
+orig: l' 	 languagetool:  	 correct: L ours: L'
+orig: cittadel 	 languagetool: cittadella 	 correct: città ours: cittadino
+orig: tino 	 languagetool:  	 correct: Tino ours: tipo
+orig: Amici 	 languagetool:  	 correct: amici ours: Amici
+orig: Amica 	 languagetool:  	 correct: amica ours: Amico
+orig: a 	 languagetool:  	 correct: alla ours: e
+orig: la 	 languagetool:  	 correct: alla ours: la
+orig: perque 	 languagetool: serque 	 correct: perché ours: perse
+orig: pasare 	 languagetool: basare 	 correct: passare ours: pagare
+orig: citta. 	 languagetool:  	 correct: città. ours: città
+orig: April 	 languagetool: Apri 	 correct: aprile ours: Aprile
+orig: E 	 languagetool:  	 correct: È ours: E
+orig: April 	 languagetool: Apri 	 correct: aprile ours: Aprile
+orig: CERA 	 languagetool:  	 correct: CARA ours: Era
+orig: CITTA 	 languagetool:  	 correct: CIITTÀ ours: IVA
+orig: CITTA 	 languagetool:  	 correct: CITTÀ ours: IVA
+orig: MERCOLEDI 	 languagetool:  	 correct: MERCOLEDÌ ours: Mercoledì
+orig: E 	 languagetool:  	 correct: È ours: E
+orig: peresempioun 	 languagetool:  	 correct: per esempio ours: esempio
+orig: Habito 	 languagetool: Abito 	 correct: Abtio ours: Abito
+orig: mangamo 	 languagetool: mangano 	 correct: mangiamo ours: mancato
+orig: piacono 	 languagetool:  	 correct: piacciono ours: piacono
+orig: E 	 languagetool:  	 correct: È ours: E
+orig: e 	 languagetool: E 	 correct: è ours: È
+orig: alpe 	 languagetool:  	 correct: Alpi ours: alte
+orig: junio 	 languagetool: junior 	 correct: giugno ours: audio
+orig: uffico 	 languagetool: Uffici 	 correct: ufficio ours: Ufficio
+orig: veder 	 languagetool:  	 correct: vederti ours: vedere
+orig: ti 	 languagetool:  	 correct: vederti ours: mi
+orig: andro 	 languagetool: Andro 	 correct: andrò ours: andrà
+orig: li 	 languagetool:  	 correct: lì ours: la
+orig: la 	 languagetool:  	 correct: là ours: ma
+orig: é 	 languagetool: e 	 correct: è ours: È
+orig: é 	 languagetool: e 	 correct: è ours: e
+orig: que 	 languagetool: UE 	 correct: che ours: qui
+orig: faggiamo 	 languagetool: foggiamo 	 correct: facciamo ours: fuggiamo
+orig: e 	 languagetool:  	 correct: è ours: e
+orig: lunedi 	 languagetool: lunedì 	 correct: lunedi ours: lunedì
+orig: e 	 languagetool:  	 correct: è ours: È
+orig: E 	 languagetool:  	 correct: È ours: E
+orig: Piemontese 	 languagetool:  	 correct: piemontese ours: Piemonte
+orig: E 	 languagetool:  	 correct: È ours: E
+orig: que 	 languagetool: UE 	 correct: che ours: Qui
+orig: salutti 	 languagetool: salotti 	 correct: saluti ours: Saluti
+orig: È 	 languagetool:  	 correct: E ours: è
+orig: TOPO 	 languagetool:  	 correct: DOPO ours: topo
+orig: voui 	 languagetool: voci 	 correct: vuoi ours: Voi
+orig: Com' 	 languagetool:  	 correct: Come ours: Como
+orig: è 	 languagetool:  	 correct: Come ours: o
+orig: po 	 languagetool:  	 correct: po' ours: po
+orig: è 	 languagetool:  	 correct: come ours: e
+orig: que 	 languagetool: UE 	 correct: che ours: qui
+orig: e 	 languagetool:  	 correct: è ours: e

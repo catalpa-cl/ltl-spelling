@@ -81,7 +81,7 @@ public class ErrorCorrectionExperiments_web1tReranking {
 		String dict_child = "src/main/resources/dictionaries/childlex_litkey.txt";
 		String dict_child_phon = "src/main/resources/dictionaries/childlex_litkey_phoneme_map.txt";
 		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_DE-manual.txt";
-		String web1t_path = System.getenv("WEB1T_DE");
+		String web1t_path = System.getenv("WEB1T") + "/de";
 
 		runErrorCorrection(
 				"SkaLa_missingSpaces_hunspell_web1t_numCand_" + num_candidates_per_method + "_ngramSize_" + n_gram_size,
@@ -134,7 +134,7 @@ public class ErrorCorrectionExperiments_web1tReranking {
 		String dict = "src/main/resources/dictionaries/hunspell_dict_en_US.txt";
 		String dict_phon = "src/main/resources/dictionaries/hunspell_dict_en_US_phoneme_map.txt";
 		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_EN-manual.txt";
-		String web1t_path = System.getenv("WEB1T_EN");
+		String web1t_path = System.getenv("WEB1T") + "/en";
 
 		runErrorCorrection(
 				"TOEFL_missingSpaces_hunspell_web1t_numCand_" + num_candidates_per_method + "_ngramSize_" + n_gram_size,
@@ -165,7 +165,7 @@ public class ErrorCorrectionExperiments_web1tReranking {
 		String dict = "src/main/resources/dictionaries/hunspell_dict_it.txt";
 		String dict_phon = "src/main/resources/dictionaries/hunspell_dict_it_phoneme_map.txt";
 		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_IT-manual.txt";
-		String web1t_path = System.getenv("WEB1T_IT");
+		String web1t_path = System.getenv("WEB1T") + "/it";
 
 		runErrorCorrection(
 				"CItA_missingSpaces_hunspell_web1t_numCand_" + num_candidates_per_method + "_ngramSize_" + n_gram_size,
@@ -198,7 +198,7 @@ public class ErrorCorrectionExperiments_web1tReranking {
 		String dict_child = "src/main/resources/dictionaries/childlex_litkey.txt";
 		String dict_child_phon = "src/main/resources/dictionaries/childlex_litkey_phoneme_map.txt";
 		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_DE-manual.txt";
-		String web1t_path = System.getenv("WEB1T_DE");
+		String web1t_path = System.getenv("WEB1T") + "/de";
 
 		runErrorCorrection(
 				"Litkey_missingSpaces_hunspell_web1t_numCand_" + num_candidates_per_method + "_ngramSize_"
@@ -252,7 +252,7 @@ public class ErrorCorrectionExperiments_web1tReranking {
 		String dict = "src/main/resources/dictionaries/hunspell_dict_it.txt";
 		String dict_phon = "src/main/resources/dictionaries/hunspell_dict_it_phoneme_map.txt";
 		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_IT-manual.txt";
-		String web1t_path = System.getenv("WEB1T_IT");
+		String web1t_path = System.getenv("WEB1T") + "/it";
 
 		runErrorCorrection(
 				"MERLIN-IT_missingSpaces_hunspell_web1t_numCand_" + num_candidates_per_method + "_ngramSize_"
@@ -284,7 +284,7 @@ public class ErrorCorrectionExperiments_web1tReranking {
 		String dict = "src/main/resources/dictionaries/hunspell__dict_cz.txt";
 		String dict_phon = "src/main/resources/dictionaries/hunspell_dict_cz_phoneme_map.txt";
 		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_CZ-manual.txt";
-		String web1t_path = System.getenv("WEB1T_CZ");
+		String web1t_path = System.getenv("WEB1T") + "/cz";
 
 		runErrorCorrection(
 				"MERLIN-CZ_missingSpaces_hunspell_web1t_numCand_" + num_candidates_per_method + "_ngramSize_"
@@ -323,7 +323,7 @@ public class ErrorCorrectionExperiments_web1tReranking {
 		String dict_child = "src/main/resources/dictionaries/childlex_litkey.txt";
 		String dict_child_phon = "src/main/resources/dictionaries/childlex_litkey_phoneme_map.txt";
 		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_DE-manual.txt";
-		String web1t_path = System.getenv("WEB1T_DE");
+		String web1t_path = System.getenv("WEB1T") + "/de";
 
 		runErrorCorrection(
 				"MERLIN-DE_missingSpaces_hunspell_web1t_numCand_" + num_candidates_per_method + "_ngramSize_"
