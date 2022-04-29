@@ -33,7 +33,7 @@ public class GenerateAndRank_FindMissingSpace extends CandidateGeneratorAndRanke
 	protected int minWordLength;
 
 	/**
-	 * The dictionaries based on which to generate the correction candidates.
+	 * The cost of inserting a space.
 	 */
 	public static final String PARAM_SPACE_INSERTION_COST = "spaceInsertionCost";
 	@ConfigurationParameter(name = PARAM_SPACE_INSERTION_COST, mandatory = true, defaultValue = "4")
@@ -50,8 +50,6 @@ public class GenerateAndRank_FindMissingSpace extends CandidateGeneratorAndRanke
 
 		for (SpellingAnomaly anomaly : JCasUtil.select(aJCas, SpellingAnomaly.class)) {
 
-//			System.out.println("Processing anomaly: " + anomaly.getCoveredText());
-
 			Map<Float, List<String>> rankedCandidates = new TreeMap<Float, List<String>>();
 			String currentWord = anomaly.getCoveredText();
 			Boolean isSentenceBeginning = !JCasUtil.selectCovered(StartOfSentence.class, anomaly).isEmpty();
@@ -60,11 +58,15 @@ public class GenerateAndRank_FindMissingSpace extends CandidateGeneratorAndRanke
 			Map<String, Integer> wordsSoFar = new HashMap<String, Integer>();
 			Set<String> solutionSet = new HashSet<String>();
 			Map<Integer, String> startWordsFromMap = wordsInWord.get(0);
+
 			if (startWordsFromMap != null) {
+
 				for (Integer key : startWordsFromMap.keySet()) {
+
 					wordsSoFar.put(startWordsFromMap.get(key), key);
 				}
 				while (wordsSoFar.size() > 0) {
+
 					Map<String, Integer> newWords = new HashMap<String, Integer>();
 					for (String word : wordsSoFar.keySet()) {
 						Map<String, Integer> results = processWord(wordsInWord, currentWord, word,
@@ -84,6 +86,7 @@ public class GenerateAndRank_FindMissingSpace extends CandidateGeneratorAndRanke
 			}
 
 			for (String solution : solutionSet) {
+
 				if (solution.contains(" ")) {
 					float cost = spaceInsertionCost * StringUtils.countMatches(solution, " ");
 					List<String> entriesForThisCost = rankedCandidates.get(cost);
@@ -93,12 +96,12 @@ public class GenerateAndRank_FindMissingSpace extends CandidateGeneratorAndRanke
 					}
 					entriesForThisCost.add(solution);
 				} else {
+
 //					System.out.println("Found a solution, but it did not contain any spaces");
 				}
 			}
 
 //			System.out.println("number of solutions: " + solutionSet.size());
-
 			SuggestionCostTuples tuples = getSuggestionCostTuples(rankedCandidates.entrySet().iterator());
 			addSuggestedActions(aJCas, anomaly, tuples);
 		}
@@ -108,14 +111,21 @@ public class GenerateAndRank_FindMissingSpace extends CandidateGeneratorAndRanke
 			String wordSoFar, int endIndex) {
 
 		Map<String, Integer> wordMap = new HashMap<String, Integer>();
+
 		if ((endIndex) == fullWord.length()) {
+
 			// Word is done
 			return wordMap;
 		}
+
 		Map<Integer, String> startMap = wordsInWord.get(endIndex);
+
 		if (startMap == null) {
+
 			return null;
+
 		} else {
+
 			for (Integer key : startMap.keySet()) {
 				wordMap.put(wordSoFar + " " + startMap.get(key), key);
 			}

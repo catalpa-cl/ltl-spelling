@@ -12,13 +12,10 @@ import java.util.Set;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
-import org.apache.uima.fit.descriptor.ResourceMetaData;
-import org.apache.uima.fit.descriptor.TypeCapability;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Level;
 
 import de.tudarmstadt.ukp.dkpro.core.api.anomaly.type.SpellingAnomaly;
-import eu.openminted.share.annotations.api.DocumentationResource;
 import utils.PhonemeUtils;
 
 /**
@@ -26,10 +23,6 @@ import utils.PhonemeUtils;
  * calculated on phonemes.
  */
 
-@ResourceMetaData(name = "")
-@DocumentationResource("")
-@TypeCapability(inputs = { "de.unidue.ltl.spelling.types.ExtendedSpellingAnomaly" }, outputs = {
-		"de.tudarmstadt.ukp.dkpro.core.api.anomaly.type.SuggestedAction" })
 public class GenerateAndRank_LevenshteinPhoneme extends CandidateGeneratorAndRanker_LevenshteinBased {
 
 	public static final String PARAM_LANGUAGE = "language";
@@ -76,15 +69,6 @@ public class GenerateAndRank_LevenshteinPhoneme extends CandidateGeneratorAndRan
 	@ConfigurationParameter(name = PARAM_DEFAULT_WEIGHT, mandatory = true, defaultValue = "1.0")
 	protected float defaultWeight;
 
-	// Replaced with PARAM_DICTIONARIES of supertype
-//	/**
-//	 * Files containing line-by-line tab-separated entries of grapheme and phoneme
-//	 * versions of dictionary words.
-//	 */
-//	public static final String PARAM_GRAPHEME_TO_PHONEME_DICT_FILES = "graphemeToPhonemeDictFiles";
-//	@ConfigurationParameter(name = PARAM_GRAPHEME_TO_PHONEME_DICT_FILES, mandatory = true)
-//	protected String[] graphemeToPhonemeDictFiles;
-
 	private Map<String, Float> deletionMap;
 	private Map<String, Float> insertionMap;
 	private Map<String, Map<String, Float>> substitutionMap;
@@ -98,6 +82,7 @@ public class GenerateAndRank_LevenshteinPhoneme extends CandidateGeneratorAndRan
 
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {
+
 		super.initialize(context);
 		graphemeToPhonemeMap = readG2PMap(dictionaries);
 		sortedDictionary = fillDictionary(graphemeToPhonemeMap);
@@ -105,6 +90,7 @@ public class GenerateAndRank_LevenshteinPhoneme extends CandidateGeneratorAndRan
 		deletionMap = readWeights(weightFileDeletion);
 		insertionMap = readWeights(weightFileInsertion);
 		substitutionMap = readWeights2D(weightFileSubstitution);
+
 		if (!includeTransposition && weightFileTransposition != null) {
 			getContext().getLogger().log(Level.WARNING,
 					"Transposition was not chosen to be included in GenerateAndRank_LevenshteinGrapheme, but you provided the file'"
@@ -112,16 +98,14 @@ public class GenerateAndRank_LevenshteinPhoneme extends CandidateGeneratorAndRan
 		} else {
 			transpositionMap = readWeights2D(weightFileTransposition);
 		}
-
-//		System.out.println(deletionMap);
-//		System.out.println(insertionMap);
-//		System.out.println(substitutionMap);
-//		System.out.println(transpositionMap);
 	}
 
 	private Map<Integer, Set<String>> fillDictionary(Map<String, String> graphemeToPhoneme) {
+
 		Map<Integer, Set<String>> dictionaryMap = new HashMap<Integer, Set<String>>();
+
 		for (String word : graphemeToPhoneme.keySet()) {
+
 			int lengthOfTranscriptionOfCurrentWord = graphemeToPhoneme.get(word).split(" ").length;
 			Set<String> wordsOfThisLength = dictionaryMap.get(lengthOfTranscriptionOfCurrentWord);
 			if (wordsOfThisLength == null) {
@@ -139,6 +123,7 @@ public class GenerateAndRank_LevenshteinPhoneme extends CandidateGeneratorAndRan
 		BufferedReader br;
 
 		for (String mapFile : mapFiles) {
+
 			try {
 				br = new BufferedReader(new FileReader(new File(mapFile)));
 				while (br.ready()) {
@@ -209,6 +194,7 @@ public class GenerateAndRank_LevenshteinPhoneme extends CandidateGeneratorAndRan
 
 	private Map<String, Float> readWeights(String weightFile) {
 		if (weightFile != null) {
+
 			Map<String, Float> weightMap = new HashMap<String, Float>();
 
 			try {
@@ -256,7 +242,7 @@ public class GenerateAndRank_LevenshteinPhoneme extends CandidateGeneratorAndRan
 
 	@Override
 	protected String getStringToCorrectFromAnomaly(SpellingAnomaly anomaly) {
-		System.out.println("ANOMALY: "+anomaly.getCoveredText());
+		System.out.println("ANOMALY: " + anomaly.getCoveredText());
 		return PhonemeUtils.getPhoneticTranscription(anomaly.getCoveredText(), language);
 	}
 
@@ -274,8 +260,6 @@ public class GenerateAndRank_LevenshteinPhoneme extends CandidateGeneratorAndRan
 		right = graphemeToPhonemeMap.get(right);
 		String[] misspellingArray = wrong.split(" ");
 		String[] correctionArray = right.split(" ");
-
-//		System.out.println("Calculating cost for "+wrong+" and "+right);
 
 		float[][] distanceMatrix = new float[misspellingArray.length + 1][correctionArray.length + 1];
 

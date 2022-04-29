@@ -19,7 +19,6 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 
 import de.tudarmstadt.ukp.dkpro.core.api.anomaly.type.SpellingAnomaly;
-import de.tudarmstadt.ukp.dkpro.core.api.anomaly.type.SuggestedAction;
 import spelling.types.SuggestedActionWithOrigin;
 
 /**
@@ -34,16 +33,16 @@ public abstract class CandidateGeneratorAndRanker extends JCasAnnotator_ImplBase
 	public static final String PARAM_DICTIONARIES = "dictionaries";
 	@ConfigurationParameter(name = PARAM_DICTIONARIES, mandatory = true)
 	protected String[] dictionaries;
-	
+
 	/**
 	 * Number of candidates to be generated with this method. If there are more
 	 * candidates with the same rank as the n-th of the top n candidates these are
 	 * included as well.
 	 */
 	public static final String PARAM_NUM_OF_CANDIDATES_TO_GENERATE = "numberOfCandidatesToGenerate";
-	@ConfigurationParameter(name = PARAM_NUM_OF_CANDIDATES_TO_GENERATE, mandatory = true, defaultValue = "5")
+	@ConfigurationParameter(name = PARAM_NUM_OF_CANDIDATES_TO_GENERATE, mandatory = true, defaultValue = "3")
 	protected int numberOfCandidatesToGenerate;
-	
+
 	protected Set<String> dictionary;
 
 	protected void readDictionaries(String[] dictionaries) {
@@ -65,12 +64,14 @@ public abstract class CandidateGeneratorAndRanker extends JCasAnnotator_ImplBase
 
 	@Override
 	public abstract void process(JCas aJCas) throws AnalysisEngineProcessException;
-	
+
 	protected SuggestionCostTuples getSuggestionCostTuples(Iterator<Entry<Float, List<String>>> entries) {
+
 		SuggestionCostTuples tuples = new SuggestionCostTuples();
 
 		while (tuples.size() < numberOfCandidatesToGenerate) {
 			if (entries.hasNext()) {
+
 				Entry<Float, List<String>> entry = entries.next();
 
 				List<String> currentRankList = entry.getValue();
@@ -92,7 +93,7 @@ public abstract class CandidateGeneratorAndRanker extends JCasAnnotator_ImplBase
 			int i = 0;
 			FSArray actions;
 
-			// Copy whats there already
+			// Copy what is there already
 			if (anomaly.getSuggestions() != null) {
 				int noOfAlreadyMadeSuggestions = anomaly.getSuggestions().size();
 				actions = new FSArray(aJCas, noOfAlreadyMadeSuggestions + tuples.size());
@@ -123,6 +124,7 @@ public abstract class CandidateGeneratorAndRanker extends JCasAnnotator_ImplBase
 	}
 
 	class SuggestionCostTuple {
+
 		private final String suggestion;
 		private final float cost;
 
@@ -141,6 +143,7 @@ public abstract class CandidateGeneratorAndRanker extends JCasAnnotator_ImplBase
 	}
 
 	class SuggestionCostTuples implements Iterable<SuggestionCostTuple> {
+
 		private final List<SuggestionCostTuple> tuples;
 
 		public SuggestionCostTuples() {

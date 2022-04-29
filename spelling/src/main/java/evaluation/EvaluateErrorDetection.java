@@ -118,6 +118,7 @@ public class EvaluateErrorDetection extends JCasAnnotator_ImplBase {
 						numberOfTNthatAreGrammarErrors++;
 						TN.inc("_grammarError: " + token.getCoveredText() + "\t("
 								+ JCasUtil.selectCovered(GrammarError.class, token).get(0).getCorrection() + ")");
+
 					} else if (errorLookup.containsKey(token)) {
 						Collection<SpellingError> errs = errorLookup.get(token);
 						if (errs.size() > 1) {
@@ -129,6 +130,7 @@ public class EvaluateErrorDetection extends JCasAnnotator_ImplBase {
 						TN.inc("_partOfSpellingError: " + token.getCoveredText() + ": " + err.getCoveredText() + " ("
 								+ err.getCorrection() + ")");
 						numberOfTNthatAreCoveredBySpellingError++;
+
 					} else if (grammarLookup.containsKey(token)) {
 						Collection<GrammarError> errs = grammarLookup.get(token);
 						if (errs.size() > 1) {
@@ -140,6 +142,7 @@ public class EvaluateErrorDetection extends JCasAnnotator_ImplBase {
 						TN.inc("_partOfGrammarError: " + token.getCoveredText() + ": " + err.getCoveredText() + " ("
 								+ err.getCorrection() + ")");
 						numberOfTNthatAreCoveredByGrammarError++;
+
 					} else {
 						TN.inc(token.getCoveredText());
 					}
@@ -162,8 +165,13 @@ public class EvaluateErrorDetection extends JCasAnnotator_ImplBase {
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
 
 		try {
-			String eval_dir = SpellingConstants.EVALUATION_DATA_PATH + "ErrorDetection_" + configName;
-			File dir = new File(eval_dir);
+
+			String eval_dir_detection = SpellingConstants.EVALUATION_DATA_PATH + "Error_Detection";
+			File dir = new File(eval_dir_detection);
+			dir.mkdir();
+
+			String eval_dir = SpellingConstants.EVALUATION_DATA_PATH + "/Error_Detection/ErrorDetection_" + configName;
+			dir = new File(eval_dir);
 			dir.mkdir();
 
 			BufferedWriter bw = new BufferedWriter(new FileWriter(new File(eval_dir + "/prec_rec_f1.txt")));

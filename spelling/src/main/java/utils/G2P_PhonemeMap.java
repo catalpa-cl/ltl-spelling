@@ -7,22 +7,30 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+ * To look up pregenerated phonetic representations of misspellings
+ */
 public class G2P_PhonemeMap {
 
 	private static G2P_PhonemeMap mapper = null;
 
-	private String phonemeLocation = "src/main/resources/g2p_maps/";
+	private String phonemeLocation = "src/main/resources/corpora/misspelling_phonemes/";
 	private Map<String, Map<String, String>> phonemeMaps;
 
 	private G2P_PhonemeMap() {
 		phonemeMaps = new HashMap<String, Map<String, String>>();
 		File dir = new File(phonemeLocation);
+		
 		// Every dir becomes a key, read all files contained in it into respective map
 		for (File phonemeDir : dir.listFiles()) {
+			
 			if (phonemeDir.isDirectory()) {
+				
 				phonemeMaps.put(phonemeDir.getName(), new HashMap<String, String>());
 				Map<String, String> phonemeMapForCurrentLanguage = phonemeMaps.get(phonemeDir.getName());
+				
 				for (File phonemeMapFile : phonemeDir.listFiles()) {
+					
 					BufferedReader br = null;
 					try {
 						br = new BufferedReader(new FileReader(phonemeMapFile));

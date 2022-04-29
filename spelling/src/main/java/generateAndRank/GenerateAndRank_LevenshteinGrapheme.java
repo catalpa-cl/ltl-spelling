@@ -12,22 +12,13 @@ import java.util.Set;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
-import org.apache.uima.fit.descriptor.ResourceMetaData;
-import org.apache.uima.fit.descriptor.TypeCapability;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Level;
-
-import eu.openminted.share.annotations.api.DocumentationResource;
 
 /**
  * Generates and ranks candidates based on (weighted) levenshtein distance and
  * graphemes.
  */
-
-@ResourceMetaData(name = "")
-@DocumentationResource("")
-@TypeCapability(inputs = { "de.unidue.ltl.spelling.types.ExtendedSpellingAnomaly" },
-		outputs = { "de.tudarmstadt.ukp.dkpro.core.api.anomaly.type.SuggestedAction" })
 
 public class GenerateAndRank_LevenshteinGrapheme extends CandidateGeneratorAndRanker_LevenshteinBased {
 
@@ -91,11 +82,13 @@ public class GenerateAndRank_LevenshteinGrapheme extends CandidateGeneratorAndRa
 	private Map<Character, Map<Character, Float>> substitutionMap;
 	private Map<Character, Map<Character, Float>> transpositionMap;
 
-	// To keep track of missing weights and alert user only once in case something is missing
+	// To keep track of missing weights and alert user only once in case something
+	// is missing
 	private Set<String> missingWeights = new HashSet<String>();
 
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {
+
 		super.initialize(context);
 		readDictionaries(dictionaries);
 
@@ -109,74 +102,93 @@ public class GenerateAndRank_LevenshteinGrapheme extends CandidateGeneratorAndRa
 		} else {
 			transpositionMap = readWeights2D(weightFileTransposition);
 		}
-
-//		System.out.println(deletionMap);
-//		System.out.println(insertionMap);
-//		System.out.println(substitutionMap);
-//		System.out.println(transpositionMap);
 	}
 
 	private Map<Character, Map<Character, Float>> readWeights2D(String weightFile) {
+
 		if (weightFile != null) {
+
 			boolean includesAtLeastOneWeightForUppercaseChar = false;
 			Map<Character, Map<Character, Float>> weightMap = new HashMap<Character, Map<Character, Float>>();
 			weightMap = new HashMap<Character, Map<Character, Float>>();
 
 			try {
+
 				BufferedReader br = new BufferedReader(new FileReader(new File(weightFile)));
+
 				while (br.ready()) {
+
 					String line = br.readLine();
 					String[] weightEntry = line.split("\t");
+
 					if (weightEntry.length != 3) {
+
 						getContext().getLogger().log(Level.WARNING,
 								"Tab-separated triples of character, character, and weight are expected, but file '"
 										+ weightFile + "' contained the line '" + line + ", which will be ignored.");
 						continue;
 					}
+
 					if (weightEntry[0].length() != 1 || weightEntry[1].length() != 1) {
+
 						getContext().getLogger().log(Level.WARNING, "You provided a weight for '" + weightEntry[0]
 								+ "' and '" + weightEntry[1]
 								+ ", but only weights for single chars are accepted. This entry of the weight file will be ignored.");
 						continue;
 					}
+
 					Character firstEntry = weightEntry[0].charAt(0);
 					Character secondEntry = weightEntry[1].charAt(0);
 					Float weight = 0.0f;
+
 					try {
+
 						weight = Float.parseFloat(weightEntry[2]);
 					} catch (NumberFormatException e) {
+
 						getContext().getLogger().log(Level.WARNING, "You provided the weight '" + weightEntry[2]
 								+ "' for '" + weightEntry[0] + "' and '" + weightEntry[1]
 								+ ", which cannot be parsed as a float. This entry of the weight file will be ignored.");
 						continue;
 					}
+
 					if (weight < 1) {
+
 						getContext().getLogger().log(Level.WARNING, "You provided the weight '" + weightEntry[2]
 								+ "' for '" + weightEntry[0] + "' and '" + weightEntry[1]
 								+ "'. In order for candidate generation to work properly please scale your distances to where the smallest distance is at least 1.0.");
 					}
+
 					if (!includesAtLeastOneWeightForUppercaseChar) {
+
 						if (!Character.isLowerCase(firstEntry) || !Character.isLowerCase(secondEntry)) {
+
 							includesAtLeastOneWeightForUppercaseChar = true;
 						}
 					}
 
 					Map<Character, Float> currentCharacterMap = weightMap.get(firstEntry);
+
 					if (currentCharacterMap == null) {
+
 						weightMap.put(firstEntry, new HashMap<Character, Float>());
 						currentCharacterMap = weightMap.get(firstEntry);
 					}
+
 					if (currentCharacterMap.get(secondEntry) == null) {
+
 						currentCharacterMap.put(secondEntry, weight);
 					} else {
+
 						getContext().getLogger().log(Level.WARNING,
-								"You provided two weights for '" + weightEntry[0] + "' to '" + weightEntry[1]
-										+ "' (" + currentCharacterMap.get(weightEntry[1].toLowerCase().charAt(0))
-										+ " and " + weightEntry[2] + ") in File" + weightFile
-										+ ". The former will be used.");
+								"You provided two weights for '" + weightEntry[0] + "' to '" + weightEntry[1] + "' ("
+										+ currentCharacterMap.get(weightEntry[1].toLowerCase().charAt(0)) + " and "
+										+ weightEntry[2] + ") in File" + weightFile + ". The former will be used.");
 					}
 				}
+
 				br.close();
+
 				if (!lowercase && !includesAtLeastOneWeightForUppercaseChar) {
 					getContext().getLogger().log(Level.INFO,
 							"Parameter to process lowercased is disabled, but not a single weight including an uppercased char was provided. Uniform apitalization penalty will be applied if cases do not match.");
@@ -186,6 +198,7 @@ public class GenerateAndRank_LevenshteinGrapheme extends CandidateGeneratorAndRa
 							"Parameter to process lowercased is enabled, but at least one weight including an uppercased char was provided. It will be ignored.");
 				}
 				return weightMap;
+
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			} catch (IOException e) {
@@ -196,16 +209,22 @@ public class GenerateAndRank_LevenshteinGrapheme extends CandidateGeneratorAndRa
 	}
 
 	private Map<Character, Float> readWeights(String weightFile) {
+
 		if (weightFile != null) {
+
 			boolean includesAtLeastOneWeightForUppercaseChar = false;
 			Map<Character, Float> weightMap = new HashMap<Character, Float>();
 			weightMap = new HashMap<Character, Float>();
 
 			try {
+
 				BufferedReader br = new BufferedReader(new FileReader(new File(weightFile)));
+
 				while (br.ready()) {
+
 					String line = br.readLine();
 					String[] weightEntry = line.split("\t");
+
 					if (weightEntry.length != 2) {
 						getContext().getLogger().log(Level.WARNING,
 								"Tab-separated pairs of characters and weights are expected, but file '" + weightFile
@@ -217,8 +236,10 @@ public class GenerateAndRank_LevenshteinGrapheme extends CandidateGeneratorAndRa
 								+ ", but only weights for single chars are accepted. This entry of the weight file will be ignored.");
 						continue;
 					}
+
 					Character character = weightEntry[0].charAt(0);
 					Float weight = 0.0f;
+
 					try {
 						weight = Float.parseFloat(weightEntry[1]);
 					} catch (NumberFormatException e) {
@@ -244,11 +265,13 @@ public class GenerateAndRank_LevenshteinGrapheme extends CandidateGeneratorAndRa
 					} else {
 						// Warn that there is double info for this char
 						getContext().getLogger().log(Level.WARNING,
-								"You provided two weights for '" + character + "' (" + currentWeight + " and "
-										+ weight + ") in File" + weightFile + ". The former will be used.");
+								"You provided two weights for '" + character + "' (" + currentWeight + " and " + weight
+										+ ") in File" + weightFile + ". The former will be used.");
 					}
 				}
+
 				br.close();
+
 				if (!lowercase && !includesAtLeastOneWeightForUppercaseChar) {
 					getContext().getLogger().log(Level.INFO,
 							"Parameter to process lowercased is disabled, but not a single weight including an uppercased char was provided. Uniform apitalization penalty will be applied if cases do not match.");
@@ -258,6 +281,7 @@ public class GenerateAndRank_LevenshteinGrapheme extends CandidateGeneratorAndRa
 							"Parameter to process lowercased is enabled, but at least one weight including an uppercased char was provided. It will be ignored.");
 				}
 				return weightMap;
+
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			} catch (IOException e) {
@@ -270,8 +294,6 @@ public class GenerateAndRank_LevenshteinGrapheme extends CandidateGeneratorAndRa
 	// Assumes performing operations on 'wrong' to turn it into 'right'
 	@Override
 	protected float calculateCost(String wrong, String right) {
-
-//		System.out.println("Calculating cost for "+wrong+" and "+right+".");
 
 		if (lowercase) {
 			wrong = wrong.toLowerCase();
@@ -397,7 +419,9 @@ public class GenerateAndRank_LevenshteinGrapheme extends CandidateGeneratorAndRa
 				result += compareCases(a, b);
 			}
 			return result;
+
 		} else {
+
 			try {
 				return substitutionMap.get(a).get(b);
 			} catch (NullPointerException e) {
@@ -432,6 +456,7 @@ public class GenerateAndRank_LevenshteinGrapheme extends CandidateGeneratorAndRa
 		if (transpositionMap == null) {
 			return defaultWeight;
 		} else {
+
 			try {
 				return transpositionMap.get(a).get(b);
 			} catch (NullPointerException e) {

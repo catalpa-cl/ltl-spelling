@@ -23,14 +23,14 @@ import org.apache.uima.jcas.JCas;
 import de.tudarmstadt.ukp.dkpro.core.api.anomaly.type.SpellingAnomaly;
 
 /**
- * Supertype for generate and rank methods based on levenshtein implementations
+ * Supertype for generate and rank methods based on Levenshtein
  */
 
 public abstract class CandidateGeneratorAndRanker_LevenshteinBased extends CandidateGeneratorAndRanker {
 
 	/**
 	 * Whether to permit transposition as a modification operation, e.g. apply
-	 * Damerau-Levenshtein distance as opposed to standard Levenshtein Distance.
+	 * Damerau-Levenshtein distance as opposed to standard Levenshtein Distance
 	 */
 	public static final String PARAM_INCLUDE_TRANSPOSITION = "includeTransposition";
 	@ConfigurationParameter(name = PARAM_INCLUDE_TRANSPOSITION, mandatory = true, defaultValue = "True")
@@ -40,6 +40,7 @@ public abstract class CandidateGeneratorAndRanker_LevenshteinBased extends Candi
 
 	@Override
 	protected void readDictionaries(String[] dictionaries) {
+
 		sortedDictionary = new HashMap<Integer, Set<String>>();
 		for (String path : dictionaries) {
 			try {
@@ -67,14 +68,18 @@ public abstract class CandidateGeneratorAndRanker_LevenshteinBased extends Candi
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 
 		for (SpellingAnomaly anomaly : JCasUtil.select(aJCas, SpellingAnomaly.class)) {
+
 			String misspelling = getStringToCorrectFromAnomaly(anomaly);
 			int lengthOfMisspelling = getLengthOfMisspelling(misspelling);
 			Map<Float, List<String>> rankedCandidates = new TreeMap<Float, List<String>>();
 
 			// First: only take words of same length as candidate
 			try {
+
 				calculateCostsForDict(sortedDictionary.get(lengthOfMisspelling), misspelling, rankedCandidates);
+
 			} catch (NullPointerException e) {
+
 				Set<String> subDict = new HashSet<String>();
 				if (lengthOfMisspelling - 1 > 0) {
 					try {
@@ -90,11 +95,11 @@ public abstract class CandidateGeneratorAndRanker_LevenshteinBased extends Candi
 
 			// Second: see what the max cost is to fill the number of required candidates
 			// Repeat cost calculation with candidates +- this length
-			// TODO: Handle case of no candidates having been found at this point
 			Iterator<Entry<Float, List<String>>> entries = rankedCandidates.entrySet().iterator();
 			int testNumberOfCandidates = 0;
 			float maxCostRequiredToFillCandidates = 0;
 			while (testNumberOfCandidates < numberOfCandidatesToGenerate) {
+
 				if (entries.hasNext()) {
 					Entry<Float, List<String>> entry = entries.next();
 					testNumberOfCandidates += entry.getValue().size();
@@ -103,9 +108,11 @@ public abstract class CandidateGeneratorAndRanker_LevenshteinBased extends Candi
 					break;
 				}
 			}
+
 			Set<String> subDict = new HashSet<String>();
 			int plusMinusLength = (int) maxCostRequiredToFillCandidates;
 			for (int i = -plusMinusLength; i <= plusMinusLength; i++) {
+
 				if (i != 0) {
 					if (lengthOfMisspelling + i > 0) {
 						Set<String> entriesWithThisLength = sortedDictionary.get(lengthOfMisspelling + i);
@@ -115,6 +122,7 @@ public abstract class CandidateGeneratorAndRanker_LevenshteinBased extends Candi
 					}
 				}
 			}
+
 			calculateCostsForDict(subDict, misspelling, rankedCandidates);
 
 			// Select the top n candidates
@@ -135,10 +143,14 @@ public abstract class CandidateGeneratorAndRanker_LevenshteinBased extends Candi
 
 	private void calculateCostsForDict(Set<String> dictionary, String misspelling,
 			Map<Float, List<String>> rankedCandidates) {
+
 		for (String word : dictionary) {
+
 			float cost = calculateCost(misspelling, word);
 			List<String> rankList = rankedCandidates.get(cost);
+
 			if (rankList == null) {
+
 				rankedCandidates.put(cost, new ArrayList<String>());
 				rankList = rankedCandidates.get(cost);
 			}

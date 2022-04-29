@@ -18,11 +18,11 @@ import spelling.types.StartOfSentence;
 public class MarkSentenceBeginnings extends JCasAnnotator_ImplBase {
 
 	/*
-	 * Whether periods are to be interpreted as sentence boundaries
-	 * Use if there are unreliable sentence annotations
+	 * Whether periods are to be interpreted as sentence boundaries Use if there are
+	 * unreliable sentence annotations
 	 */
 	public static final String PARAM_INCLUDE_PERIOD = "includePeriod";
-	@ConfigurationParameter(name = PARAM_INCLUDE_PERIOD, mandatory = true, defaultValue = "false")
+	@ConfigurationParameter(name = PARAM_INCLUDE_PERIOD, mandatory = true, defaultValue = "False")
 	private boolean includePeriod;
 
 	@Override

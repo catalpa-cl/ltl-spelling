@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -20,8 +19,6 @@ import org.dkpro.core.api.frequency.util.FrequencyDistribution;
 import org.uimafit.util.JCasUtil;
 
 import constants.SpellingConstants;
-import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
-import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import spelling.types.ExtendedSpellingAnomaly;
 import spelling.types.StartOfSentence;
 
@@ -53,26 +50,20 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 	int moreThan3in3;
 	int moreThan5in5;
 	int moreThan10in10;
-	
+
 	List<String> corrections = new ArrayList<String>();
 
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
-		
-		//For list of wrong corrections
-		Map<ExtendedSpellingAnomaly, Collection<Sentence>> sentenceLookup = JCasUtil.indexCovering(aJCas, ExtendedSpellingAnomaly.class, Sentence.class);
 
 		for (ExtendedSpellingAnomaly anomaly : JCasUtil.select(aJCas, ExtendedSpellingAnomaly.class)) {
 
 			boolean isBeginningOfSentence = !JCasUtil.selectCovered(StartOfSentence.class, anomaly).isEmpty();
-			if (isBeginningOfSentence) {
-//				System.out.println("Is beginning of sentence");
-			}
 
 			numberOfAnomalies++;
-//			System.out.println("Number of anomalies "+numberOfAnomalies);
-			
+
 			if (anomaly.getCoveredText().equals(anomaly.getGoldStandardCorrection())) {
+
 				numberOfMatchingCorrections++;
 				correct.inc(anomaly.getMisspelledTokenText() + "\t(" + anomaly.getCoveredText() + ")");
 
@@ -82,36 +73,40 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 				rAt5++;
 				rAt10++;
 //				System.out.println("Correct: " + anomaly.getGoldStandardCorrection());
-				
-//				addToListOfCorrections(sentenceLookup.get(anomaly).iterator().next(),anomaly,"y");
-				numberedAndWeightedCorrect_forOracle.add(
-						numberOfAnomalies + "\t1.0\t" + anomaly.getMisspelledTokenText() + "\t" + anomaly.getCoveredText());
-				
+
+				numberedAndWeightedCorrect_forOracle.add(numberOfAnomalies + "\t1.0\t"
+						+ anomaly.getMisspelledTokenText() + "\t" + anomaly.getCoveredText());
+
 			} else {
-				
-//				addToListOfCorrections(sentenceLookup.get(anomaly).iterator().next(),anomaly,"n");
-				
+
 				incorrect.inc(anomaly.getMisspelledTokenText() + "\t(" + anomaly.getCoveredText()
 						+ "), should have been: " + anomaly.getGoldStandardCorrection());
 //				System.out.println("Incorrect: " + anomaly.getGoldStandardCorrection());
 
-				// R@3, 5, 10, accuracy is same as R@1
+				// R@3, 5, 10
 				// Ensure that there are no duplicates in ranked candidates
 				String targetCorrection = anomaly.getGoldStandardCorrection();
 				Map<Float, Set<String>> suggestions = new HashMap<Float, Set<String>>();
+
 				if (anomaly.getSuggestions() != null) {
+
 					for (int i = 0; i < anomaly.getSuggestions().size(); i++) {
 						float certainty = anomaly.getSuggestions(i).getCertainty();
 						String candidate = anomaly.getSuggestions(i).getCoveredText();
 						boolean alreadyPresent = false;
+
 						for (Set<String> candidateSet : suggestions.values()) {
+
 							if (candidateSet.contains(candidate)) {
 								alreadyPresent = true;
 							}
 						}
 						if (!alreadyPresent) {
+
 							Set<String> suggestionRank = suggestions.get(certainty);
+
 							if (suggestionRank == null) {
+
 								suggestions.put(certainty, new HashSet<String>());
 								suggestionRank = suggestions.get(certainty);
 							}
@@ -126,14 +121,6 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 				List<Float> rankList = new ArrayList<Float>();
 				rankList.addAll(suggestions.keySet());
 				rankList.sort(null);
-
-//				System.out.println("Rank list: " + rankList);
-				
-				for(Float key : rankList) {
-					for(String entry : suggestions.get(key)) {
-//						System.out.println(key+"\t"+entry);
-					}
-				}
 
 				Set<String> top1Candidates = new HashSet<String>();
 				Set<String> top2Candidates = new HashSet<String>();
@@ -150,145 +137,125 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 						break;
 					}
 				}
+
 				// In case of too many candidates with equal rank, use probability
 				if (top1Candidates.size() > 1) {
 
 					// These candidates are all equivalent
 					Set<String> equivalentCandidates = suggestions.get(rankList.get(currentIndex - 1));
 					top1Candidates.clear();
-					
-					for(int i=0; i<currentIndex-1; i++) {
+
+					for (int i = 0; i < currentIndex - 1; i++) {
 						top1Candidates.addAll(suggestions.get(rankList.get(i)));
 					}
-					
-//					System.out.println("1 without equiv");
-//					for(String cand: top1Candidates) {
-//						System.out.println(cand);
-//					}
-//					System.out.println("end");
 
 					if (top1Candidates.contains(targetCorrection)
 							|| (isBeginningOfSentence && top1Candidates.contains(targetCorrection.toLowerCase()))) {
+
 						rAt1++;
-//						System.out.println("1: above");
-						numberedAndWeightedCorrect_forOracle.add(
-								numberOfAnomalies + "\t1.0\t" + anomaly.getMisspelledTokenText() + "\t" + anomaly.getCoveredText());
+						numberedAndWeightedCorrect_forOracle.add(numberOfAnomalies + "\t1.0\t"
+								+ anomaly.getMisspelledTokenText() + "\t" + anomaly.getCoveredText());
 					} else if (equivalentCandidates.contains(targetCorrection) || (isBeginningOfSentence
 							&& equivalentCandidates.contains(targetCorrection.toLowerCase()))) {
+
 						rAt1 += 1.0 / (equivalentCandidates.size() * 1.0);
-//						System.out.println("1: within: "+equivalentCandidates.size());
 						double weight = 1.0 / (equivalentCandidates.size() * 1.0);
-						numberedAndWeightedCorrect_forOracle.add(
-								numberOfAnomalies + "\t"+ weight + "\t" + anomaly.getMisspelledTokenText() + "\t" + anomaly.getCoveredText());
-//						for(String entry : equivalentCandidates) {
-//							System.out.println(entry);
-//						}
+						numberedAndWeightedCorrect_forOracle.add(numberOfAnomalies + "\t" + weight + "\t"
+								+ anomaly.getMisspelledTokenText() + "\t" + anomaly.getCoveredText());
 					}
 				} else {
 					if (top1Candidates.contains(targetCorrection)
 							|| (isBeginningOfSentence && top1Candidates.contains(targetCorrection.toLowerCase()))) {
+
 						rAt1++;
-//						System.out.println("1: contained");
-						numberedAndWeightedCorrect_forOracle.add(
-								numberOfAnomalies + "\t1.0\t" + anomaly.getMisspelledTokenText() + "\t" + anomaly.getCoveredText());
+						numberedAndWeightedCorrect_forOracle.add(numberOfAnomalies + "\t1.0\t"
+								+ anomaly.getMisspelledTokenText() + "\t" + anomaly.getCoveredText());
 					}
 				}
 
 				currentIndex = 0;
 				while (top2Candidates.size() < 2) {
 					if (currentIndex < rankList.size()) {
+
 						top2Candidates.addAll(suggestions.get(rankList.get(currentIndex)));
 						currentIndex++;
 					} else {
 						break;
 					}
 				}
+
 				// In case of too many candidates with equal rank, use probability
 				if (top2Candidates.size() > 2) {
 
 					// These candidates are all equivalent
 					Set<String> equivalentCandidates = suggestions.get(rankList.get(currentIndex - 1));
 					top2Candidates.clear();
-					
-					for(int i=0; i<currentIndex-1; i++) {
+
+					for (int i = 0; i < currentIndex - 1; i++) {
 						top2Candidates.addAll(suggestions.get(rankList.get(i)));
 					}
-					
-//					System.out.println("2 without equiv");
-//					for(String cand: top2Candidates) {
-//						System.out.println(cand);
-//					}
-//					System.out.println("end");
 
 					if (top2Candidates.contains(targetCorrection)
 							|| (isBeginningOfSentence && top2Candidates.contains(targetCorrection.toLowerCase()))) {
+
 						rAt2++;
-//						System.out.println("2: above");
 					} else if (equivalentCandidates.contains(targetCorrection) || (isBeginningOfSentence
 							&& equivalentCandidates.contains(targetCorrection.toLowerCase()))) {
+
 						rAt2 += 1.0 / (equivalentCandidates.size() * 1.0);
-//						System.out.println("2: within: "+equivalentCandidates.size());
-//						for(String entry : equivalentCandidates) {
-//							System.out.println(entry);
-//						}
 					}
 				} else {
 					if (top2Candidates.contains(targetCorrection)
 							|| (isBeginningOfSentence && top2Candidates.contains(targetCorrection.toLowerCase()))) {
+
 						rAt2++;
-//						System.out.println("2: contained");
 					}
 				}
 
 				currentIndex = 0;
 				while (top3Candidates.size() < 3) {
 					if (currentIndex < rankList.size()) {
+
 						top3Candidates.addAll(suggestions.get(rankList.get(currentIndex)));
 						currentIndex++;
 					} else {
 						break;
 					}
 				}
+
 				// In case of too many candidates with equal rank, use probability
 				if (top3Candidates.size() > 3) {
 
 					// These candidates are all equivalent
 					Set<String> equivalentCandidates = suggestions.get(rankList.get(currentIndex - 1));
 					top3Candidates.clear();
-					
-					for(int i=0; i<currentIndex-1; i++) {
+
+					for (int i = 0; i < currentIndex - 1; i++) {
 						top3Candidates.addAll(suggestions.get(rankList.get(i)));
 					}
-					
-//					System.out.println("3 without equiv");
-//					for(String cand: top3Candidates) {
-//						System.out.println(cand);
-//					}
-//					System.out.println("end");
 
 					if (top3Candidates.contains(targetCorrection)
 							|| (isBeginningOfSentence && top3Candidates.contains(targetCorrection.toLowerCase()))) {
+
 						rAt3++;
 //						System.out.println("3: above");
 					} else if (equivalentCandidates.contains(targetCorrection) || (isBeginningOfSentence
 							&& equivalentCandidates.contains(targetCorrection.toLowerCase()))) {
+
 						rAt3 += 1.0 / (equivalentCandidates.size() * 1.0);
-//						System.out.println("3: within: "+equivalentCandidates.size());
-//						for(String entry : equivalentCandidates) {
-//							System.out.println(entry);
-//						}
 					}
 				} else {
 					if (top3Candidates.contains(targetCorrection)
 							|| (isBeginningOfSentence && top3Candidates.contains(targetCorrection.toLowerCase()))) {
+
 						rAt3++;
-//						System.out.println("3: contained");
 					}
 				}
 
 				currentIndex = 0;
 				while (top5Candidates.size() < 5) {
 					if (currentIndex < rankList.size()) {
+
 						top5Candidates.addAll(suggestions.get(rankList.get(currentIndex)));
 						currentIndex++;
 					} else {
@@ -296,145 +263,90 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 					}
 
 				}
+
 				// In case of too many candidates with equal rank, use probability
 				if (top5Candidates.size() > 5) {
 
 					// These candidates are all equivalent
 					Set<String> equivalentCandidates = suggestions.get(rankList.get(currentIndex - 1));
 					top5Candidates.clear();
-					
-					for(int i=0; i<currentIndex-1; i++) {
+
+					for (int i = 0; i < currentIndex - 1; i++) {
 						top5Candidates.addAll(suggestions.get(rankList.get(i)));
 					}
-					
-//					System.out.println("5 without equiv");
-//					for(String cand: top5Candidates) {
-//						System.out.println(cand);
-//					}
-//					System.out.println("end");
 
 					if (top5Candidates.contains(targetCorrection)
 							|| (isBeginningOfSentence && top5Candidates.contains(targetCorrection.toLowerCase()))) {
+
 						rAt5++;
-//						System.out.println("5: above");
 					} else if (equivalentCandidates.contains(targetCorrection) || (isBeginningOfSentence
 							&& equivalentCandidates.contains(targetCorrection.toLowerCase()))) {
+
 						rAt5 += 1.0 / (equivalentCandidates.size() * 1.0);
-//						System.out.println("5: within: "+equivalentCandidates.size());
-//						for(String entry : equivalentCandidates) {
-//							System.out.println(entry);
-//						}
 					}
 				} else {
 					if (top5Candidates.contains(targetCorrection)
 							|| (isBeginningOfSentence && top5Candidates.contains(targetCorrection.toLowerCase()))) {
+
 						rAt5++;
-//						System.out.println("5: contained");
 					}
 				}
 
 				currentIndex = 0;
 				while (top10Candidates.size() < 10) {
 					if (currentIndex < rankList.size()) {
+
 						top10Candidates.addAll(suggestions.get(rankList.get(currentIndex)));
 						currentIndex++;
 					} else {
 						break;
 					}
 				}
+
 				// In case of too many candidates with equal rank, use probability
 				if (top10Candidates.size() > 10) {
 
 					// These candidates are all equivalent
 					Set<String> equivalentCandidates = suggestions.get(rankList.get(currentIndex - 1));
 					top10Candidates.clear();
-					
-					for(int i=0; i<currentIndex-1; i++) {
+
+					for (int i = 0; i < currentIndex - 1; i++) {
+
 						top10Candidates.addAll(suggestions.get(rankList.get(i)));
 					}
-					
-//					System.out.println("10 without equiv");
-//					for(String cand: top10Candidates) {
-//						System.out.println(cand);
-//					}
-//					System.out.println("end");
 
 					if (top10Candidates.contains(targetCorrection)
 							|| (isBeginningOfSentence && top10Candidates.contains(targetCorrection.toLowerCase()))) {
+
 						rAt10++;
-//						System.out.println("10: above");
 					} else if (equivalentCandidates.contains(targetCorrection) || (isBeginningOfSentence
 							&& equivalentCandidates.contains(targetCorrection.toLowerCase()))) {
+
 						rAt10 += (1.0 / (equivalentCandidates.size() * 1.0));
-//						System.out.println("10: within: "+equivalentCandidates.size());
-//						for(String entry : equivalentCandidates) {
-//							System.out.println(entry);
-//						}
 					}
 				} else {
+
 					if (top10Candidates.contains(targetCorrection)
 							|| (isBeginningOfSentence && top10Candidates.contains(targetCorrection.toLowerCase()))) {
+
 						rAt10++;
-//						System.out.println("10: contained");
 					}
 				}
 			}
-
-//			System.out.println("at 1: " + rAt1);
-//			System.out.println("at 2: " + rAt2);
-//			System.out.println("at 3: " + rAt3);
-//			System.out.println("at 5: " + rAt5);
-//			System.out.println("at 10: " + rAt10);
-//			System.out.println("correct: " + numberOfMatchingCorrections);
-
 		}
 	}
-	
-	private void addToListOfCorrections(Sentence sentence, ExtendedSpellingAnomaly anomaly, String isCorrect) {
-		
-		List<String> sentenceTokens = new ArrayList<String>();
-		List<Token> tokens = JCasUtil.selectCovered(Token.class, sentence);
-		
-		// to count offset of anomaly within sentence
-		int sentenceIndex = 0;
-		int begin_index = -1;
-		int end_index = -1;
-		
-		for(Token token : tokens) {
-//			if(token.getBegin() == anomaly.getBegin() && token.getEnd() == anomaly.getEnd()) {
-//				sentenceTokens.add(anomaly.getMisspelledTokenText());
-//			}
-//			else {
-//				sentenceTokens.add(token.getCoveredText());
-//			}
-			// Have to replace all that are spelling anomalies in oder to normalize back to initial form
-			if(JCasUtil.selectCovered(ExtendedSpellingAnomaly.class, token).size() != 0) {
-				ExtendedSpellingAnomaly anomalyToReplace = JCasUtil.selectCovered(ExtendedSpellingAnomaly.class, token).iterator().next();
-				sentenceTokens.add(anomalyToReplace.getMisspelledTokenText());
-				// if this is the target anomaly
-				if(anomalyToReplace.equals(anomaly)) {
-					begin_index = sentenceIndex;
-					end_index = sentenceIndex + anomalyToReplace.getMisspelledTokenText().length();
-				}
-				sentenceIndex += anomalyToReplace.getMisspelledTokenText().length()+1;
-			}
-			else {
-				sentenceTokens.add(token.getCoveredText());
-				sentenceIndex += token.getCoveredText().length()+1;
-			}
-		}
-		int sentenceBeginIndex = sentence.getBegin();
-		corrections.add(String.join(" ", sentenceTokens)+"\t"+anomaly.getMisspelledTokenText()+"\t"+begin_index+"\t"+end_index+"\t"+anomaly.getCoveredText()+"\t"+anomaly.getGoldStandardCorrection()+"\t"+isCorrect);
-		
-	}
-	
 
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
 
 		try {
+
+			String eval_dir_correction = SpellingConstants.EVALUATION_DATA_PATH + "Error_Correction";
+			File dir = new File(eval_dir_correction);
+			dir.mkdir();
+
 			String eval_dir = SpellingConstants.EVALUATION_DATA_PATH + "ErrorCorrection_" + configName;
-			File dir = new File(eval_dir);
+			dir = new File(eval_dir);
 			dir.mkdir();
 
 			BufferedWriter bw = new BufferedWriter(new FileWriter(new File(eval_dir + "/evaluation.txt")));
@@ -500,11 +412,12 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 				bw.newLine();
 			}
 			bw.close();
-			
-			bw = new BufferedWriter(new FileWriter(eval_dir+"/wrongSentences.txt"));
-			bw.write("Sentence\tinitial_word\tstart_index\tend_index\tour_correction\tgold_correction\tours_is_correct\n");
-			for(String element : corrections) {
-				bw.write(element+"\n");
+
+			bw = new BufferedWriter(new FileWriter(eval_dir + "/wrongSentences.txt"));
+			bw.write(
+					"Sentence\tinitial_word\tstart_index\tend_index\tour_correction\tgold_correction\tours_is_correct\n");
+			for (String element : corrections) {
+				bw.write(element + "\n");
 			}
 			bw.close();
 

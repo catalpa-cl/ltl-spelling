@@ -2,6 +2,7 @@ package experiments;
 
 import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.apache.uima.UIMAException;
@@ -19,6 +20,18 @@ import reader.SpellingReader;
 public class CollectMisspellingPhonemes {
 
 	public static void main(String[] args) throws UIMAException, IOException {
+
+		File dir = new File("src/main/resources/corpora/misspelling_phonemes/cze-CZ");
+		dir.mkdir();
+
+		dir = new File("src/main/resources/corpora/misspelling_phonemes/deu-DE");
+		dir.mkdir();
+
+		dir = new File("src/main/resources/corpora/misspelling_phonemes/eng-US");
+		dir.mkdir();
+
+		dir = new File("src/main/resources/corpora/misspelling_phonemes/ita-IT");
+		dir.mkdir();
 
 		System.out.println("Processing CItA");
 		evalCItA();
@@ -52,49 +65,49 @@ public class CollectMisspellingPhonemes {
 	public static void evalSkaLa() throws UIMAException, IOException {
 		String lang = "de";
 		String corpus = "src/main/resources/corpora/skala_speling.xml";
-		String outPath = "src/main/resources/dictionaries/skala_misspellingPhonemes.tsv";
+		String outPath = "src/main/resources/corpora/misspelling_phonemes/deu-DE/skala_misspellingPhonemes.tsv";
 		writeMisspellingPhonemes(lang, corpus, outPath);
 	}
 
 	public static void evalTOEFL() throws UIMAException, IOException {
 		String lang = "en";
 		String corpus = "src/main/resources/corpora/toefl_spelling.xml";
-		String outPath = "src/main/resources/dictionaries/toefl_misspellingPhonemes.tsv";
+		String outPath = "src/main/resources/corpora/misspelling_phonemes/eng-US/toefl_misspellingPhonemes.tsv";
 		writeMisspellingPhonemes(lang, corpus, outPath);
 	}
 
 	public static void evalCItA() throws UIMAException, IOException {
 		String lang = "it";
 		String corpus = "src/main/resources/corpora/cita_spelling.xml";
-		String outPath = "src/main/resources/dictionaries/cita_misspellingPhonemes.tsv";
+		String outPath = "src/main/resources/corpora/misspelling_phonemes/ita-IT/cita_misspellingPhonemes.tsv";
 		writeMisspellingPhonemes(lang, corpus, outPath);
 	}
 
 	public static void evalLitkey() throws UIMAException, IOException {
 		String lang = "de";
 		String corpus = "src/main/resources/corpora/litkey_spelling.xml";
-		String outPath = "src/main/resources/dictionaries/litkey_misspellingPhonemes.tsv";
+		String outPath = "src/main/resources/corpora/misspelling_phonemes/deu-DE/litkey_misspellingPhonemes.tsv";
 		writeMisspellingPhonemes(lang, corpus, outPath);
 	}
 
 	public static void evalMerlinDE() throws UIMAException, IOException {
 		String lang = "de";
 		String corpus = "src/main/resources/corpora/merlin-DE_spelling.xml";
-		String outPath = "src/main/resources/dictionaries/merlin-DE_misspellingPhonemes.tsv";
+		String outPath = "src/main/resources/corpora/misspelling_phonemes/deu-DE/merlin-DE_misspellingPhonemes.tsv";
 		writeMisspellingPhonemes(lang, corpus, outPath);
 	}
 
 	public static void evalMerlinIT() throws UIMAException, IOException {
 		String lang = "it";
 		String corpus = "src/main/resources/corpora/merlin-IT_spelling.xml";
-		String outPath = "src/main/resources/dictionaries/merlin-IT_misspellingPhonemes.tsv";
+		String outPath = "src/main/resources/corpora/misspelling_phonemes/ita-IT/merlin-IT_misspellingPhonemes.tsv";
 		writeMisspellingPhonemes(lang, corpus, outPath);
 	}
 
 	public static void evalMerlinCZ() throws UIMAException, IOException {
 		String lang = "cz";
 		String corpus = "src/main/resources/corpora/merlin-CZ_spelling.xml";
-		String outPath = "src/main/resources/dictionaries/merlin-CZ_misspellingPhonemes.tsv";
+		String outPath = "src/main/resources/corpora/misspelling_phonemes/cze-CZ/merlin-CZ_misspellingPhonemes.tsv";
 		writeMisspellingPhonemes(lang, corpus, outPath);
 	}
 
