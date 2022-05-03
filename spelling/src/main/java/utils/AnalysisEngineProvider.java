@@ -33,7 +33,7 @@ public class AnalysisEngineProvider {
 
 				segmenter = createEngineDescription(RegexSegmenter.class,
 //					RegexSegmenter.PARAM_WRITE_SENTENCE, false,
-						RegexSegmenter.PARAM_SENTENCE_BOUNDARY_REGEX, " ([\\.!?\\n]+)|.$ ");
+						RegexSegmenter.PARAM_SENTENCE_BOUNDARY_REGEX, " [\\.!?]+ ");
 
 			} else if (lang.equals("en")) {
 				segmenter = createEngineDescription(LanguageToolSegmenter.class);

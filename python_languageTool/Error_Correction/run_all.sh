@@ -1,8 +1,0 @@
-# !/bin/sh
-
-python3 languagetool_correction.py it-IT full_lists_of_sentences/Cita_all_sentences_withOffset.tsv
-python3 languagetool_correction.py it-IT full_lists_of_sentences/MerlinIT_all_sentences_withOffset.tsv
-python3 languagetool_correction.py de-DE full_lists_of_sentences/MerlinDE_all_sentences_withOffset.tsv
-python3 languagetool_correction.py de-DE full_lists_of_sentences/Skala_all_sentences_withOffset.tsv
-python3 languagetool_correction.py de-DE full_lists_of_sentences/Litkey_all_sentences_withOffset.tsv
-python3 languagetool_correction.py en-US full_lists_of_sentences/TOEFL_all_sentences_withOffset.tsv
