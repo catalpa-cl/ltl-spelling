@@ -45,6 +45,12 @@
 	</dependency>
 	
 	<dependency>
+    <groupId>org.dkpro.core</groupId>
+    <artifactId>dkpro-core-io-webanno-asl</artifactId>
+    <version>1.10.0</version>
+	</dependency>
+	
+	<dependency>
     <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
     <artifactId>de.tudarmstadt.ukp.dkpro.core.opennlp-asl</artifactId>
     <version>1.10.0</version>
@@ -124,12 +130,6 @@
 	</dependency>
 	
 	<dependency>
-	<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
-	<artifactId>de.tudarmstadt.ukp.dkpro.core.decompounding-asl</artifactId>
-	<version>1.8.0</version>
-	</dependency>
-	
-	<dependency>
     <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
     <artifactId>de.tudarmstadt.ukp.dkpro.core.opennlp-model-sentence-it-maxent</artifactId>
     <version>20130618.0</version>
@@ -179,6 +179,7 @@
   	
   </dependencies>
   	<build>
+
   		<plugins>
   			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -198,6 +199,16 @@
 										<exclude>META-INF/*.SF</exclude>
 										<exclude>META-INF/*.DSA</exclude>
 										<exclude>META-INF/*.RSA</exclude>
+										<exclude>dictionaries/*.zip</exclude>
+										<exclude>dictionaries/*_phoneme_map.txt</exclude>
+										<exclude>dictionaries/hunspell/**</exclude>
+										<exclude>LanguageTool_Suggestions/**</exclude>
+										<exclude>language_models/**</exclude>
+										<exclude>corpora/**</exclude>
+										<exclude>results/**</exclude>
+										<exclude>target/*.jar</exclude>
+										<exclude>org/languagetool/resource/**</exclude>
+										<exclude>org/languagetool/rules/**</exclude>
 									</excludes>
 								</filter>
 							</filters>
@@ -205,7 +216,7 @@
 								<!-- Set the main class of the executable JAR -->
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>de/unidue/ltl/spelling/experiments/ErrorCorrectionExperiments</mainClass>
+									<mainClass>experiments/DKPro_Spellcheck</mainClass>
 									<!-- mainClass>de.unidue.ltl.eduscoring.zlbessays.experiments.ASAP_Experiments</mainClass -->
 									<!-- mainClass>de.unidue.ltl.eduscoring.zlbessays.experiments.EssayGradingExperiment_LabelChangeCV</mainClass -->
 									<!-- mainClass>de.unidue.ltl.eduscoring.zlbessays.experiments.EssayGradingExperiment_LearningCurves</mainClass -->
@@ -253,7 +264,7 @@
 									repository (remove if not desired) -->
 							</transformers>
 							<outputFile>
-								${project.build.directory}/${project.artifactId}-${project.version}-MerlinCZ-hunspell-web1tTrigrams-forOracleRedo.jar
+								${project.build.directory}/${project.artifactId}-${project.version}-DKPro_Spellcheck.jar
 							</outputFile>
 						</configuration>
 					</execution>

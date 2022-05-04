@@ -11,7 +11,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Thu Apr 28 10:19:32 CEST 2022
+ * Updated by JCasGen Wed May 04 14:11:59 CEST 2022
  * @generated */
 public class SuggestedAction_Type extends Annotation_Type {
   /** @generated */

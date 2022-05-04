@@ -125,5 +125,22 @@
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>
+  <typeDescription>
+      <name>spelling.types.ExtendedSpellingAnomaly_ForTSV</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>suggestions</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>best_candidate</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
   </types>
 </typeSystemDescription>

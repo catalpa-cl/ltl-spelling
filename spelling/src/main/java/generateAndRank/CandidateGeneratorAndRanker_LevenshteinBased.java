@@ -1,10 +1,10 @@
 package generateAndRank;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -44,7 +44,8 @@ public abstract class CandidateGeneratorAndRanker_LevenshteinBased extends Candi
 		sortedDictionary = new HashMap<Integer, Set<String>>();
 		for (String path : dictionaries) {
 			try {
-				BufferedReader br = new BufferedReader(new FileReader(new File(path)));
+				InputStream inputStream = getClass().getResourceAsStream(path);
+				BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
 				while (br.ready()) {
 					String word = br.readLine();
 					int lengthOfCurrentWord = word.length();

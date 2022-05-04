@@ -1,10 +1,10 @@
 package preprocessing;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -16,8 +16,6 @@ import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 
-import de.tudarmstadt.ukp.dkpro.core.decompounding.dictionary.LinkingMorphemes;
-import de.tudarmstadt.ukp.dkpro.core.decompounding.splitter.LeftToRightSplitterAlgorithm;
 import spelling.types.KnownWord;
 import spelling.types.StartOfSentence;
 import spelling.types.TokenToConsider;
@@ -53,9 +51,6 @@ public class DictionaryChecker extends JCasAnnotator_ImplBase {
 
 	private Set<String> dictionaryWords = new HashSet<String>();
 
-	LeftToRightSplitterAlgorithm splitter = null;
-	LinkingMorphemes linkingMorphemesDE = new LinkingMorphemes(new String[] { "e", "s", "es", "n", "en", "er", "ens" });
-
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {
 
@@ -69,7 +64,8 @@ public class DictionaryChecker extends JCasAnnotator_ImplBase {
 	private void readDictionary(String dictionaryPath) {
 		BufferedReader br = null;
 		try {
-			br = new BufferedReader(new FileReader(new File(dictionaryPath)));
+			InputStream inputStream = getClass().getResourceAsStream(dictionaryPath);
+			br = new BufferedReader(new InputStreamReader(inputStream));
 			while (br.ready()) {
 				if (lowercase) {
 					dictionaryWords.add(br.readLine().toLowerCase());

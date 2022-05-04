@@ -137,7 +137,10 @@ public class SpellingReader_LanguageToolSuggestions extends JCasResourceCollecti
 						langtoolCorrections));
 
 			}
-		} catch (NumberFormatException | IOException e) {
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
