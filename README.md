@@ -18,11 +18,13 @@ For easy access we also provide jars for the default configuration (see [User Mo
 
 <img src="https://github.com/ltl-ude/ltl-spelling/blob/master/pipeline_overview.png" width="900">
 
-Before you use phonetic spellchecking on a new corpus, please pre-generate the phonetic representations of the misspellings as shown [here](https://github.com/ltl-ude/ltl-spelling/blob/master/spelling/src/main/java/experiments/CollectMisspellingPhonemes.java).
+Before you use phonetic spellchecking on a new corpus, please pre-generate phonetic representations of misspellings/out-of-dictionary words in it as shown [here](https://github.com/ltl-ude/ltl-spelling/blob/master/spelling/src/main/java/experiments/CollectMisspellingPhonemes.java) and place copies of the `_phoneme_map.txt` [dictionaries](spelling/src/main/resources/dictionaries) in the respective language folders [here](spelling/src/main/resources/corpora/misspelling_phonemes).
 
 ## Setup
-For Web1T reranking to work, set `WEB1T` system variable to point to the location of web1t,
-with subfolders `/en`, `/de`, `/it`, `/cz` for the respective languages.
+For Web1T reranking to work, set `WEB1T` system variable to point to the location of web1t (`export WEB1T="PATH_TO_WEB1T"`).
+In this folder you need subfolders `/en`, `/de`, `/it`, `/cz` for the respective languages.
+
+You may have to unzip some of the [dictionaries](spelling/src/main/resources/dictionaries).
 
 ## LeSpell Error Annotation Format
 
