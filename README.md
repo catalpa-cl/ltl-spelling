@@ -1,5 +1,6 @@
 # DKPro Spelling
 
+
 DKPro Spelling is a highly configurable spellchecking application.
 It is language-invariant: To process any language, at least a tokenizer and dictionary are required.
 A named entity recognizer and (unigram) language model are likely to improve results.</br>
@@ -7,7 +8,7 @@ A named entity recognizer and (unigram) language model are likely to improve res
 Resources included in this repository are:
 * [Corpora](spelling/src/main/resources/corpora):
   * The English, German and Czech [MERLIN](https://merlin-platform.eu) corpora and the German [Litkey corpus](https://www.linguistics.rub.de/litkeycorpus/index.html) in the [LeSpell format](#lespell-error-annotation-format).
-  * A [script](https://github.com/ltl-ude/ltl-spelling/blob/master/data_prep/convert_cita.py) to convert the Italian [CItA corpus](http://www.italianlp.it/resources/cita-corpus-italiano-di-apprendenti-l1/) into the LeSpell format.
+  * [Scripts](https://github.com/ltl-ude/ltl-spelling/blob/master/data_prep) to convert the Italian [CItA](http://www.italianlp.it/resources/cita-corpus-italiano-di-apprendenti-l1/) and English [TOEFL-Spell](https://github.com/EducationalTestingService/TOEFL-Spell) corpora into the LeSpell format.
 * [Dictionaries](spelling/src/main/resources/dictionaries) for English, German, Italian and Czech and a [script](spelling/src/main/resources/dictionaries/hunspell/GetHunspellDict.java) to generate a `.txt` dictionary from hunspell `.dic` and `.aff` files.
 * Phonetic versions (`*_phoneme_map.txt`) of the above dictionaries and a [script](https://github.com/ltl-ude/ltl-spelling/blob/master/spelling/src/main/java/utils/GraphemeDictionaryToPhonemeMap.java) to create a phonetic dictionary from a given .txt dictionary.
 * [Keyboard distance files](https://github.com/ltl-ude/ltl-spelling/tree/master/spelling/src/main/resources/matrixes) for English, German, Italian and Czech.
@@ -18,7 +19,7 @@ For easy access we also provide jars for the default configuration (see [User Mo
 
 <img src="https://github.com/ltl-ude/ltl-spelling/blob/master/pipeline_overview.png" width="900">
 
-Before you use phonetic spellchecking on a new corpus, please pre-generate phonetic representations of misspellings/out-of-dictionary words in it as shown [here](https://github.com/ltl-ude/ltl-spelling/blob/master/spelling/src/main/java/experiments/CollectMisspellingPhonemes.java) and place copies of the `_phoneme_map.txt` [dictionaries](spelling/src/main/resources/dictionaries) in the respective language folders [here](spelling/src/main/resources/corpora/misspelling_phonemes).
+Before you use phonetic spellchecking on a new corpus, please pre-generate phonetic representations of misspellings/out-of-dictionary words in it as shown [here](https://github.com/ltl-ude/ltl-spelling/blob/master/spelling/src/main/java/experiments/CollectMisspellingPhonemes.java) and place copies of the `_phoneme_map.txt` [dictionaries](spelling/src/main/resources/dictionaries) as well as any custom phonetic dictionaries in the respective language folders [here](spelling/src/main/resources/corpora/misspelling_phonemes).
 
 ## Setup
 For Web1T reranking to work, set `WEB1T` system variable to point to the location of web1t (`export WEB1T="PATH_TO_WEB1T"`).
