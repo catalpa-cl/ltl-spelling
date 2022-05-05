@@ -2,8 +2,8 @@
 
 
 DKPro Spelling is a highly configurable spellchecking application.</br>
-It is language-invariant: To process any language, at least a tokenizer and dictionary are required.
-A named entity recognizer and (unigram) language model are likely to improve results.</br>
+It is language-invariant: To process any language, at least a tokenizer and dictionary are required.</br>
+A named entity recognizer and (unigram) language model are likely to improve results.
 
 Resources included in this repository are:
 * [Corpora](spelling/src/main/resources/corpora):
