@@ -2,7 +2,7 @@
 
 
 DKPro Spelling is a highly configurable spellchecking application.</br>
-It is language-invariant: To process any language, at least a tokenizer and dictionary are required.</br>
+It is language-invariant: To process any language in a minimal version, only a tokenizer and dictionary are required.</br>
 A named entity recognizer and (unigram) language model are likely to improve results.
 
 Resources included in this repository are:
@@ -23,7 +23,7 @@ Before you use phonetic spellchecking on a new corpus, please pre-generate phone
 
 ## Setup
 For Web 1T reranking to work, set `WEB1T` system variable to point to the location of web1t (`export WEB1T="PATH_TO_WEB1T"`).
-In this folder you need subfolders `/en`, `/de`, `/it`, `/cz` for the respective languages.
+In this folder you need subfolders `/en`, `/de`, `/it`, `/cz` for the respective languages. Within these, you need subfolders `/*gms` as well as files `index-*gms` and the `aggregated_counts.cnt` file.
 
 You may have to unzip some of the [dictionaries](spelling/src/main/resources/dictionaries).
 
@@ -56,4 +56,14 @@ java -jar DKPro_Spellcheck_EvaluateCorrection.jar [LANGUAGE] [PATH_TO_XML]
 ```
 
 ## Cite
-Bexte, M., Laarmann-Quante, R., Horbach, A., & Zesch, T. (2022, to appear). LeSpell - A Multi-Lingual Benchmark Corpus of Spelling Errors to Develop Spellchecking Methods for Learner Language. In Proceedings of the 13th International Conference on Language Resources and Evaluation
+```
+@InProceedings{le-spell-2022,
+  author    = {Bexte, Marie and Laarmann-Quante, Ronja and Horbach, Andrea and Zesch, Torsten},
+  booktitle = {Proceedings of The 13th Language Resources and Evaluation Conference},
+  title     = {LeSpell - A Multi-Lingual Benchmark Corpus of Spelling Errors to Develop Spellchecking Methods for Learner Language},
+  year      = {2022},
+  address   = {Marseille, France},
+  month     = {to appear},
+  publisher = {European Language Resources Association}
+}
+```
