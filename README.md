@@ -43,14 +43,14 @@ Generate correction candidates based on Damerau-Levenshtein Distance, rerank the
 
 Spellcheck a `.txt` file.</br>
 Outputs `.tsv` with ranked list of corrections.</br>
-*To run an example: java -jar DKPro_Spellcheck.jar de src/main/resources/corpora/test_de.txt*
+*To run an example: java -jar DKPro_Spellcheck.jar de spelling/src/main/resources/corpora/test_de.txt*
 ```
 java -jar DKPro_Spellcheck.jar [LANGUAGE] [PATH_TO_TXT]
 ```
 
 Evaluate error correction on a corpus annotated with errors (in the [LeSpell XML format](#lespell-error-annotation-format)).</br>
 Outputs recall@k and lists of words that are corrected correctly/incorrectly.</br>
-*To run an example: java -jar DKPro_Spellcheck_EvaluateCorrection.jar cz src/main/resources/corpora/merlin-CZ_spelling.xml*
+*To run an example: java -jar DKPro_Spellcheck_EvaluateCorrection.jar cz spelling/src/main/resources/corpora/merlin-CZ_spelling.xml*
 ```
 java -jar DKPro_Spellcheck_EvaluateCorrection.jar [LANGUAGE] [PATH_TO_XML]
 ```
