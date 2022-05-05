@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -49,7 +51,8 @@ public abstract class CandidateGeneratorAndRanker extends JCasAnnotator_ImplBase
 		dictionary = new HashSet<String>();
 		for (String path : dictionaries) {
 			try {
-				BufferedReader br = new BufferedReader(new FileReader(new File(path)));
+				InputStream inputStream = getClass().getResourceAsStream(path);
+				BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));	
 				while (br.ready()) {
 					dictionary.add(br.readLine());
 				}

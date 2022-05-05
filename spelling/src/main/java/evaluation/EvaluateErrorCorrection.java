@@ -40,16 +40,6 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 	double rAt3;
 	double rAt5;
 	double rAt10;
-	int lessThan1in1;
-	int lessThan2in2;
-	int lessThan3in3;
-	int lessThan5in5;
-	int lessThan10in10;
-	int moreThan1in1;
-	int moreThan2in2;
-	int moreThan3in3;
-	int moreThan5in5;
-	int moreThan10in10;
 
 	List<String> corrections = new ArrayList<String>();
 
@@ -364,25 +354,15 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 			bw.newLine();
 			bw.write("Accuracy:\t" + (numberOfMatchingCorrections * 1.0) / (numberOfAnomalies * 1.0));
 			bw.newLine();
-			bw.write("R@1:\t" + (rAt1 * 1.0) / (numberOfAnomalies * 1.0) + "\t(" + lessThan1in1
-					+ " times there were less than 1 candidates to choose from, " + moreThan1in1
-					+ " times there were more than 1)");
+			bw.write("R@1:\t" + (rAt1 * 1.0) / (numberOfAnomalies * 1.0));
 			bw.newLine();
-			bw.write("R@2:\t" + (rAt2 * 1.0) / (numberOfAnomalies * 1.0) + "\t(" + lessThan2in2
-					+ " times there were less than 2 candidates to choose from, " + moreThan2in2
-					+ " times there were more than 2)");
+			bw.write("R@2:\t" + (rAt2 * 1.0) / (numberOfAnomalies * 1.0));
 			bw.newLine();
-			bw.write("R@3:\t" + (rAt3 * 1.0) / (numberOfAnomalies * 1.0) + "\t(" + lessThan3in3
-					+ " times there were less than 3 candidates to choose from, " + moreThan3in3
-					+ " times there were more than 3)");
+			bw.write("R@3:\t" + (rAt3 * 1.0) / (numberOfAnomalies * 1.0));
 			bw.newLine();
-			bw.write("R@5:\t" + (rAt5 * 1.0) / (numberOfAnomalies * 1.0) + "\t(" + lessThan5in5
-					+ " times there were less than 5 candidates to choose from, " + moreThan5in5
-					+ " times there were more than 3)");
+			bw.write("R@5:\t" + (rAt5 * 1.0) / (numberOfAnomalies * 1.0));
 			bw.newLine();
-			bw.write("R@10:\t" + (rAt10 * 1.0) / (numberOfAnomalies * 1.0) + "\t(" + lessThan10in10
-					+ " times there were less than 10 candidates to choose from, " + moreThan10in10
-					+ " times there were more than 10)");
+			bw.write("R@10:\t" + (rAt10 * 1.0) / (numberOfAnomalies * 1.0));
 			bw.newLine();
 			bw.close();
 
@@ -413,13 +393,13 @@ public class EvaluateErrorCorrection extends JCasAnnotator_ImplBase {
 			}
 			bw.close();
 
-			bw = new BufferedWriter(new FileWriter(eval_dir + "/wrongSentences.txt"));
-			bw.write(
-					"Sentence\tinitial_word\tstart_index\tend_index\tour_correction\tgold_correction\tours_is_correct\n");
-			for (String element : corrections) {
-				bw.write(element + "\n");
-			}
-			bw.close();
+//			bw = new BufferedWriter(new FileWriter(eval_dir + "/wrongSentences.txt"));
+//			bw.write(
+//					"Sentence\tinitial_word\tstart_index\tend_index\tour_correction\tgold_correction\tours_is_correct\n");
+//			for (String element : corrections) {
+//				bw.write(element + "\n");
+//			}
+//			bw.close();
 
 		} catch (IOException e) {
 			e.printStackTrace();

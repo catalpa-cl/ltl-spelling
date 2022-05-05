@@ -408,13 +408,13 @@ public class EvaluateErrorCorrection_UserMode extends JCasAnnotator_ImplBase {
 			}
 			bw.close();
 
-			bw = new BufferedWriter(new FileWriter(eval_dir + "/wrongSentences.txt"));
-			bw.write(
-					"Sentence\tinitial_word\tstart_index\tend_index\tour_correction\tgold_correction\tours_is_correct\n");
-			for (String element : corrections) {
-				bw.write(element + "\n");
-			}
-			bw.close();
+//			bw = new BufferedWriter(new FileWriter(eval_dir + "/wrongSentences.txt"));
+//			bw.write(
+//					"Sentence\tinitial_word\tstart_index\tend_index\tour_correction\tgold_correction\tours_is_correct\n");
+//			for (String element : corrections) {
+//				bw.write(element + "\n");
+//			}
+//			bw.close();
 
 		} catch (IOException e) {
 			e.printStackTrace();

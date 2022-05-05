@@ -435,7 +435,7 @@ q	w	1
 q	x	3
 q	y	5
 q	z	2
-r	a	4
+r	a	3
 r	b	3
 r	c	2
 r	d	1
@@ -536,9 +536,9 @@ u	t	2
 u	u	0
 u	v	3
 u	w	5
-u	x	6
-u	y	5
-u	z	1
+u	x	5
+u	y	1
+u	z	5
 v	a	4
 v	b	1
 v	c	1
@@ -637,7 +637,7 @@ z	q	2
 z	r	3
 z	s	1
 z	t	4
-z	u	6
+z	u	5
 z	v	3
 z	w	2
 z	x	1

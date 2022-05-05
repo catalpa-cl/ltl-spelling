@@ -48,8 +48,8 @@ public class DKPro_Spellcheck_EvaluateCorrection {
 				runErrorCorrection(lang, file, "/dictionaries/hunspell_dict_it.txt",
 						System.getenv("WEB1T") + "/" + lang);
 			} else {
-				System.out.println("Cannot process language " + lang
-						+ "! Supported langauges are German (\"de\"), English (\"en\"), Italian (\"it\"), and Czech (\"cz\").");
+				System.out.println("Cannot process language \"" + lang
+						+ "\"! Supported langauges are German (\"de\"), English (\"en\"), Italian (\"it\"), and Czech (\"cz\").");
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

@@ -85,7 +85,7 @@ public class CorpusStatisticsExperiment {
 
 	public static void evalMerlinDE() throws UIMAException, IOException {
 		String lang = "de";
-		String corpus = "src/main/resources/corpora/Merlin_spelling_german.xml";
+		String corpus = "src/main/resources/corpora/merlin-DE_spelling.xml";
 		String dict = "src/main/resources/dictionaries/hunspell_dict_de.txt";
 //		String dict = "src/main/resources/dictionaries/childlex_litkey.txt";
 		getErrorRate(lang, corpus, "MERLIN-DE");

@@ -1,10 +1,10 @@
 package generateAndRank;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -65,8 +65,8 @@ public class GenerateAndRank_KeyboardDistance extends CandidateGeneratorAndRanke
 
 		boolean hasUpper = false;
 		try {
-
-			BufferedReader br = new BufferedReader(new FileReader(new File(distanceFile)));
+			InputStream inputStream = getClass().getResourceAsStream(distanceFile);
+			BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));	
 			while (br.ready()) {
 
 				String line = br.readLine();

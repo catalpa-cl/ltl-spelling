@@ -64,7 +64,7 @@ public class CollectMisspellingPhonemes {
 
 	public static void evalSkaLa() throws UIMAException, IOException {
 		String lang = "de";
-		String corpus = "src/main/resources/corpora/skala_speling.xml";
+		String corpus = "src/main/resources/corpora/skala_spelling.xml";
 		String outPath = "src/main/resources/corpora/misspelling_phonemes/deu-DE/skala_misspellingPhonemes.tsv";
 		writeMisspellingPhonemes(lang, corpus, outPath);
 	}

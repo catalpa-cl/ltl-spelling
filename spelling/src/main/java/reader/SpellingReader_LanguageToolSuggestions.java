@@ -145,7 +145,7 @@ public class SpellingReader_LanguageToolSuggestions extends JCasResourceCollecti
 			e.printStackTrace();
 		}
 		System.out.println("Number of spelling errors:\t" + nrOfErrors);
-		System.out.println("Number of grammar errors:\t" + nrOfGrammarErrors);
+//		System.out.println("Number of grammar errors:\t" + nrOfGrammarErrors);
 
 		numberOfTexts = items.size();
 	}
@@ -201,7 +201,7 @@ public class SpellingReader_LanguageToolSuggestions extends JCasResourceCollecti
 					anomaly.setSuggestions(actions);
 				}
 				anomaly.addToIndexes();
-				System.out.println("SPELLING_ERROR: " + anomaly.getCoveredText() + "\t" + corrections.get(element));
+//				System.out.println("SPELLING_ERROR: " + anomaly.getCoveredText() + "\t" + corrections.get(element));
 
 			}
 		}

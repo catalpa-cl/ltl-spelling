@@ -47,7 +47,6 @@ public class ErrorCorrectionExperiments_unigramReranking {
 		int num_candidates_per_method = 3;
 
 		runLitkey_unigrams(num_candidates_per_method);
-		runLitkey_unigrams(num_candidates_per_method);
 		runMerlinDE_unigrams(num_candidates_per_method);
 		runSkaLa_unigrams(num_candidates_per_method);
 		runCItA_unigrams(num_candidates_per_method);
@@ -56,7 +55,6 @@ public class ErrorCorrectionExperiments_unigramReranking {
 
 		num_candidates_per_method = 10;
 
-		runLitkey_unigrams(num_candidates_per_method);
 		runLitkey_unigrams(num_candidates_per_method);
 		runMerlinDE_unigrams(num_candidates_per_method);
 		runSkaLa_unigrams(num_candidates_per_method);
@@ -70,9 +68,9 @@ public class ErrorCorrectionExperiments_unigramReranking {
 
 		String lang = "de";
 		String path = "src/main/resources/corpora/litkey_spelling.xml";
-		String dict = "src/main/resources/dictionaries/hunspell_DE.txt";
-		String dict_phon = "src/main/resources/dictionaries/hunspell_DE_phoneme_map.txt";
-		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_DE-manual.txt";
+		String dict = "/dictionaries/hunspell_dict_de.txt";
+		String dict_phon = "/dictionaries/hunspell_dict_de_phoneme_map.txt";
+		String keyboard_distances = "/matrixes/keyboardDistance_DE-manual.txt";
 
 		String unigram_file = "src/main/resources/language_models/childLex/childLex_0.17.01.tsv";
 		ConditionalFrequencyDistribution<Integer, String> cfd = new ConditionalFrequencyDistribution<Integer, String>();
@@ -116,7 +114,7 @@ public class ErrorCorrectionExperiments_unigramReranking {
 			String word = entries[0];
 			word = word.replaceAll("^\"|\"$", "");
 			String frequency = entries[1];
-			System.out.println(word + " " + frequency);
+//			System.out.println(word + " " + frequency);
 			cfd.addSample(1, word, Integer.parseInt(frequency));
 		}
 		br.close();
@@ -142,9 +140,9 @@ public class ErrorCorrectionExperiments_unigramReranking {
 
 		String lang = "de";
 		String path = "src/main/resources/corpora/merlin-DE_spelling.xml";
-		String dict = "src/main/resources/dictionaries/hunspell_dict_de.txt";
-		String dict_phon = "src/main/resources/dictionaries/hunspell_dict_de_phoneme_map.txt";
-		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_DE-manual.txt";
+		String dict = "/dictionaries/hunspell_dict_de.txt";
+		String dict_phon = "/dictionaries/hunspell_dict_de_phoneme_map.txt";
+		String keyboard_distances = "/matrixes/keyboardDistance_DE-manual.txt";
 
 		String unigram_file = "src/main/resources/language_models/childLex/childLex_0.17.01.tsv";
 		ConditionalFrequencyDistribution<Integer, String> cfd = new ConditionalFrequencyDistribution<Integer, String>();
@@ -187,7 +185,7 @@ public class ErrorCorrectionExperiments_unigramReranking {
 			String word = entries[0];
 			word = word.replaceAll("^\"|\"$", "");
 			String frequency = entries[1];
-			System.out.println(word + " " + frequency);
+//			System.out.println(word + " " + frequency);
 			cfd.addSample(1, word, Integer.parseInt(frequency));
 		}
 		br.close();
@@ -213,9 +211,9 @@ public class ErrorCorrectionExperiments_unigramReranking {
 
 		String lang = "de";
 		String path = "src/main/resources/corpora/skala_spelling.xml";
-		String dict = "src/main/resources/dictionaries/hunspell_dict_de.txt";
-		String dict_phon = "src/main/resources/dictionaries/hunspell_dict_de_phoneme_map.txt";
-		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_DE-manual.txt";
+		String dict = "/dictionaries/hunspell_dict_de.txt";
+		String dict_phon = "/dictionaries/hunspell_dict_de_phoneme_map.txt";
+		String keyboard_distances = "/matrixes/keyboardDistance_DE-manual.txt";
 
 		String unigram_file = "src/main/resources/language_models/childLex/childLex_0.17.01.tsv";
 		ConditionalFrequencyDistribution<Integer, String> cfd = new ConditionalFrequencyDistribution<Integer, String>();
@@ -257,7 +255,7 @@ public class ErrorCorrectionExperiments_unigramReranking {
 			String word = entries[0];
 			word = word.replaceAll("^\"|\"$", "");
 			String frequency = entries[1];
-			System.out.println(word + " " + frequency);
+//			System.out.println(word + " " + frequency);
 			cfd.addSample(1, word, Integer.parseInt(frequency));
 		}
 		br.close();
@@ -281,9 +279,9 @@ public class ErrorCorrectionExperiments_unigramReranking {
 
 		String lang = "it";
 		String path = "src/main/resources/corpora/cita_spelling.xml";
-		String dict = "src/main/resources/dictionaries/hunspell_dict_it.txt";
-		String dict_phon = "src/main/resources/dictionaries/hunspell_dict_it_phoneme_map.txt";
-		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_IT-manual.txt";
+		String dict = "/dictionaries/hunspell_dict_it.txt";
+		String dict_phon = "/dictionaries/hunspell_dict_it_phoneme_map.txt";
+		String keyboard_distances = "/matrixes/keyboardDistance_IT-manual.txt";
 
 		String unigram_file = "src/main/resources/language_models/subtlex/subtlex_it.tsv";
 		ConditionalFrequencyDistribution<Integer, String> cfd = new ConditionalFrequencyDistribution<Integer, String>();
@@ -296,7 +294,7 @@ public class ErrorCorrectionExperiments_unigramReranking {
 			String word = entries[1];
 			word = word.replaceAll("^\"|\"$", "");
 			String frequency = entries[2];
-			System.out.println(word + " " + frequency);
+//			System.out.println(word + " " + frequency);
 			cfd.addSample(1, word, Integer.parseInt(frequency));
 		}
 		br.close();
@@ -318,10 +316,10 @@ public class ErrorCorrectionExperiments_unigramReranking {
 	private static void runMerlinIT_unigrams(int num_candidates_per_method) throws UIMAException, IOException {
 
 		String lang = "it";
-		String path = "src/main/resources/corpora/Merlin_spelling_italian.xml";
-		String dict = "src/main/resources/dictionaries/hunspell_dict_it.txt";
-		String dict_phon = "src/main/resources/dictionaries/hunspell_dict_it_phoneme_map.txt";
-		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_IT-manual.txt";
+		String path = "src/main/resources/corpora/merlin-IT_spelling.xml";
+		String dict = "/dictionaries/hunspell_dict_it.txt";
+		String dict_phon = "/dictionaries/hunspell_dict_it_phoneme_map.txt";
+		String keyboard_distances = "/matrixes/keyboardDistance_IT-manual.txt";
 
 		String unigram_file = "src/main/resources/language_models/subtlex/subtlex_it.tsv";
 		ConditionalFrequencyDistribution<Integer, String> cfd = new ConditionalFrequencyDistribution<Integer, String>();
@@ -333,7 +331,7 @@ public class ErrorCorrectionExperiments_unigramReranking {
 			String word = entries[1];
 			word = word.replaceAll("^\"|\"$", "");
 			String frequency = entries[2];
-			System.out.println(word + " " + frequency);
+//			System.out.println(word + " " + frequency);
 			cfd.addSample(1, word, Integer.parseInt(frequency));
 		}
 		br.close();
@@ -363,9 +361,9 @@ public class ErrorCorrectionExperiments_unigramReranking {
 
 		String lang = "en";
 		String path = "src/main/resources/corpora/toefl_spelling.xml";
-		String dict = "src/main/resources/dictionaries/hunspell_dict_en_US.txt";
-		String dict_phon = "src/main/resources/dictionaries/hunspell_dict_en_US_phoneme_map.txt";
-		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_EN-manual.txt";
+		String dict = "/dictionaries/hunspell_dict_en_US.txt";
+		String dict_phon = "/dictionaries/hunspell_dict_en_US_phoneme_map.txt";
+		String keyboard_distances = "/matrixes/keyboardDistance_EN-manual.txt";
 
 		String unigram_file = "src/main/resources/language_models/subtlex/subtlex_en_us.csv";
 		ConditionalFrequencyDistribution<Integer, String> cfd = new ConditionalFrequencyDistribution<Integer, String>();
@@ -377,7 +375,7 @@ public class ErrorCorrectionExperiments_unigramReranking {
 			String word = entries[0];
 			word = word.replaceAll("^\"|\"$", "");
 			String frequency = entries[1];
-			System.out.println(word + " " + frequency);
+//			System.out.println(word + " " + frequency);
 			cfd.addSample(1, word, Integer.parseInt(frequency));
 		}
 		br.close();
@@ -428,7 +426,7 @@ public class ErrorCorrectionExperiments_unigramReranking {
 				LanguageModelReranker.PARAM_NGRAM_SIZE, 1);
 		AnalysisEngineDescription anomalyReplacer = createEngineDescription(SpellingAnomalyReplacer.class,
 				SpellingAnomalyReplacer.PARAM_TYPES_TO_COPY,
-				new String[] { "de.unidue.ltl.spelling.types.ExtendedSpellingAnomaly" });
+				new String[] { "spelling.types.ExtendedSpellingAnomaly" });
 		AnalysisEngineDescription changeApplier = createEngineDescription(ApplyChanges.class);
 		AnalysisEngineDescription correctionEvaluator = createEngineDescription(EvaluateErrorCorrection.class,
 				EvaluateErrorCorrection.PARAM_CONFIG_NAME, config_name);

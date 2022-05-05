@@ -162,7 +162,7 @@ public class SpellingReader extends JCasResourceCollectionReader_ImplBase {
 				}
 			}
 			System.out.println("Reader: Number of spelling errors:\t" + nrOfErrors);
-			System.out.println("Reader: Number of grammar errors:\t" + nrOfGrammarErrors);
+//			System.out.println("Reader: Number of grammar errors:\t" + nrOfGrammarErrors);
 		} catch (ParserConfigurationException e) {
 			e.printStackTrace();
 		} catch (SAXException e) {

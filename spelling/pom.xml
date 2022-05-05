@@ -207,8 +207,6 @@
 										<exclude>corpora/**</exclude>
 										<exclude>results/**</exclude>
 										<exclude>target/*.jar</exclude>
-										<exclude>org/languagetool/resource/**</exclude>
-										<exclude>org/languagetool/rules/**</exclude>
 									</excludes>
 								</filter>
 							</filters>

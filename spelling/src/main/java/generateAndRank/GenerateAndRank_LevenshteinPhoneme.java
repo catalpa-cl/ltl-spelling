@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -125,7 +127,8 @@ public class GenerateAndRank_LevenshteinPhoneme extends CandidateGeneratorAndRan
 		for (String mapFile : mapFiles) {
 
 			try {
-				br = new BufferedReader(new FileReader(new File(mapFile)));
+				InputStream inputStream = getClass().getResourceAsStream(mapFile);
+				br = new BufferedReader(new InputStreamReader(inputStream));	
 				while (br.ready()) {
 					String line = br.readLine();
 					String[] entry = line.split("\t");

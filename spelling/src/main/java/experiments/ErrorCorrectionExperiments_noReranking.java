@@ -37,7 +37,7 @@ public class ErrorCorrectionExperiments_noReranking {
 		runCItA_noReranking(num_candidates_per_method);
 		runSkaLa_noReranking(num_candidates_per_method);
 
-//		int num_candidates_per_method = 10;
+		num_candidates_per_method = 10;
 
 		runTOEFL_noReranking(num_candidates_per_method);
 		runMerlinDE_noReranking(num_candidates_per_method);
@@ -53,9 +53,9 @@ public class ErrorCorrectionExperiments_noReranking {
 
 		String lang = "en";
 		String path = "src/main/resources/corpora/toefl_spelling.xml";
-		String dict = "src/main/resources/dictionaries/hunspell_dict_en_US.txt";
-		String dict_phon = "src/main/resources/dictionaries/hunspell_dict_en_US_phoneme_map.txt";
-		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_EN-manual.txt";
+		String dict = "/dictionaries/hunspell_dict_en_US.txt";
+		String dict_phon = "/dictionaries/hunspell_dict_en_US_phoneme_map.txt";
+		String keyboard_distances = "/matrixes/keyboardDistance_EN-manual.txt";
 
 		runErrorCorrection_noReranking("TOEFL_missingSpaces_hunspell_noReranking_numCand_" + num_candidates_per_method,
 				"missing_spaces", lang, path, dict, dict_phon, keyboard_distances, num_candidates_per_method, false);
@@ -73,9 +73,9 @@ public class ErrorCorrectionExperiments_noReranking {
 
 		String lang = "it";
 		String path = "src/main/resources/corpora/cita_spelling.xml";
-		String dict = "src/main/resources/dictionaries/hunspell_dict_it.txt";
-		String dict_phon = "src/main/resources/dictionaries/hunspell_dict_it_phoneme_map.txt";
-		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_IT-manual.txt";
+		String dict = "/dictionaries/hunspell_dict_it.txt";
+		String dict_phon = "/dictionaries/hunspell_dict_it_phoneme_map.txt";
+		String keyboard_distances = "/matrixes/keyboardDistance_IT-manual.txt";
 
 		runErrorCorrection_noReranking("CItA_missingSpaces_hunspell_noReranking_numCand_" + num_candidates_per_method,
 				"missing_spaces", lang, path, dict, dict_phon, keyboard_distances, num_candidates_per_method, false);
@@ -93,9 +93,9 @@ public class ErrorCorrectionExperiments_noReranking {
 
 		String lang = "de";
 		String path = "src/main/resources/corpora/litkey_spelling.xml";
-		String dict = "src/main/resources/dictionaries/hunspell_dict_de.txt";
-		String dict_phon = "src/main/resources/dictionaries/hunspell_dict_de_phoneme_map.txt";
-		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_DE-manual.txt";
+		String dict = "/dictionaries/hunspell_dict_de.txt";
+		String dict_phon = "/dictionaries/hunspell_dict_de_phoneme_map.txt";
+		String keyboard_distances = "/matrixes/keyboardDistance_DE-manual.txt";
 
 		runErrorCorrection_noReranking("Litkey_missingSpaces_hunspell_noReranking_numCand_" + num_candidates_per_method,
 				"missing_spaces", lang, path, dict, dict_phon, keyboard_distances, num_candidates_per_method, true);
@@ -113,9 +113,9 @@ public class ErrorCorrectionExperiments_noReranking {
 
 		String lang = "it";
 		String path = "src/main/resources/corpora/merlin-IT_spelling.xml";
-		String dict = "src/main/resources/dictionaries/hunspell__dict_it.txt";
-		String dict_phon = "src/main/resources/dictionaries/hunspell_dict_it_phoneme_map.txt";
-		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_IT-manual.txt";
+		String dict = "/dictionaries/hunspell_dict_it.txt";
+		String dict_phon = "/dictionaries/hunspell_dict_it_phoneme_map.txt";
+		String keyboard_distances = "/matrixes/keyboardDistance_IT-manual.txt";
 
 		runErrorCorrection_noReranking(
 				"MERLIN-IT_missingSpaces_hunspell_noReranking_numCand_" + num_candidates_per_method, "missing_spaces",
@@ -133,9 +133,9 @@ public class ErrorCorrectionExperiments_noReranking {
 	private static void runMerlinCZ_noReranking(int num_candidates_per_method) throws UIMAException, IOException {
 		String lang = "cz";
 		String path = "src/main/resources/corpora/merlin-CZ_spelling.xml";
-		String dict = "src/main/resources/dictionaries/hunspell_dict_cz.txt";
-		String dict_phon = "src/main/resources/dictionaries/hunspell_dict_cz_phoneme_map.txt";
-		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_CZ-manual.txt";
+		String dict = "/dictionaries/hunspell_dict_cz.txt";
+		String dict_phon = "/dictionaries/hunspell_dict_cz_phoneme_map.txt";
+		String keyboard_distances = "/matrixes/keyboardDistance_CZ-manual.txt";
 
 		runErrorCorrection_noReranking(
 				"MERLIN-CZ_missingSpaces_hunspell_noReranking_numCand_" + num_candidates_per_method, "missing_spaces",
@@ -154,9 +154,9 @@ public class ErrorCorrectionExperiments_noReranking {
 
 		String lang = "de";
 		String path = "src/main/resources/corpora/merlin-DE_spelling.xml";
-		String dict = "src/main/resources/dictionaries/hunspell_dict_de.txt";
-		String dict_phon = "src/main/resources/dictionaries/hunspell_dict_de_phoneme_map.txt";
-		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_DE-manual.txt";
+		String dict = "/dictionaries/hunspell_dict_de.txt";
+		String dict_phon = "/dictionaries/hunspell_dict_de_phoneme_map.txt";
+		String keyboard_distances = "/matrixes/keyboardDistance_DE-manual.txt";
 
 		runErrorCorrection_noReranking(
 				"MERLIN-DE_missingSpaces_hunspell_noReranking_numCand_" + num_candidates_per_method, "missing_spaces",
@@ -175,9 +175,9 @@ public class ErrorCorrectionExperiments_noReranking {
 
 		String lang = "de";
 		String path = "src/main/resources/corpora/skala_spelling.xml";
-		String dict = "src/main/resources/dictionaries/hunspell_dict_de.txt";
-		String dict_phon = "src/main/resources/dictionaries/hunspell_dict_de_phoneme_map.txt";
-		String keyboard_distances = "src/main/resources/matrixes/keyboardDistance_DE-manual.txt";
+		String dict = "/dictionaries/hunspell_dict_de.txt";
+		String dict_phon = "/dictionaries/hunspell_dict_de_phoneme_map.txt";
+		String keyboard_distances = "/matrixes/keyboardDistance_DE-manual.txt";
 
 		runErrorCorrection_noReranking("SkaLa_missingSpaces_hunspell_noReranking_numCand_" + num_candidates_per_method,
 				"missing_spaces", lang, path, dict, dict_phon, keyboard_distances, num_candidates_per_method, false);
@@ -220,7 +220,7 @@ public class ErrorCorrectionExperiments_noReranking {
 				GenerateAndRank_FindMissingSpace.PARAM_NUM_OF_CANDIDATES_TO_GENERATE, num_candidates_per_method);
 		AnalysisEngineDescription anomalyReplacer = createEngineDescription(SpellingAnomalyReplacer.class,
 				SpellingAnomalyReplacer.PARAM_TYPES_TO_COPY,
-				new String[] { "de.unidue.ltl.spelling.types.ExtendedSpellingAnomaly" });
+				new String[] { "spelling.types.ExtendedSpellingAnomaly" });
 		AnalysisEngineDescription changeApplier = createEngineDescription(ApplyChanges.class);
 		AnalysisEngineDescription correctionEvaluator = createEngineDescription(EvaluateErrorCorrection.class,
 				EvaluateErrorCorrection.PARAM_CONFIG_NAME, config_name);

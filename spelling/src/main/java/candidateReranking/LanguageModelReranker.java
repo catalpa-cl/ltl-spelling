@@ -206,6 +206,11 @@ public class LanguageModelReranker extends JCasAnnotator_ImplBase {
 				} else {
 					probability = probability * (1 / fcp.getNrOfNgrams(ngramSize));
 				}
+
+			} catch (RuntimeException e) {
+				System.out.println("Unable to load Language Model. Did you forget to set WEB1T system variable or set \"-Djava.io.tmpdir=\" to a path that doesn't exist?");
+				System.exit(0);
+
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
