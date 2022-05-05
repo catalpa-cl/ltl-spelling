@@ -1,7 +1,7 @@
 # DKPro Spelling
 
 
-DKPro Spelling is a highly configurable spellchecking application.
+DKPro Spelling is a highly configurable spellchecking application.</br>
 It is language-invariant: To process any language, at least a tokenizer and dictionary are required.
 A named entity recognizer and (unigram) language model are likely to improve results.</br>
 
@@ -19,10 +19,10 @@ For easy access we also provide jars for the default configuration (see [User Mo
 
 <img src="https://github.com/ltl-ude/ltl-spelling/blob/master/pipeline_overview.png" width="900">
 
-Before you use phonetic spellchecking on a new corpus, please pre-generate phonetic representations of misspellings/out-of-dictionary words in it as shown [here](https://github.com/ltl-ude/ltl-spelling/blob/master/spelling/src/main/java/experiments/CollectMisspellingPhonemes.java) and place copies of the `_phoneme_map.txt` [dictionaries](spelling/src/main/resources/dictionaries) as well as any custom phonetic dictionaries in the respective language folders [here](spelling/src/main/resources/corpora/misspelling_phonemes).
+Before you use phonetic spellchecking on a new corpus, please pre-generate phonetic representations of misspellings/out-of-dictionary words in it as shown [here](https://github.com/ltl-ude/ltl-spelling/blob/master/spelling/src/main/java/experiments/CollectMisspellingPhonemes.java) and place copies of the `*_phoneme_map.txt` [dictionaries](spelling/src/main/resources/dictionaries) as well as any custom phonetic dictionaries in the respective language folders [here](spelling/src/main/resources/corpora/misspelling_phonemes).
 
 ## Setup
-For Web1T reranking to work, set `WEB1T` system variable to point to the location of web1t (`export WEB1T="PATH_TO_WEB1T"`).
+For Web 1T reranking to work, set `WEB1T` system variable to point to the location of web1t (`export WEB1T="PATH_TO_WEB1T"`).
 In this folder you need subfolders `/en`, `/de`, `/it`, `/cz` for the respective languages.
 
 You may have to unzip some of the [dictionaries](spelling/src/main/resources/dictionaries).
@@ -36,23 +36,21 @@ You may have to unzip some of the [dictionaries](spelling/src/main/resources/dic
 ```
 
 ## User Mode
-#### Supports English (en), German (de), Italian (it) and Czech (cz).</br> Requires Web1t system variable to be set.
+#### Supports English (en), German (de), Italian (it) and Czech (cz).</br> Requires WEB1T system variable to be set.
 
 Use the tool in its default configuration:
-Generate correction candidates based on Damerau-Levenshtein Distance, rerank them using Web1t trigrams.
+Generate correction candidates based on Damerau-Levenshtein Distance, rerank them using Web 1T trigrams.
 
-Spellcheck a `.txt` file.
-Outputs `.tsv` with ranked list of corrections.
+Spellcheck a `.txt` file.</br>
+Outputs `.tsv` with ranked list of corrections.</br>
 *To run an example: java -jar DKPro_Spellcheck.jar de src/main/resources/corpora/test_de.txt*
-
 ```
 java -jar DKPro_Spellcheck.jar [LANGUAGE] [PATH_TO_TXT]
 ```
 
-Evaluate error correction on a corpus annotated with errors (in the [LeSpell XML format](#lespell-error-annotation-format)).
-Outputs recall@k and lists of words that are corrected correctly/incorrectly.
+Evaluate error correction on a corpus annotated with errors (in the [LeSpell XML format](#lespell-error-annotation-format)).</br>
+Outputs recall@k and lists of words that are corrected correctly/incorrectly.</br>
 *To run an example: java -jar DKPro_Spellcheck_EvaluateCorrection.jar cz src/main/resources/corpora/merlin-CZ_spelling.xml*
-
 ```
 java -jar DKPro_Spellcheck_EvaluateCorrection.jar [LANGUAGE] [PATH_TO_XML]
 ```
