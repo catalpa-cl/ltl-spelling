@@ -54,6 +54,7 @@ Outputs recall@k and lists of words that are corrected correctly/incorrectly.</b
 ```
 java -jar DKPro_Spellcheck_EvaluateCorrection.jar [LANGUAGE] [PATH_TO_XML]
 ```
+As Web 1T is quite large, you may (especially for English) want to set `-Djava.io.tmpdir="PATH_TO_DIR"` to a folder with enough space, making the full command `java -Djava.io.tmpdir="PATH_TO_DIR" -jar [JAR_NAME] [LANG] [PATH_TO_FILE]`
 
 ## Cite
 ```
