@@ -27,13 +27,33 @@ public class ErrorDetectionExperiments {
 
 	public static void main(String[] args) throws UIMAException, IOException {
 
+		System.out.println("Processing CItA");
 		runCItA();
+		System.out.println();
+
+		System.out.println("Processing MERLIN-IT");
 		runMerlinIT();
+		System.out.println();
+
+		System.out.println("Processing MERLIN-CZ");
 		runMerlinCZ();
+		System.out.println();
+
+		System.out.println("Processing TOEFL");
 		runTOEFL();
+		System.out.println();
+
+		System.out.println("Processing SkaLa");
 		runSkaLa();
+		System.out.println();
+
+		System.out.println("Processing MERLIN-DE");
 		runMerlinDE();
+		System.out.println();
+
+		System.out.println("Processing Litkey");
 		runLitkey();
+		System.out.println();
 
 	}
 
@@ -41,7 +61,7 @@ public class ErrorDetectionExperiments {
 
 		String lang = "en";
 		String path = "src/main/resources/corpora/toefl_spelling.xml";
-		String dict = "src/main/resources/dictionaries/hunspell_dict_en_US.txt";
+		String dict = "/dictionaries/hunspell_dict_en_US.txt";
 		String dic = "src/main/resources/dictionaries/hunspell/English_US.dic";
 		String aff = "src/main/resources/dictionaries/hunspell/English_US.aff";
 		runErrorDetection_hunspellTool("TOEFL_hunspellTool_web1t", lang, path, dic, aff, false);
@@ -53,8 +73,8 @@ public class ErrorDetectionExperiments {
 
 		String lang = "de";
 		String path = "src/main/resources/corpora/litkey_spelling.xml";
-		String dict = "src/main/resources/dictionaries/hunspell_dict_de.txt";
-		String dict_child = "src/main/resources/dictionaries/childLex_litkey.txt";
+		String dict = "/dictionaries/hunspell_dict_de.txt";
+		String dict_child = "/dictionaries/childLex_litkey.txt";
 		String dic = "src/main/resources/dictionaries/hunspell/German_de_DE_aux.dic";
 		String aff = "src/main/resources/dictionaries/hunspell/German_de_DE.aff";
 		runErrorDetection_hunspellTool("Litkey_hunspellTool_web1t", lang, path, dic, aff, true);
@@ -67,10 +87,10 @@ public class ErrorDetectionExperiments {
 
 		String lang = "it";
 		String path = "src/main/resources/corpora/cita_spelling.xml";
-		String dict = "src/main/resources/dictionaries/hunspell_dict_it.txt";
+		String dict = "/dictionaries/hunspell_dict_it.txt";
 		String dic = "src/main/resources/dictionaries/hunspell/Italian_aux.dic";
 		String aff = "src/main/resources/dictionaries/hunspell/Italian.aff";
-		String italian_aux_dict = "src/main/resources/dictionaries/italian_include.txt";
+		String italian_aux_dict = "/dictionaries/italian_include.txt";
 		runErrorDetection_hunspellTool("CItA_hunspellTool_web1t", lang, path, dic, aff, false);
 		runErrorDetection_hunspellDict("CItA_hunspellDict_web1t", lang, path, dict, italian_aux_dict, false, false);
 	}
@@ -79,8 +99,8 @@ public class ErrorDetectionExperiments {
 
 		String lang = "de";
 		String path = "src/main/resources/corpora/skala_spelling.xml";
-		String dict = "src/main/resources/dictionaries/hunspell_dict_de.txt";
-		String dict_child = "src/main/resources/dictionaries/childLex_litkey.txt";
+		String dict = "/dictionaries/hunspell_dict_de.txt";
+		String dict_child = "/dictionaries/childLex_litkey.txt";
 		String dic = "src/main/resources/dictionaries/hunspell/German_de_DE_aux.dic";
 		String aff = "src/main/resources/dictionaries/hunspell/German_de_DE.aff";
 		runErrorDetection_hunspellTool("SkaLa_hunspellTool_web1t", lang, path, dic, aff, false);
@@ -92,8 +112,8 @@ public class ErrorDetectionExperiments {
 
 		String lang = "de";
 		String path = "src/main/resources/corpora/merlin-DE_spelling.xml";
-		String dict = "src/main/resources/dictionaries/hunspell_dict_de.txt";
-		String dict_child = "src/main/resources/dictionaries/childlex_litkey.txt";
+		String dict = "/dictionaries/hunspell_dict_de.txt";
+		String dict_child = "/dictionaries/childlex_litkey.txt";
 		String dic = "src/main/resources/dictionaries/hunspell/German_de_DE_aux.dic";
 		String aff = "src/main/resources/dictionaries/hunspell/German_de_DE.aff";
 		runErrorDetection_hunspellTool("MERLIN-DE_hunspellTool_web1t", lang, path, dic, aff, false);
@@ -105,10 +125,10 @@ public class ErrorDetectionExperiments {
 
 		String lang = "it";
 		String path = "src/main/resources/corpora/merlin-IT_spelling.xml";
-		String dict = "src/main/resources/dictionaries/hunspell_dict_it.txt";
+		String dict = "/dictionaries/hunspell_dict_it.txt";
 		String dic = "src/main/resources/dictionaries/hunspell/Italian_aux.dic";
 		String aff = "src/main/resources/dictionaries/hunspell/Italian.aff";
-		String italian_aux_dict = "src/main/resources/dictionaries/italian_include.txt";
+		String italian_aux_dict = "/dictionaries/italian_include.txt";
 		runErrorDetection_hunspellTool("MERLIN-IT_hunspellTool_web1t", lang, path, dic, aff, false);
 		runErrorDetection_hunspellDict("MERLIN-IT_hunspellDict_web1t", lang, path, dict, italian_aux_dict, false,
 				false);
@@ -117,8 +137,8 @@ public class ErrorDetectionExperiments {
 	private static void runMerlinCZ() throws UIMAException, IOException {
 
 		String lang = "cz";
-		String path = "src/main/resources/corpora/merlin_spelling.xml";
-		String dict = "src/main/resources/dictionaries/hunspell_Czech_dict.txt";
+		String path = "src/main/resources/corpora/merlin-CZ_spelling.xml";
+		String dict = "/dictionaries/hunspell_dict_cz.txt";
 		String dic = "src/main/resources/dictionaries/hunspell/Czech.dic";
 		String aff = "src/main/resources/dictionaries/hunspell/Czech.aff";
 		runErrorDetection_hunspellTool("MERLIN-CZ_hunspellTool_web1t", lang, path, dic, aff, false);

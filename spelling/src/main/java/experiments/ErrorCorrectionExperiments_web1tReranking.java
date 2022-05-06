@@ -35,12 +35,12 @@ public class ErrorCorrectionExperiments_web1tReranking {
 
 		int num_candidates_per_method = 3;
 		runSkaLa(num_candidates_per_method, n_gram_size);
+		runTOEFL(num_candidates_per_method, n_gram_size);
 		runCItA(num_candidates_per_method, n_gram_size);
 		runLitkey(num_candidates_per_method, n_gram_size);
 		runMerlinDE(num_candidates_per_method, n_gram_size);
 		runMerlinIT(num_candidates_per_method, n_gram_size);
 		runMerlinCZ(num_candidates_per_method, n_gram_size);
-		runTOEFL(num_candidates_per_method, n_gram_size);
 
 		num_candidates_per_method = 10;
 		runSkaLa(num_candidates_per_method, n_gram_size);
@@ -281,7 +281,7 @@ public class ErrorCorrectionExperiments_web1tReranking {
 
 		String lang = "cz";
 		String path = "src/main/resources/corpora/merlin-CZ_spelling.xml";
-		String dict = "/dictionaries/hunspell__dict_cz.txt";
+		String dict = "/dictionaries/hunspell_dict_cz.txt";
 		String dict_phon = "/dictionaries/hunspell_dict_cz_phoneme_map.txt";
 		String keyboard_distances = "/matrixes/keyboardDistance_CZ-manual.txt";
 		String web1t_path = System.getenv("WEB1T") + "/cz";
@@ -303,11 +303,6 @@ public class ErrorCorrectionExperiments_web1tReranking {
 				"MERLIN-CZ_keyboard_hunspell_web1t_numCand_" + num_candidates_per_method + "_ngramSize_" + n_gram_size,
 				"keyboard", lang, path, dict, dict_phon, keyboard_distances, web1t_path, num_candidates_per_method,
 				n_gram_size, false);
-		runErrorCorrection(
-				"MERLIN-CZ_graphemePhoneme_hunspell_web1t_numCand_" + num_candidates_per_method + "_ngramSize_"
-						+ n_gram_size,
-				"graphemePhoneme", lang, path, dict, dict_phon, keyboard_distances, web1t_path,
-				num_candidates_per_method, n_gram_size, false);
 		runErrorCorrection(
 				"MERLIN-CZ_full_hunspell_web1t_numCand_" + num_candidates_per_method + "_ngramSize_" + n_gram_size,
 				"full", lang, path, dict, dict_phon, keyboard_distances, web1t_path, num_candidates_per_method,

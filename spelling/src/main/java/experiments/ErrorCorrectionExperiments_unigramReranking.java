@@ -101,7 +101,7 @@ public class ErrorCorrectionExperiments_unigramReranking {
 				"Litkey_phoneme_hunspell_childLex_numCand_" + num_candidates_per_method + "_unigrams", "phoneme", lang,
 				path, dict, dict_phon, keyboard_distances, num_candidates_per_method, true, cfd);
 		runErrorCorrectionUnigrams(
-				"Litkey_fullUni_hunspell_childLex_numCand_" + num_candidates_per_method + "_unigrams", "full", lang,
+				"Litkey_full_hunspell_childLex_numCand_" + num_candidates_per_method + "_unigrams", "full", lang,
 				path, dict, dict_phon, keyboard_distances, num_candidates_per_method, true, cfd);
 
 		unigram_file = "src/main/resources/language_models/subtlex/subtlex_de.txt";
@@ -132,7 +132,7 @@ public class ErrorCorrectionExperiments_unigramReranking {
 				path, dict, dict_phon, keyboard_distances, num_candidates_per_method, true, cfd);
 		runErrorCorrectionUnigrams("Litkey_phoneme_hunspell_subtlex_numCand_" + num_candidates_per_method + "_unigrams",
 				"phoneme", lang, path, dict, dict_phon, keyboard_distances, num_candidates_per_method, true, cfd);
-		runErrorCorrectionUnigrams("Litkey_fullUni_hunspell_subtlex_numCand_" + num_candidates_per_method + "_unigrams",
+		runErrorCorrectionUnigrams("Litkey_full_hunspell_subtlex_numCand_" + num_candidates_per_method + "_unigrams",
 				"full", lang, path, dict, dict_phon, keyboard_distances, num_candidates_per_method, true, cfd);
 	}
 
@@ -160,7 +160,7 @@ public class ErrorCorrectionExperiments_unigramReranking {
 
 		// childLex
 		runErrorCorrectionUnigrams(
-				"MERLIN-DE_missingSpaces_childLex_numCand_" + num_candidates_per_method + "_unigrams", "missing_spaces",
+				"MERLIN-DE_missingSpaces_hunspell_childLex_numCand_" + num_candidates_per_method + "_unigrams", "missing_spaces",
 				lang, path, dict, dict_phon, keyboard_distances, num_candidates_per_method, false, cfd);
 		runErrorCorrectionUnigrams(
 				"MERLIN-DE_grapheme_hunspell_childLex_numCand_" + num_candidates_per_method + "_unigrams", "grapheme",
@@ -388,10 +388,10 @@ public class ErrorCorrectionExperiments_unigramReranking {
 				"grapheme", lang, path, dict, dict_phon, keyboard_distances, num_candidates_per_method, false, cfd);
 		runErrorCorrectionUnigrams("TOEFL_phoneme_hunspell_subtlex_numCand_" + num_candidates_per_method + "_unigrams",
 				"phoneme", lang, path, dict, dict_phon, keyboard_distances, num_candidates_per_method, false, cfd);
-		runErrorCorrectionUnigrams("TOEF_keyboard_hunspell_subtlex_numCand_" + num_candidates_per_method + "_unigrams",
+		runErrorCorrectionUnigrams("TOEFL_keyboard_hunspell_subtlex_numCand_" + num_candidates_per_method + "_unigrams",
 				"keyboard", lang, path, dict, dict_phon, keyboard_distances, num_candidates_per_method, false, cfd);
 		runErrorCorrectionUnigrams("TOEFL_full_hunspell_subtlex_numCand_" + num_candidates_per_method + "_unigrams",
-				"fullUni", lang, path, dict, dict_phon, keyboard_distances, num_candidates_per_method, false, cfd);
+				"full", lang, path, dict, dict_phon, keyboard_distances, num_candidates_per_method, false, cfd);
 	}
 
 	private static void runErrorCorrectionUnigrams(String config_name, String setting, String lang, String corpus_path,
