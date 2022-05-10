@@ -77,7 +77,7 @@ public class ErrorCorrectionExperiments_hunspell {
 	private static void runMerlinDE_hunspell() throws UIMAException, IOException {
 
 		String lang = "de";
-		String path = "src/main/resources/corpora/merlin-de_spelling.xml";
+		String path = "src/main/resources/corpora/merlin-DE_spelling.xml";
 
 		String dic = "src/main/resources/dictionaries/hunspell/German_de_DE_aux.dic";
 		String aff = "src/main/resources/dictionaries/hunspell/German_de_DE.aff";
@@ -95,7 +95,7 @@ public class ErrorCorrectionExperiments_hunspell {
 	private static void runMerlinCZ_hunspell() throws UIMAException, IOException {
 
 		String lang = "cz";
-		String path = "src/main/resources/corpora/merlin-cz_spelling.xml";
+		String path = "src/main/resources/corpora/merlin-CZ_spelling.xml";
 
 		String dic = "src/main/resources/dictionaries/hunspell/Czech.dic";
 		String aff = "src/main/resources/dictionaries/hunspell/Czech.aff";
@@ -113,9 +113,9 @@ public class ErrorCorrectionExperiments_hunspell {
 	private static void runMerlinIT_hunspell() throws UIMAException, IOException {
 
 		String lang = "it";
-		String path = "src/main/resources/corpora/merlin-it_spelling.xml";
+		String path = "src/main/resources/corpora/merlin-IT_spelling.xml";
 
-		String dic = "src/main/resources/dictionaries/hunspell/Italian.dic";
+		String dic = "src/main/resources/dictionaries/hunspell/Italian_aux.dic";
 		String aff = "src/main/resources/dictionaries/hunspell/Italian.aff";
 
 		String web1t_path = System.getenv("WEB1T") + "/it";
@@ -131,18 +131,18 @@ public class ErrorCorrectionExperiments_hunspell {
 	private static void runCIta_hunspell() throws UIMAException, IOException {
 
 		String lang = "it";
-		String corpus_path = "src/main/resources/corpora/cita_spelling.xml";
+		String path = "src/main/resources/corpora/cita_spelling.xml";
 
-		String dic = "src/main/resources/dictionaries/hunspell/Italian.dic";
+		String dic = "src/main/resources/dictionaries/hunspell/Italian_aux.dic";
 		String aff = "src/main/resources/dictionaries/hunspell/Italian.aff";
 
-		String web1t_path = System.getenv("WEB1T" + "/it");
+		String web1t_path = System.getenv("WEB1T") + "/it";
 
-		runErrorCorrection_hunspell(lang, corpus_path, "CIta_hunspell_noReranking", dic, aff, 1, web1t_path, -1, false,
+		runErrorCorrection_hunspell(lang, path, "CIta_hunspell_noReranking", dic, aff, 1, web1t_path, -1, false,
 				false);
-		runErrorCorrection_hunspell(lang, corpus_path, "CIta_hunspell_web1tTrigrams", dic, aff, 100, web1t_path, 3,
+		runErrorCorrection_hunspell(lang, path, "CIta_hunspell_web1tTrigrams", dic, aff, 100, web1t_path, 3,
 				true, false);
-		runErrorCorrection_hunspell(lang, corpus_path, "CIta_hunspell_3candidates_web1tTrigrams", dic, aff, 3,
+		runErrorCorrection_hunspell(lang, path, "CIta_hunspell_3candidates_web1tTrigrams", dic, aff, 3,
 				web1t_path, 3, true, false);
 
 	}
@@ -152,8 +152,8 @@ public class ErrorCorrectionExperiments_hunspell {
 		String lang = "en";
 		String path = "src/main/resources/corpora/toefl_spelling.xml";
 
-		String dic = "src/main/resources/dictionaries/hunspell/en_US.dic";
-		String aff = "src/main/resources/dictionaries/hunspell/en_US.aff";
+		String dic = "src/main/resources/dictionaries/hunspell/English_US.dic";
+		String aff = "src/main/resources/dictionaries/hunspell/English_US.aff";
 
 		String web1t_path = System.getenv("WEB1T") + "/en";
 
@@ -193,7 +193,7 @@ public class ErrorCorrectionExperiments_hunspell {
 
 		AnalysisEngineDescription anomalyReplacer = createEngineDescription(SpellingAnomalyReplacer.class,
 				SpellingAnomalyReplacer.PARAM_TYPES_TO_COPY,
-				new String[] { "de.unidue.ltl.spelling.types.ExtendedSpellingAnomaly" });
+				new String[] { "spelling.types.ExtendedSpellingAnomaly" });
 		AnalysisEngineDescription changeApplier = createEngineDescription(ApplyChanges.class);
 		AnalysisEngineDescription correctionEvaluator = createEngineDescription(EvaluateErrorCorrection.class,
 				EvaluateErrorCorrection.PARAM_CONFIG_NAME, config_name);

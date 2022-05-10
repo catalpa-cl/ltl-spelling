@@ -28,11 +28,11 @@ public class LanguagetoolRerankingExperiments {
 	public static void main(String[] args) throws UIMAException, IOException {
 
 		runCItA(3);
-//		runTOEFL(3);
-//		runSkaLa(3);
-//		runMerlinIT(3);
-//		runMerlinDE(3);
-//		runLitkey(3);
+		runTOEFL(3);
+		runSkaLa(3);
+		runMerlinIT(3);
+		runMerlinDE(3);
+		runLitkey(3);
 	}
 
 	private static void runLitkey(int n_gram_size) throws UIMAException, IOException {
