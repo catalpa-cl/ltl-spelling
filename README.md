@@ -22,6 +22,8 @@ For easy access we also provide jars for the default configuration (see [User Mo
 Before you use phonetic spellchecking on a new corpus, please pre-generate phonetic representations of misspellings/out-of-dictionary words in it as shown [here](https://github.com/ltl-ude/ltl-spelling/blob/master/spelling/src/main/java/experiments/CollectMisspellingPhonemes.java) and place copies of the `*_phoneme_map.txt` [dictionaries](spelling/src/main/resources/dictionaries) as well as any custom phonetic dictionaries in the respective language folders [here](spelling/src/main/resources/corpora/misspelling_phonemes).
 
 ## Setup
+Please make sure to `git clone` this repository rather than to download it as a `.zip`. This ensures that the jars and other large files will be downloaded properly.
+
 For Web 1T reranking to work, set `WEB1T` system variable to point to the location of web1t (`export WEB1T="PATH_TO_WEB1T"`).
 In this folder you need subfolders `/en`, `/de`, `/it`, `/cz` for the respective languages. Within these, you need subfolders `/*gms` as well as files `index-*gms` and the `aggregated_counts.cnt` file. You can obtain Web 1T from the [Linguistic Data Consortium](https://catalog.ldc.upenn.edu/LDC2006T13).
 
