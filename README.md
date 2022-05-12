@@ -23,7 +23,7 @@ Before you use phonetic spellchecking on a new corpus, please pre-generate phone
 
 ## Setup
 For Web 1T reranking to work, set `WEB1T` system variable to point to the location of web1t (`export WEB1T="PATH_TO_WEB1T"`).
-In this folder you need subfolders `/en`, `/de`, `/it`, `/cz` for the respective languages. Within these, you need subfolders `/*gms` as well as files `index-*gms` and the `aggregated_counts.cnt` file.
+In this folder you need subfolders `/en`, `/de`, `/it`, `/cz` for the respective languages. Within these, you need subfolders `/*gms` as well as files `index-*gms` and the `aggregated_counts.cnt` file. You can obtain Web 1T from the [Linguistic Data Consortium](https://catalog.ldc.upenn.edu/LDC2006T13).
 
 You may have to unzip some of the [dictionaries](spelling/src/main/resources/dictionaries).
 
