@@ -1,7 +1,7 @@
 # DKPro Spelling
 
 
-DKPro Spelling is a highly configurable spellchecking application.</br>
+[DKPro Spelling](http://www.lrec-conf.org/proceedings/lrec2022/pdf/2022.lrec-1.73.pdf) is a highly configurable spellchecking application.</br>
 It is language-invariant: To process any language in a minimal version, only a tokenizer and dictionary are required.</br>
 A named entity recognizer and (unigram) language model are likely to improve results.
 
@@ -61,12 +61,14 @@ As Web 1T is quite large, you may (especially for English) want to set `-Djava.i
 ## Cite
 ```
 @InProceedings{le-spell-2022,
-  author    = {Bexte, Marie and Laarmann-Quante, Ronja and Horbach, Andrea and Zesch, Torsten},
-  booktitle = {Proceedings of The 13th Language Resources and Evaluation Conference},
+  author    = {Bexte, Marie  and  Laarmann-Quante, Ronja  and  Horbach, Andrea  and  Zesch, Torsten},
   title     = {LeSpell - A Multi-Lingual Benchmark Corpus of Spelling Errors to Develop Spellchecking Methods for Learner Language},
+  booktitle = {Proceedings of the Language Resources and Evaluation Conference},
+  month     = {June},
   year      = {2022},
   address   = {Marseille, France},
-  month     = {to appear},
-  publisher = {European Language Resources Association}
+  publisher = {European Language Resources Association},
+  pages     = {697--706},
+  url       = {https://aclanthology.org/2022.lrec-1.73}
 }
 ```
